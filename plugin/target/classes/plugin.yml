@@ -1,0 +1,4 @@
+name: plugin
+version: '1.0-SNAPSHOT'
+main: org.test.plugin.ServerStatusPlugin
+api-version: '1.21'

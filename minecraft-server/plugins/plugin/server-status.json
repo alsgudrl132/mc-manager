@@ -1,0 +1,14 @@
+{
+  "maxPlayers": 20,
+  "onlinePlayers": 1,
+  "ramUsage": "851/1024MB",
+  "tps": 20.0,
+  "players": [
+    {
+      "world": "world",
+      "level": 0,
+      "name": "Bico_",
+      "health": 1.8
+    }
+  ]
+}

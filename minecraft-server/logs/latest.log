@@ -1,0 +1,56 @@
+[13:11:15] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.3+9-LTS; Amazon.com Inc. Corretto-21.0.3.9.1) on Mac OS X 14.6.1 (aarch64)
+[13:11:15] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) for Minecraft 1.21.4
+[13:11:16] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[13:11:16] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[13:11:16] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+ - plugin (1.0-SNAPSHOT)
+[13:11:19] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[13:11:21] [ServerMain/INFO]: Loaded 1370 recipes
+[13:11:21] [ServerMain/INFO]: Loaded 1481 advancements
+[13:11:21] [ServerMain/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
+[13:11:21] [ServerMain/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 264.1ms
+[13:11:21] [Server thread/INFO]: Starting minecraft server version 1.21.4
+[13:11:21] [Server thread/INFO]: Loading properties
+[13:11:21] [Server thread/INFO]: This server is running Paper version 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) (Implementing API version 1.21.4-R0.1-SNAPSHOT)
+[13:11:21] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[13:11:21] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[13:11:21] [Server thread/INFO]: Using 4 threads for Netty based IO
+[13:11:22] [Server thread/INFO]: [MoonriseCommon] Paper is using 2 worker threads, 1 I/O threads
+[13:11:22] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
+[13:11:22] [Server thread/INFO]: Default game type: SURVIVAL
+[13:11:22] [Server thread/INFO]: Generating keypair
+[13:11:22] [Server thread/INFO]: Starting Minecraft server on *:25565
+[13:11:22] [Server thread/INFO]: Using default channel type
+[13:11:22] [Server thread/INFO]: Paper: Using libdeflate (macOS ARM64 / Apple Silicon) compression from Velocity.
+[13:11:22] [Server thread/INFO]: Paper: Using native (macOS ARM64 / Apple Silicon) cipher from Velocity.
+[13:11:22] [Server thread/INFO]: [plugin] Loading server plugin plugin v1.0-SNAPSHOT
+[13:11:22] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[13:11:22] [Server thread/INFO]: Preparing level "world"
+[13:11:23] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[13:11:23] [Server thread/INFO]: Preparing spawn area: 0%
+[13:11:23] [Server thread/INFO]: Preparing spawn area: 12%
+[13:11:23] [Server thread/INFO]: Time elapsed: 585 ms
+[13:11:23] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[13:11:23] [Server thread/INFO]: Preparing spawn area: 0%
+[13:11:24] [Server thread/INFO]: Time elapsed: 71 ms
+[13:11:24] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[13:11:24] [Server thread/INFO]: Preparing spawn area: 0%
+[13:11:24] [Server thread/INFO]: Time elapsed: 55 ms
+[13:11:24] [Server thread/INFO]: [plugin] Enabling plugin v1.0-SNAPSHOT
+[13:11:24] [Server thread/INFO]: [plugin] ServerStatusPlugin이 성공적으로 활성화되었습니다.
+[13:11:24] [Server thread/INFO]: [spark] Starting background profiler...
+[13:11:25] [Server thread/INFO]: Done preparing level "world" (2.294s)
+[13:11:25] [Server thread/INFO]: Starting remote control listener
+[13:11:25] [Server thread/INFO]: Thread RCON Listener started
+[13:11:25] [Server thread/INFO]: RCON running on 0.0.0.0:25575
+[13:11:25] [Server thread/INFO]: Running delayed init tasks
+[13:11:25] [Server thread/INFO]: Done (10.629s)! For help, type "help"
+[13:11:42] [User Authenticator #0/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[13:11:43] [Server thread/INFO]: Bico_ joined the game
+[13:11:43] [Server thread/INFO]: Bico_[/127.0.0.1:52566] logged in with entity id 36 at ([world]-170.69999998807907, 73.0, -31.59515437769349)
+[13:11:57] [Async Chat Thread - #1/INFO]: <Bico_> 123
+[13:11:58] [Async Chat Thread - #1/INFO]: <Bico_> 123123123
+[13:12:09] [Async Chat Thread - #0/INFO]: <Bico_> 2341243
+[13:17:59] [Async Chat Thread - #2/INFO]: <Bico_> ㄱㅏ나다라마ㅏ바
+[13:48:55] [Async Chat Thread - #4/INFO]: <Bico_> 1
+[13:49:05] [Async Chat Thread - #5/INFO]: <Bico_> sdfsaf

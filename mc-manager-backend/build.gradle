@@ -1,0 +1,49 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.2'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.mcmanager'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Spring Boot Web만 사용
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// JSON 파일 감시용
+	implementation 'commons-io:commons-io:2.11.0'
+	implementation 'jakarta.annotation:jakarta.annotation-api'
+
+	// Lombok
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// Jackson
+	implementation 'com.fasterxml.jackson.core:jackson-databind'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+springBoot {
+	mainClass = 'com.mcmanager.McManagerBackendApplication'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
