@@ -1,6 +1,10 @@
 # MC Manager
 
 ![스크린샷 2025-02-03 오전 11 31 57](https://github.com/user-attachments/assets/59b3dba1-8a84-4595-831e-af55775048df)
+![스크린샷 2025-02-04 오후 5 48 29](https://github.com/user-attachments/assets/6dfc0cd2-e63d-4a30-8bd5-92a58b6e1688)
+![스크린샷 2025-02-04 오후 5 48 40](https://github.com/user-attachments/assets/ea0e3741-3b29-4048-bbf5-d1b5e0426846)
+![스크린샷 2025-02-04 오후 5 48 54](https://github.com/user-attachments/assets/35799551-15a2-4363-a7bf-d4314b99121c)
+
 
 마인크래프트 서버 관리를 위한 대시보드 프로젝트입니다. 서버 상태, 플레이어 정보, 채팅 로그 등을 실시간으로 모니터링할 수 있습니다.
 
