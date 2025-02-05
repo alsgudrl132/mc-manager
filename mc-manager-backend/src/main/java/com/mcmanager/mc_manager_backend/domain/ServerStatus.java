@@ -8,6 +8,7 @@ public class ServerStatus {
     private double tps;
     private int maxPlayers;
     private int onlinePlayers;
-    private String ramUsage;
+    private RamUsage ramUsage;
     private List<Player> players;
+    private String uptime;
 }

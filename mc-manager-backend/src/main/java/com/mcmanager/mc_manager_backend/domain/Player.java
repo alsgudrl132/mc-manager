@@ -8,4 +8,6 @@ public class Player {
     private int level;
     private double health;
     private String world;
+    private boolean online;
+    private String skinUrl;
 }

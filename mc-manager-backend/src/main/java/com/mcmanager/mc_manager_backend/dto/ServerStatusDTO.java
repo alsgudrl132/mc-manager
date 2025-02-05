@@ -11,17 +11,29 @@ import java.util.List;
 public class ServerStatusDTO {
     private int maxPlayers;
     private int onlinePlayers;
-    private String ramUsage;
+    private RamUsageDTO ramUsage;
     private double tps;
     private List<PlayerDTO> players;
+    private String uptime;
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class RamUsageDTO {
+        private long total;
+        private String formatted;
+        private long used;
+    }
 
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
     public static class PlayerDTO {
-        private int level;
         private String name;
+        private int level;
         private double health;
         private String world;
+        private boolean online;
+        private String skinUrl;
     }
 }

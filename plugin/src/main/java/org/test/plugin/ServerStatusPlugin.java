@@ -11,9 +11,11 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.*;
+import java.lang.management.ManagementFactory;
 import java.nio.file.*;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.TimeUnit;
 
 public class ServerStatusPlugin extends JavaPlugin implements Listener {
 
@@ -22,10 +24,12 @@ public class ServerStatusPlugin extends JavaPlugin implements Listener {
     private static final int MAX_CHAT_LOG = 100;
     private Queue<Map<String, Object>> chatLogs = new ConcurrentLinkedQueue<>();
     private double tps = 20.0;
+    private long startTime;
 
     @Override
     public void onEnable() {
         try {
+            startTime = System.currentTimeMillis();
             dataFolder = getDataFolder();
             Files.createDirectories(dataFolder.toPath());
             getServer().getPluginManager().registerEvents(this, this);
@@ -37,10 +41,12 @@ public class ServerStatusPlugin extends JavaPlugin implements Listener {
         }
     }
 
-    @EventHandler
-    public void onServerTick(ServerTickStartEvent event) {
-        // TPS 계산을 위한 이벤트 핸들러
-        tps = Bukkit.getTPS()[0];
+    private String getUptime() {
+        long uptime = System.currentTimeMillis() - startTime;
+        long days = TimeUnit.MILLISECONDS.toDays(uptime);
+        long hours = TimeUnit.MILLISECONDS.toHours(uptime) % 24;
+        long minutes = TimeUnit.MILLISECONDS.toMinutes(uptime) % 60;
+        return String.format("%dd %dh %dm", days, hours, minutes);
     }
 
     private void updateServerStatus() {
@@ -51,12 +57,19 @@ public class ServerStatusPlugin extends JavaPlugin implements Listener {
             serverData.put("tps", Math.min(20.0, Math.round(tps * 100.0) / 100.0));
             serverData.put("maxPlayers", Bukkit.getMaxPlayers());
             serverData.put("onlinePlayers", Bukkit.getOnlinePlayers().size());
+            serverData.put("uptime", getUptime());
 
-            // 메모리 사용량
+            // 시스템 메모리 정보
             Runtime runtime = Runtime.getRuntime();
-            long usedMemory = (runtime.totalMemory() - runtime.freeMemory()) / 1024 / 1024;
+            long totalMemory = runtime.totalMemory() / 1024 / 1024;
+            long freeMemory = runtime.freeMemory() / 1024 / 1024;
+            long usedMemory = totalMemory - freeMemory;
             long maxMemory = runtime.maxMemory() / 1024 / 1024;
-            serverData.put("ramUsage", String.format("%d/%dMB", usedMemory, maxMemory));
+            serverData.put("ramUsage", new HashMap<String, Object>() {{
+                put("used", usedMemory);
+                put("total", maxMemory);
+                put("formatted", String.format("%d/%dMB", usedMemory, maxMemory));
+            }});
 
             // 플레이어 정보
             List<Map<String, Object>> playerList = new ArrayList<>();
@@ -66,6 +79,9 @@ public class ServerStatusPlugin extends JavaPlugin implements Listener {
                 playerData.put("level", player.getLevel());
                 playerData.put("health", Math.round(player.getHealth() * 10.0) / 10.0);
                 playerData.put("world", player.getWorld().getName());
+                playerData.put("online", true);
+                // MCHeads API를 통해 스킨 URL 생성
+                playerData.put("skinUrl", String.format("https://mc-heads.net/avatar/%s", player.getUniqueId().toString()));
                 playerList.add(playerData);
             }
             serverData.put("players", playerList);

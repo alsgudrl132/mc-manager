@@ -1,3 +1,6 @@
+"use client";
+
+import { getServerStatus, ServerStatus } from "@/api/minecraft";
 import {
   Card,
   CardContent,
@@ -5,8 +8,25 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Activity, Database, Search, Users } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [status, setStatus] = useState<ServerStatus | null>(null);
+
+  useEffect(() => {
+    const fetchStatus = async () => {
+      try {
+        const data = await getServerStatus();
+        setStatus(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchStatus();
+  }, []);
+
+  console.log(status);
+
   return (
     <div>
       <div className="flex">
@@ -18,7 +38,7 @@ export default function Home() {
                   Active Players
                 </CardTitle>
                 <CardDescription className="font-bold text-2xl text-black">
-                  42
+                  {status?.onlinePlayers}
                 </CardDescription>
               </div>
               <div className="bg-emerald-100 p-2 rounded-lg h-10">
@@ -35,7 +55,7 @@ export default function Home() {
                   Server Uptime
                 </CardTitle>
                 <CardDescription className="font-bold text-base text-black">
-                  24d 12h 50m
+                  {status?.uptime}
                 </CardDescription>
               </div>
               <div className="bg-blue-100 p-2 rounded-lg h-10">
@@ -49,8 +69,8 @@ export default function Home() {
             <div className="flex justify-between gap-4">
               <div>
                 <CardTitle className="mb-3 text-gray-500">RAM Usage</CardTitle>
-                <CardDescription className="font-bold text-2xl text-black">
-                  6.2/8GB
+                <CardDescription className="font-bold text-lg text-black">
+                  {status?.ramUsage.formatted}
                 </CardDescription>
               </div>
               <div className="bg-amber-100 p-2 rounded-lg h-10">

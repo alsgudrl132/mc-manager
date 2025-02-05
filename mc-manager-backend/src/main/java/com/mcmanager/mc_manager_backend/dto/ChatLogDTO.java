@@ -1,4 +1,14 @@
 package com.mcmanager.mc_manager_backend.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class ChatLogDTO {
+    private String player;
+    private String message;
+    private long timestamp;
 }
