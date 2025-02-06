@@ -25,8 +25,8 @@ export default function Home() {
         <img src={player.skinUrl} alt="skin" />
       </div>
       <div>
-        <p>{player.name}</p>
-        <p>{player.level}</p>
+        <p>Name : {player.name}</p>
+        <p>Level : {player.level}</p>
       </div>
       <div>
         <span className="rounded-lg text-white bg-black pt-1 pb-1 pl-3 pr-3">

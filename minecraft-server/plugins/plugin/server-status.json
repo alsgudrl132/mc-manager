@@ -3,8 +3,8 @@
   "onlinePlayers": 1,
   "ramUsage": {
     "total": 1024,
-    "formatted": "484/1024MB",
-    "used": 484
+    "formatted": "896/1024MB",
+    "used": 896
   },
   "tps": 20.0,
   "players": [
@@ -17,5 +17,5 @@
       "skinUrl": "https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988"
     }
   ],
-  "uptime": "0d 0h 3m"
+  "uptime": "0d 1h 12m"
 }
