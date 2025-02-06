@@ -17611,3 +17611,618 @@
 2025-02-06 16:20:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
 2025-02-06 16:20:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=859/1024MB, used=859), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 32m)
 2025-02-06 16:20:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:20:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:20:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=917/1024MB, used=917), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 32m)
+2025-02-06 16:20:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:20:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:20:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=357/1024MB, used=357), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 32m)
+2025-02-06 16:20:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:20:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:20:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=400/1024MB, used=400), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 32m)
+2025-02-06 16:20:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:21:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:21:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=443/1024MB, used=443), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 32m)
+2025-02-06 16:21:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:21:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:21:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=492/1024MB, used=492), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 33m)
+2025-02-06 16:21:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:21:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:21:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=540/1024MB, used=540), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 33m)
+2025-02-06 16:21:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:21:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:21:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=608/1024MB, used=608), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 33m)
+2025-02-06 16:21:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:21:41 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:21:41 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=654/1024MB, used=654), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 33m)
+2025-02-06 16:21:41 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:21:51 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:21:51 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=699/1024MB, used=699), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 33m)
+2025-02-06 16:21:51 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:22:01 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:22:01 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=746/1024MB, used=746), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 33m)
+2025-02-06 16:22:01 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:22:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:22:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=793/1024MB, used=793), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 34m)
+2025-02-06 16:22:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:22:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:22:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=840/1024MB, used=840), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 34m)
+2025-02-06 16:22:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:22:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:22:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=906/1024MB, used=906), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 34m)
+2025-02-06 16:22:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:22:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:22:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=353/1024MB, used=353), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 34m)
+2025-02-06 16:22:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:22:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:22:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=402/1024MB, used=402), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 34m)
+2025-02-06 16:22:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:23:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:23:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=449/1024MB, used=449), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 34m)
+2025-02-06 16:23:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:23:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:23:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=495/1024MB, used=495), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 35m)
+2025-02-06 16:23:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:23:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:23:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=542/1024MB, used=542), players=[Player(name=Bico_, level=21, health=5.5, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 35m)
+2025-02-06 16:23:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:23:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:23:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=816/1024MB, used=816), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 35m)
+2025-02-06 16:23:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:23:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:23:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=823/1024MB, used=823), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 35m)
+2025-02-06 16:23:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:23:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:23:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=830/1024MB, used=830), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 35m)
+2025-02-06 16:23:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:24:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:24:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=838/1024MB, used=838), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 35m)
+2025-02-06 16:24:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:24:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:24:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=844/1024MB, used=844), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 36m)
+2025-02-06 16:24:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:24:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:24:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=851/1024MB, used=851), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 36m)
+2025-02-06 16:24:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:24:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:24:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=901/1024MB, used=901), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 36m)
+2025-02-06 16:24:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:24:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:24:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=908/1024MB, used=908), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 36m)
+2025-02-06 16:24:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:24:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:24:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=915/1024MB, used=915), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 36m)
+2025-02-06 16:24:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:25:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:25:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=922/1024MB, used=922), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 36m)
+2025-02-06 16:25:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:25:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:25:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=929/1024MB, used=929), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 37m)
+2025-02-06 16:25:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:25:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:25:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=936/1024MB, used=936), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 37m)
+2025-02-06 16:25:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:25:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:25:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=350/1024MB, used=350), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 37m)
+2025-02-06 16:25:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:25:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:25:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=357/1024MB, used=357), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 37m)
+2025-02-06 16:25:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:25:51 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:25:51 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=364/1024MB, used=364), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 37m)
+2025-02-06 16:25:51 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:26:01 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:26:01 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=371/1024MB, used=371), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 37m)
+2025-02-06 16:26:01 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:26:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:26:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=378/1024MB, used=378), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 38m)
+2025-02-06 16:26:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:26:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:26:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=385/1024MB, used=385), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 38m)
+2025-02-06 16:26:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:26:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:26:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=403/1024MB, used=403), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 38m)
+2025-02-06 16:26:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:26:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:26:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=410/1024MB, used=410), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 38m)
+2025-02-06 16:26:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:26:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:26:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=417/1024MB, used=417), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 38m)
+2025-02-06 16:26:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:27:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:27:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=424/1024MB, used=424), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 38m)
+2025-02-06 16:27:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:27:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:27:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=431/1024MB, used=431), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 39m)
+2025-02-06 16:27:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:27:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:27:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=438/1024MB, used=438), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 39m)
+2025-02-06 16:27:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:27:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:27:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=455/1024MB, used=455), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 39m)
+2025-02-06 16:27:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:27:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:27:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=462/1024MB, used=462), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 39m)
+2025-02-06 16:27:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:27:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:27:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=470/1024MB, used=470), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 39m)
+2025-02-06 16:27:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:28:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:28:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=477/1024MB, used=477), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 39m)
+2025-02-06 16:28:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:28:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:28:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=484/1024MB, used=484), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 40m)
+2025-02-06 16:28:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:28:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:28:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=491/1024MB, used=491), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 40m)
+2025-02-06 16:28:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:28:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:28:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=506/1024MB, used=506), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 40m)
+2025-02-06 16:28:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:28:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:28:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=512/1024MB, used=512), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 40m)
+2025-02-06 16:28:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:28:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:28:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=516/1024MB, used=516), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 40m)
+2025-02-06 16:28:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:29:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:29:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=521/1024MB, used=521), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 40m)
+2025-02-06 16:29:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:29:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:29:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=526/1024MB, used=526), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 41m)
+2025-02-06 16:29:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:29:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:29:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=531/1024MB, used=531), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 41m)
+2025-02-06 16:29:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:29:31 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:29:31 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=548/1024MB, used=548), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 41m)
+2025-02-06 16:29:31 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:29:41 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:29:41 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=553/1024MB, used=553), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 41m)
+2025-02-06 16:29:41 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:29:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:29:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=558/1024MB, used=558), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 41m)
+2025-02-06 16:29:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:30:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:30:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=563/1024MB, used=563), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 41m)
+2025-02-06 16:30:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:30:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:30:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=568/1024MB, used=568), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 42m)
+2025-02-06 16:30:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:30:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:30:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=573/1024MB, used=573), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 42m)
+2025-02-06 16:30:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:30:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:30:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=589/1024MB, used=589), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 42m)
+2025-02-06 16:30:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:30:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:30:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=594/1024MB, used=594), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 42m)
+2025-02-06 16:30:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:30:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:30:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=598/1024MB, used=598), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 42m)
+2025-02-06 16:30:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:31:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:31:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=603/1024MB, used=603), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 42m)
+2025-02-06 16:31:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:31:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:31:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=608/1024MB, used=608), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 43m)
+2025-02-06 16:31:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:31:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:31:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=613/1024MB, used=613), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 43m)
+2025-02-06 16:31:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:31:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:31:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=629/1024MB, used=629), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 43m)
+2025-02-06 16:31:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:31:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:31:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=633/1024MB, used=633), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 43m)
+2025-02-06 16:31:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:31:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:31:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=638/1024MB, used=638), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 43m)
+2025-02-06 16:31:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:32:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:32:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=643/1024MB, used=643), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 43m)
+2025-02-06 16:32:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:32:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:32:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=648/1024MB, used=648), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 44m)
+2025-02-06 16:32:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:32:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:32:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=653/1024MB, used=653), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 44m)
+2025-02-06 16:32:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:32:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:32:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=668/1024MB, used=668), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 44m)
+2025-02-06 16:32:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:32:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:32:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=673/1024MB, used=673), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 44m)
+2025-02-06 16:32:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:32:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:32:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=678/1024MB, used=678), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 44m)
+2025-02-06 16:32:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:33:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:33:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=683/1024MB, used=683), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 44m)
+2025-02-06 16:33:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:33:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:33:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=688/1024MB, used=688), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 45m)
+2025-02-06 16:33:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:33:21 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:33:21 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=693/1024MB, used=693), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 45m)
+2025-02-06 16:33:21 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:33:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:33:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=708/1024MB, used=708), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 45m)
+2025-02-06 16:33:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:33:31 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:33:31 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=708/1024MB, used=708), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 45m)
+2025-02-06 16:33:31 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:33:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:33:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=714/1024MB, used=714), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 45m)
+2025-02-06 16:33:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:33:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:33:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=718/1024MB, used=718), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 45m)
+2025-02-06 16:33:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:34:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:34:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=723/1024MB, used=723), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 45m)
+2025-02-06 16:34:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:34:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:34:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=728/1024MB, used=728), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 46m)
+2025-02-06 16:34:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:34:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:34:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=733/1024MB, used=733), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 46m)
+2025-02-06 16:34:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:34:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:34:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=751/1024MB, used=751), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 46m)
+2025-02-06 16:34:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:34:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:34:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=756/1024MB, used=756), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 46m)
+2025-02-06 16:34:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:34:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:34:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=761/1024MB, used=761), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 46m)
+2025-02-06 16:34:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:35:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:35:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=765/1024MB, used=765), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 46m)
+2025-02-06 16:35:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:35:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:35:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=770/1024MB, used=770), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 47m)
+2025-02-06 16:35:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:35:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:35:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=775/1024MB, used=775), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 47m)
+2025-02-06 16:35:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:35:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:35:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=790/1024MB, used=790), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 47m)
+2025-02-06 16:35:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:35:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:35:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=796/1024MB, used=796), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 47m)
+2025-02-06 16:35:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:35:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:35:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=800/1024MB, used=800), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 47m)
+2025-02-06 16:35:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:36:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:36:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=805/1024MB, used=805), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 47m)
+2025-02-06 16:36:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:36:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:36:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=810/1024MB, used=810), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 48m)
+2025-02-06 16:36:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:36:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:36:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=815/1024MB, used=815), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 48m)
+2025-02-06 16:36:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:36:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:36:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=830/1024MB, used=830), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 48m)
+2025-02-06 16:36:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:36:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:36:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=835/1024MB, used=835), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 48m)
+2025-02-06 16:36:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:36:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:36:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=840/1024MB, used=840), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 48m)
+2025-02-06 16:36:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:37:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:37:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=845/1024MB, used=845), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 48m)
+2025-02-06 16:37:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:37:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:37:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=850/1024MB, used=850), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 49m)
+2025-02-06 16:37:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:37:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:37:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=855/1024MB, used=855), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 49m)
+2025-02-06 16:37:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:37:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:37:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=870/1024MB, used=870), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 49m)
+2025-02-06 16:37:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:37:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:37:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=875/1024MB, used=875), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 49m)
+2025-02-06 16:37:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:37:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:37:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=880/1024MB, used=880), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 49m)
+2025-02-06 16:37:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:38:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:38:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=885/1024MB, used=885), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 49m)
+2025-02-06 16:38:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:38:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:38:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=890/1024MB, used=890), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 50m)
+2025-02-06 16:38:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:38:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:38:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=894/1024MB, used=894), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 50m)
+2025-02-06 16:38:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:38:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:38:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=910/1024MB, used=910), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 50m)
+2025-02-06 16:38:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:38:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:38:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=915/1024MB, used=915), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 50m)
+2025-02-06 16:38:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:38:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:38:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=920/1024MB, used=920), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 50m)
+2025-02-06 16:38:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:39:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:39:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=925/1024MB, used=925), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 50m)
+2025-02-06 16:39:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:39:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:39:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=930/1024MB, used=930), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 51m)
+2025-02-06 16:39:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:39:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:39:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=934/1024MB, used=934), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 51m)
+2025-02-06 16:39:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:39:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:39:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=352/1024MB, used=352), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 51m)
+2025-02-06 16:39:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:39:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:39:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=356/1024MB, used=356), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 51m)
+2025-02-06 16:39:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:39:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:39:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=361/1024MB, used=361), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 51m)
+2025-02-06 16:39:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:40:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:40:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=366/1024MB, used=366), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 51m)
+2025-02-06 16:40:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:40:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:40:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=371/1024MB, used=371), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 52m)
+2025-02-06 16:40:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:40:21 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:40:21 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=376/1024MB, used=376), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 52m)
+2025-02-06 16:40:21 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:40:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:40:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=391/1024MB, used=391), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 52m)
+2025-02-06 16:40:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:40:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:40:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=396/1024MB, used=396), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 52m)
+2025-02-06 16:40:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:40:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:40:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=401/1024MB, used=401), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 52m)
+2025-02-06 16:40:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:41:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:41:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=406/1024MB, used=406), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 52m)
+2025-02-06 16:41:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:41:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:41:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=411/1024MB, used=411), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 53m)
+2025-02-06 16:41:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:41:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:41:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=416/1024MB, used=416), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 53m)
+2025-02-06 16:41:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:41:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:41:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=431/1024MB, used=431), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 53m)
+2025-02-06 16:41:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:41:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:41:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=436/1024MB, used=436), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 53m)
+2025-02-06 16:41:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:41:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:41:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=440/1024MB, used=440), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 53m)
+2025-02-06 16:41:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:42:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:42:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=446/1024MB, used=446), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 53m)
+2025-02-06 16:42:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:42:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:42:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=450/1024MB, used=450), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 54m)
+2025-02-06 16:42:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:42:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:42:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=455/1024MB, used=455), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 54m)
+2025-02-06 16:42:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:42:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:42:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=470/1024MB, used=470), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 54m)
+2025-02-06 16:42:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:42:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:42:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=475/1024MB, used=475), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 54m)
+2025-02-06 16:42:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:42:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:42:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=480/1024MB, used=480), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 54m)
+2025-02-06 16:42:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:43:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:43:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=485/1024MB, used=485), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 54m)
+2025-02-06 16:43:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:43:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:43:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=490/1024MB, used=490), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 55m)
+2025-02-06 16:43:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:43:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:43:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=495/1024MB, used=495), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 55m)
+2025-02-06 16:43:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:43:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:43:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=510/1024MB, used=510), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 55m)
+2025-02-06 16:43:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:43:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:43:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=516/1024MB, used=516), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 55m)
+2025-02-06 16:43:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:43:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:43:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=520/1024MB, used=520), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 55m)
+2025-02-06 16:43:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:44:01 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:44:01 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=525/1024MB, used=525), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 55m)
+2025-02-06 16:44:01 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:44:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:44:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=530/1024MB, used=530), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 56m)
+2025-02-06 16:44:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:44:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:44:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=535/1024MB, used=535), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 56m)
+2025-02-06 16:44:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:44:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:44:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=552/1024MB, used=552), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 56m)
+2025-02-06 16:44:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:44:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:44:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=557/1024MB, used=557), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 56m)
+2025-02-06 16:44:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:44:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:44:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=562/1024MB, used=562), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 56m)
+2025-02-06 16:44:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:45:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:45:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=567/1024MB, used=567), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 56m)
+2025-02-06 16:45:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:45:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:45:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=571/1024MB, used=571), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 57m)
+2025-02-06 16:45:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:45:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:45:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=577/1024MB, used=577), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 57m)
+2025-02-06 16:45:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:45:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:45:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=592/1024MB, used=592), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 57m)
+2025-02-06 16:45:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:45:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:45:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=597/1024MB, used=597), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 57m)
+2025-02-06 16:45:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:45:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:45:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=602/1024MB, used=602), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 57m)
+2025-02-06 16:45:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:46:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:46:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=606/1024MB, used=606), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 57m)
+2025-02-06 16:46:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:46:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:46:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=612/1024MB, used=612), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 58m)
+2025-02-06 16:46:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:46:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:46:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=616/1024MB, used=616), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 58m)
+2025-02-06 16:46:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:46:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:46:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=632/1024MB, used=632), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 58m)
+2025-02-06 16:46:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:46:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:46:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=636/1024MB, used=636), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 58m)
+2025-02-06 16:46:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:46:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:46:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=641/1024MB, used=641), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 58m)
+2025-02-06 16:46:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:47:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:47:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=646/1024MB, used=646), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 58m)
+2025-02-06 16:47:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:47:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:47:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=651/1024MB, used=651), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 59m)
+2025-02-06 16:47:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:47:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:47:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=656/1024MB, used=656), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 59m)
+2025-02-06 16:47:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:47:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:47:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=671/1024MB, used=671), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 59m)
+2025-02-06 16:47:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:47:41 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:47:41 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=676/1024MB, used=676), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 59m)
+2025-02-06 16:47:41 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:47:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:47:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=681/1024MB, used=681), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 59m)
+2025-02-06 16:47:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:48:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:48:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=686/1024MB, used=686), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 22h 59m)
+2025-02-06 16:48:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:48:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:48:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=691/1024MB, used=691), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 0m)
+2025-02-06 16:48:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:48:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:48:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=696/1024MB, used=696), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 0m)
+2025-02-06 16:48:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:48:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:48:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=711/1024MB, used=711), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 0m)
+2025-02-06 16:48:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:48:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:48:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=716/1024MB, used=716), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 0m)
+2025-02-06 16:48:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:48:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:48:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=721/1024MB, used=721), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 0m)
+2025-02-06 16:48:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:49:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:49:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=726/1024MB, used=726), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 0m)
+2025-02-06 16:49:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:49:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:49:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=731/1024MB, used=731), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 1m)
+2025-02-06 16:49:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:49:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:49:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=735/1024MB, used=735), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 1m)
+2025-02-06 16:49:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:49:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:49:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=754/1024MB, used=754), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 1m)
+2025-02-06 16:49:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:49:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:49:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=759/1024MB, used=759), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 1m)
+2025-02-06 16:49:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:49:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:49:50 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=764/1024MB, used=764), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 1m)
+2025-02-06 16:49:50 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:50:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:50:00 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=768/1024MB, used=768), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 1m)
+2025-02-06 16:50:00 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:50:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:50:10 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=773/1024MB, used=773), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 2m)
+2025-02-06 16:50:10 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:50:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:50:20 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=778/1024MB, used=778), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 2m)
+2025-02-06 16:50:20 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:50:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:50:30 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=793/1024MB, used=793), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 2m)
+2025-02-06 16:50:30 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:50:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:50:40 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=798/1024MB, used=798), players=[Player(name=Bico_, level=21, health=0.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 23h 2m)
+2025-02-06 16:50:40 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:51:22 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:51:23 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=532/1024MB, used=532), players=[], uptime=0d 0h 0m)
+2025-02-06 16:51:23 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:51:33 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:51:33 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=540/1024MB, used=540), players=[], uptime=0d 0h 0m)
+2025-02-06 16:51:33 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:51:43 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:51:43 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=544/1024MB, used=544), players=[], uptime=0d 0h 0m)
+2025-02-06 16:51:43 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:51:53 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:51:53 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=549/1024MB, used=549), players=[], uptime=0d 0h 0m)
+2025-02-06 16:51:53 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:52:03 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:52:03 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=554/1024MB, used=554), players=[], uptime=0d 0h 0m)
+2025-02-06 16:52:03 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:52:12 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:52:12 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=558/1024MB, used=558), players=[], uptime=0d 0h 0m)
+2025-02-06 16:52:12 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:52:22 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:52:22 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=675/1024MB, used=675), players=[], uptime=0d 0h 1m)
+2025-02-06 16:52:22 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:52:32 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:52:32 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=676/1024MB, used=676), players=[], uptime=0d 0h 1m)
+2025-02-06 16:52:32 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:52:42 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:52:42 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=678/1024MB, used=678), players=[], uptime=0d 0h 1m)
+2025-02-06 16:52:42 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:52:52 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:52:52 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=680/1024MB, used=680), players=[], uptime=0d 0h 1m)
+2025-02-06 16:52:52 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:53:02 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:53:02 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=681/1024MB, used=681), players=[], uptime=0d 0h 1m)
+2025-02-06 16:53:02 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:53:12 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:53:12 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=0, ramUsage=RamUsage(total=1024, formatted=682/1024MB, used=682), players=[], uptime=0d 0h 1m)
+2025-02-06 16:53:12 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:53:22 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:53:22 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=363/1024MB, used=363), players=[Player(name=Bico_, level=0, health=20.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 0h 2m)
+2025-02-06 16:53:22 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:53:32 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:53:32 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=569/1024MB, used=569), players=[Player(name=Bico_, level=0, health=20.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 0h 2m)
+2025-02-06 16:53:32 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:53:42 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:53:42 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=612/1024MB, used=612), players=[Player(name=Bico_, level=0, health=20.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 0h 2m)
+2025-02-06 16:53:42 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:53:52 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:53:52 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=657/1024MB, used=657), players=[Player(name=Bico_, level=0, health=20.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 0h 2m)
+2025-02-06 16:53:52 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:54:02 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:54:02 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=702/1024MB, used=702), players=[Player(name=Bico_, level=0, health=20.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 0h 2m)
+2025-02-06 16:54:02 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:54:12 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:54:12 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=751/1024MB, used=751), players=[Player(name=Bico_, level=0, health=20.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 0h 2m)
+2025-02-06 16:54:12 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:54:22 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:54:22 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=348/1024MB, used=348), players=[Player(name=Bico_, level=0, health=20.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 0h 3m)
+2025-02-06 16:54:22 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:54:32 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:54:32 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=394/1024MB, used=394), players=[Player(name=Bico_, level=0, health=20.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 0h 3m)
+2025-02-06 16:54:32 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:54:42 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:54:42 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=444/1024MB, used=444), players=[Player(name=Bico_, level=0, health=20.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 0h 3m)
+2025-02-06 16:54:42 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공
+2025-02-06 16:54:52 [Thread-1] INFO  c.m.m.service.FileWatcherService - 파일 변경 감지: server-status.json
+2025-02-06 16:54:52 [Thread-1] INFO  c.m.m.service.MinecraftServerService - 서버 상태 업데이트: ServerStatus(tps=20.0, maxPlayers=20, onlinePlayers=1, ramUsage=RamUsage(total=1024, formatted=484/1024MB, used=484), players=[Player(name=Bico_, level=0, health=20.0, world=world, online=true, skinUrl=https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988)], uptime=0d 0h 3m)
+2025-02-06 16:54:52 [Thread-1] INFO  c.m.m.service.FileWatcherService - 서버 상태 업데이트 성공

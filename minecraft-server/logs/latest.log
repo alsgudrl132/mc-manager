@@ -1,9 +1,50 @@
-[16:04:47] [Server thread/INFO]: Bico_ was blown up by Creeper
-[16:10:05] [Server thread/INFO]: Made Bico_ a server operator
-[16:10:46] [Server thread/INFO]: Bico_ issued server command: /xp add B
-[16:10:51] [Server thread/INFO]: Bico_ issued server command: /xp add Bico_ 500
-[16:10:51] [Server thread/INFO]: [Bico_: Gave 500 experience points to Bico_]
-[16:11:27] [Server thread/INFO]: Bico_ issued server command: /xp add Bico_ 10
-[16:11:27] [Server thread/INFO]: [Bico_: Gave 10 experience points to Bico_]
-[16:11:29] [Server thread/INFO]: Bico_ issued server command: /xp add Bico_ 100
-[16:11:29] [Server thread/INFO]: [Bico_: Gave 100 experience points to Bico_]
+[16:51:12] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.3+9-LTS; Amazon.com Inc. Corretto-21.0.3.9.1) on Mac OS X 14.6.1 (aarch64)
+[16:51:12] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) for Minecraft 1.21.4
+[16:51:13] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[16:51:13] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[16:51:13] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+ - plugin (1.0-SNAPSHOT)
+[16:51:16] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[16:51:17] [ServerMain/INFO]: Loaded 1370 recipes
+[16:51:17] [ServerMain/INFO]: Loaded 1481 advancements
+[16:51:17] [ServerMain/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
+[16:51:17] [ServerMain/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 122.2ms
+[16:51:17] [Server thread/INFO]: Starting minecraft server version 1.21.4
+[16:51:17] [Server thread/INFO]: Loading properties
+[16:51:17] [Server thread/INFO]: This server is running Paper version 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) (Implementing API version 1.21.4-R0.1-SNAPSHOT)
+[16:51:17] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[16:51:17] [Server thread/INFO]: Using 4 threads for Netty based IO
+[16:51:17] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[16:51:18] [Server thread/INFO]: [MoonriseCommon] Paper is using 2 worker threads, 1 I/O threads
+[16:51:18] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
+[16:51:18] [Server thread/INFO]: Default game type: SURVIVAL
+[16:51:18] [Server thread/INFO]: Generating keypair
+[16:51:18] [Server thread/INFO]: Starting Minecraft server on *:25565
+[16:51:18] [Server thread/INFO]: Using default channel type
+[16:51:18] [Server thread/INFO]: Paper: Using libdeflate (macOS ARM64 / Apple Silicon) compression from Velocity.
+[16:51:18] [Server thread/INFO]: Paper: Using native (macOS ARM64 / Apple Silicon) cipher from Velocity.
+[16:51:18] [Server thread/INFO]: [plugin] Loading server plugin plugin v1.0-SNAPSHOT
+[16:51:18] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[16:51:18] [Server thread/INFO]: Preparing level "world"
+[16:51:19] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[16:51:19] [Server thread/INFO]: Preparing spawn area: 0%
+[16:51:19] [Server thread/INFO]: Time elapsed: 493 ms
+[16:51:19] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[16:51:19] [Server thread/INFO]: Preparing spawn area: 0%
+[16:51:19] [Server thread/INFO]: Time elapsed: 96 ms
+[16:51:19] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[16:51:19] [Server thread/INFO]: Preparing spawn area: 0%
+[16:51:19] [Server thread/INFO]: Time elapsed: 45 ms
+[16:51:19] [Server thread/INFO]: [plugin] Enabling plugin v1.0-SNAPSHOT
+[16:51:19] [Server thread/INFO]: [plugin] ServerStatusPlugin이 성공적으로 활성화되었습니다.
+[16:51:19] [Server thread/INFO]: [spark] Starting background profiler...
+[16:51:21] [Server thread/INFO]: Done preparing level "world" (2.341s)
+[16:51:21] [Server thread/INFO]: Starting remote control listener
+[16:51:21] [Server thread/INFO]: Thread RCON Listener started
+[16:51:21] [Server thread/INFO]: RCON running on 0.0.0.0:25575
+[16:51:21] [Server thread/INFO]: Running delayed init tasks
+[16:51:21] [Server thread/INFO]: Done (9.711s)! For help, type "help"
+[16:52:21] [Server thread/INFO]: Server empty for 60 seconds, pausing
+[16:53:15] [User Authenticator #0/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:53:16] [Server thread/INFO]: Bico_ joined the game
+[16:53:16] [Server thread/INFO]: Bico_[/127.0.0.1:58176] logged in with entity id 72 at ([world]-108.36180094228138, 61.0, 39.575679648517855)

@@ -1,6 +1,4 @@
 "use client";
-
-import { getServerStatus, ServerStatus } from "@/api/minecraft";
 import {
   Card,
   CardContent,
@@ -8,22 +6,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Activity, Database, Search, Users } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useServerStore } from "../../store/minecraftStore";
+import CommonLoading from "./common/CommonLoading";
 
 export default function Home() {
-  const [status, setStatus] = useState<ServerStatus | null>(null);
+  const { status, isLoading, fetchStatus } = useServerStore();
 
   useEffect(() => {
-    const fetchStatus = async () => {
-      try {
-        const data = await getServerStatus();
-        setStatus(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
     fetchStatus();
-  }, []);
+  }, [fetchStatus]);
+
+  if (isLoading) return <CommonLoading />;
 
   const playerList = status?.players.map((player) => (
     <Card key={player.name} className="mt-5 p-3 mr-10 flex items-center gap-4">
