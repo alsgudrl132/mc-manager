@@ -1,65 +1,9 @@
-[17:41:26] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
-[17:41:26] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
-[17:41:26] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[17:41:26] [Server thread/INFO]: Using 4 threads for Netty based IO
-[17:41:27] [Server thread/INFO]: [MoonriseCommon] Paper is using 2 worker threads, 1 I/O threads
-[17:41:27] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
-[17:41:27] [Server thread/INFO]: [plugin] Disabling plugin v1.0-SNAPSHOT
-[17:41:28] [Server thread/INFO]: Loaded 1370 recipes
-[17:41:28] [Server thread/INFO]: Loaded 1481 advancements
-[17:41:28] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
-[17:41:28] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins/plugin.jar'...
-[17:41:29] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins/plugin.jar' in 742ms.
-[17:41:29] [Server thread/INFO]: [PluginInitializerManager] Initialized 1 plugin
-[17:41:29] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (1):
- - plugin (1.0-SNAPSHOT)
-[17:41:29] [Server thread/INFO]: [plugin] Loading server plugin plugin v1.0-SNAPSHOT
-[17:41:29] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[17:41:29] [Server thread/INFO]: [plugin] Enabling plugin v1.0-SNAPSHOT
-[17:41:29] [Server thread/INFO]: [plugin] ServerStatusPlugin이 성공적으로 활성화되었습니다.
-[17:41:29] [Server thread/INFO]: CONSOLE: Reload complete.
-[17:42:46] [User Authenticator #1/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
-[17:42:46] [Server thread/INFO]: Bico_ joined the game
-[17:42:46] [Server thread/INFO]: Bico_[/127.0.0.1:63710] logged in with entity id 7999 at ([world]-59.91327585305011, 67.0, -38.82461629586809)
-[17:46:24] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
-[17:46:24] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
-[17:46:24] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[17:46:24] [Server thread/INFO]: Using 4 threads for Netty based IO
-[17:46:24] [Server thread/INFO]: [MoonriseCommon] Paper is using 2 worker threads, 1 I/O threads
-[17:46:24] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
-[17:46:24] [Server thread/INFO]: [plugin] Disabling plugin v1.0-SNAPSHOT
-[17:46:25] [Server thread/INFO]: Loaded 1370 recipes
-[17:46:25] [Server thread/INFO]: Loaded 1481 advancements
-[17:46:25] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
-[17:46:25] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins/plugin.jar'...
-[17:46:25] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins/plugin.jar' in 181ms.
-[17:46:25] [Server thread/INFO]: [PluginInitializerManager] Initialized 1 plugin
-[17:46:25] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (1):
- - plugin (1.0-SNAPSHOT)
-[17:46:25] [Server thread/INFO]: [plugin] Loading server plugin plugin v1.0-SNAPSHOT
-[17:46:25] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[17:46:25] [Server thread/INFO]: [plugin] Enabling plugin v1.0-SNAPSHOT
-[17:46:25] [Server thread/INFO]: [plugin] ServerStatusPlugin이 성공적으로 활성화되었습니다.
-[17:46:25] [Server thread/INFO]: CONSOLE: Reload complete.
-[17:46:33] [Async Chat Thread - #9/INFO]: <Bico_> ㅅ11
-[17:48:06] [Server thread/INFO]: CONSOLE: Please note that this command is not supported and may cause issues when using some plugins.
-[17:48:06] [Server thread/INFO]: CONSOLE: If you encounter any issues please use the /stop command to restart your server.
-[17:48:06] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[17:48:06] [Server thread/INFO]: Using 4 threads for Netty based IO
-[17:48:06] [Server thread/INFO]: [MoonriseCommon] Paper is using 2 worker threads, 1 I/O threads
-[17:48:06] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
-[17:48:06] [Server thread/INFO]: [plugin] Disabling plugin v1.0-SNAPSHOT
-[17:48:07] [Server thread/INFO]: Loaded 1370 recipes
-[17:48:07] [Server thread/INFO]: Loaded 1481 advancements
-[17:48:07] [Server thread/INFO]: [PluginInitializerManager] Initializing plugins...
-[17:48:07] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'plugins/plugin.jar'...
-[17:48:07] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'plugins/plugin.jar' in 322ms.
-[17:48:07] [Server thread/INFO]: [PluginInitializerManager] Initialized 1 plugin
-[17:48:07] [Server thread/INFO]: [PluginInitializerManager] Bukkit plugins (1):
- - plugin (1.0-SNAPSHOT)
-[17:48:07] [Server thread/INFO]: [plugin] Loading server plugin plugin v1.0-SNAPSHOT
-[17:48:07] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[17:48:07] [Server thread/INFO]: [plugin] Enabling plugin v1.0-SNAPSHOT
-[17:48:07] [Server thread/INFO]: [plugin] ServerStatusPlugin이 성공적으로 활성화되었습니다.
-[17:48:07] [Server thread/INFO]: CONSOLE: Reload complete.
-[17:59:20] [Server thread/INFO]: Bico_ was slain by Spider
+[16:04:47] [Server thread/INFO]: Bico_ was blown up by Creeper
+[16:10:05] [Server thread/INFO]: Made Bico_ a server operator
+[16:10:46] [Server thread/INFO]: Bico_ issued server command: /xp add B
+[16:10:51] [Server thread/INFO]: Bico_ issued server command: /xp add Bico_ 500
+[16:10:51] [Server thread/INFO]: [Bico_: Gave 500 experience points to Bico_]
+[16:11:27] [Server thread/INFO]: Bico_ issued server command: /xp add Bico_ 10
+[16:11:27] [Server thread/INFO]: [Bico_: Gave 10 experience points to Bico_]
+[16:11:29] [Server thread/INFO]: Bico_ issued server command: /xp add Bico_ 100
+[16:11:29] [Server thread/INFO]: [Bico_: Gave 100 experience points to Bico_]

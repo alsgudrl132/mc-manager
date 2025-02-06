@@ -25,7 +25,22 @@ export default function Home() {
     fetchStatus();
   }, []);
 
-  console.log(status);
+  const playerList = status?.players.map((player) => (
+    <Card key={player.name} className="mt-5 p-3 mr-10 flex items-center gap-4">
+      <div className="w-10 h-10 bg-gray-200 border-2 border-emerald-200 rounded-full">
+        <img src={player.skinUrl} alt="skin" />
+      </div>
+      <div>
+        <p>{player.name}</p>
+        <p>{player.level}</p>
+      </div>
+      <div>
+        <span className="rounded-lg text-white bg-black pt-1 pb-1 pl-3 pr-3">
+          {player.online ? "online" : "offline"}
+        </span>
+      </div>
+    </Card>
+  ));
 
   return (
     <div>
@@ -93,42 +108,7 @@ export default function Home() {
             placeholder="Search Players..."
           />
         </div>
-        <Card className="mt-5 p-3 mr-10 flex items-center gap-4">
-          <div className="w-10 h-10 bg-gray-200 border-2 border-emerald-200  rounded-full"></div>
-          <div>
-            <p>Player_1</p>
-            <p>Level 30</p>
-          </div>
-          <div>
-            <span className=" rounded-lg text-white bg-black pt-1 pb-1 pl-3 pr-3">
-              Online
-            </span>
-          </div>
-        </Card>
-        <Card className="mt-5 p-3 mr-10 flex items-center gap-4">
-          <div className="w-10 h-10 bg-gray-200 border-2 border-emerald-200  rounded-full"></div>
-          <div>
-            <p>Player_1</p>
-            <p>Level 30</p>
-          </div>
-          <div>
-            <span className=" rounded-lg text-white bg-black pt-1 pb-1 pl-3 pr-3">
-              Online
-            </span>
-          </div>
-        </Card>
-        <Card className="mt-5 p-3 mr-10 flex items-center gap-4">
-          <div className="w-10 h-10 bg-gray-200 border-2 border-emerald-200  rounded-full"></div>
-          <div>
-            <p>Player_1</p>
-            <p>Level 30</p>
-          </div>
-          <div>
-            <span className=" rounded-lg text-white bg-black pt-1 pb-1 pl-3 pr-3">
-              Online
-            </span>
-          </div>
-        </Card>
+        {playerList}
       </Card>
     </div>
   );
