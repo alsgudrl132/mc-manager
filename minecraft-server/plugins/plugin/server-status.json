@@ -1,21 +1,12 @@
 {
   "maxPlayers": 20,
-  "onlinePlayers": 1,
+  "onlinePlayers": 0,
   "ramUsage": {
     "total": 1024,
-    "formatted": "896/1024MB",
-    "used": 896
+    "formatted": "563/1024MB",
+    "used": 563
   },
   "tps": 20.0,
-  "players": [
-    {
-      "world": "world",
-      "level": 0,
-      "name": "Bico_",
-      "health": 20.0,
-      "online": true,
-      "skinUrl": "https://mc-heads.net/avatar/6142d14b-9b65-4085-9636-b6f67c23a988"
-    }
-  ],
-  "uptime": "0d 1h 12m"
+  "players": [],
+  "uptime": "0d 21h 56m"
 }
