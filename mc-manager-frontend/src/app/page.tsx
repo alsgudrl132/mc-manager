@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div>
       <div className="flex">
-        <Card className="max-w-48  max-h-32 mt-10 ml-10 bg-gray-50">
+        <Card className="max-w-48  max-h-32 mt-10 ml-10 bg-white">
           <CardContent className="mt-5">
             <div className="flex justify-between">
               <div>
@@ -56,7 +56,7 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-        <Card className="max-w-48 min-h-32 m-10 bg-gray-50">
+        <Card className="max-w-48 min-h-32 m-10 bg-white">
           <CardContent className="mt-5">
             <div className="flex justify-between">
               <div>
@@ -73,7 +73,7 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-        <Card className="max-w-48 max-h-32 mt-10 bg-gray-50 ">
+        <Card className="max-w-48 max-h-32 mt-10 bg-white ">
           <CardContent className="mt-5">
             <div className="flex justify-between gap-4">
               <div>
@@ -89,7 +89,7 @@ export default function Home() {
           </CardContent>
         </Card>
       </div>
-      <Card className="ml-10 pl-10 pt-5 pb-5 w-[658px] bg-gray-50">
+      <Card className="ml-10 pl-10 pt-5 pb-5 w-[658px] bg-white">
         <div className="flex gap-5 items-center mb-5">
           <Users />
           <CardTitle className="font-bold text-xl">Online Players</CardTitle>
