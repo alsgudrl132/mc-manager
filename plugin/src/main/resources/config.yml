@@ -1,0 +1,26 @@
+# ServerStatusPlugin 설정 파일
+
+# 데이터베이스 설정
+database:
+  host: localhost
+  port: 3306
+  name: minecraft_dashboard
+  username: root
+  password: 1238546
+
+# 데이터 보존 기간 (일)
+data-retention:
+  server-status: 30
+  player-status: 30
+  chat-logs: 90
+
+# 업데이트 주기 (틱 단위, 20틱 = 1초)
+update-intervals:
+  server-status: 200  # 10초
+  player-status: 400  # 20초
+
+# 로깅 설정
+logging:
+  enable-debug: false
+  log-commands: true
+  log-player-events: true

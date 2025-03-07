@@ -1,4 +1,6 @@
-name: plugin
-version: '1.0-SNAPSHOT'
+name: ServerStatusPlugin
 main: org.test.plugin.ServerStatusPlugin
-api-version: '1.21'
+version: 1.0.0
+api-version: 1.16
+description: 마인크래프트 서버 대시보드를 위한 데이터 수집 플러그인
+author: YourName
