@@ -6,6 +6,7 @@ import { Ban, Bell, Filter, MessageSquare, VolumeX } from "lucide-react";
 import React from "react";
 import { fetchChatLogs, useChatStore } from "../store/store";
 import { useQuery } from "@tanstack/react-query";
+import CommonLoading from "../common/CommonLoading";
 
 interface ChatLog {
   id: number;
@@ -16,16 +17,58 @@ interface ChatLog {
 }
 
 function Chat() {
-  const {
-    data: chatLogs,
-    isLoading,
-    isError,
-  } = useQuery<ChatLog[]>({
+  const { data: chatLogs, isLoading } = useQuery<ChatLog[]>({
     queryKey: ["chatLogs"],
     queryFn: () => fetchChatLogs({ limit: 50, player: "", search: "" }),
   });
 
-  console.log(chatLogs);
+  if (isLoading) {
+    return <CommonLoading />;
+  }
+
+  function ChatData() {
+    return (
+      <Card className="mt-5 p-3 mr-10 w-full items-center gap-4">
+        {chatLogs?.map((chatLog) => (
+          <div key={chatLog.id} className="mb-2 w-full flex items-center gap-4">
+            <div className="w-10 h-10 bg-gray-200 border-2 border-emerald-200 rounded-full overflow-hidden">
+              <img
+                src={`https://mc-heads.net/avatar/${chatLog.uuid}`}
+                alt={`${chatLog.playerName || "Unknown"}'s skin`}
+                className="w-full h-full"
+              />
+            </div>
+            <div className="w-full items-center flex justify-between">
+              <div>
+                <div>
+                  <span className="mr-3 text-sm">
+                    Name : {chatLog.playerName}
+                  </span>
+                  <span className="text-gray-600 text-sm">|</span>
+                  <span className="text-gray-600 text-sm ml-3">
+                    {new Date(chatLog.timestamp).toLocaleString()}
+                  </span>
+                </div>
+                <div>
+                  <span>{chatLog.message}</span>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="flex flex-col items-center cursor-pointer">
+                  <Ban />
+                  <strong className="text-red-500">Kick</strong>
+                </div>
+                <div className="flex flex-col items-center cursor-pointer">
+                  <VolumeX />
+                  <strong>Mute</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </Card>
+    );
+  }
 
   return (
     <div className="py-7 px-5 mx-7 my-12 border-2 bg-white rounded-lg">
@@ -49,41 +92,13 @@ function Chat() {
           Send Global Message
         </Button>
       </div>
+      <ChatData />
       <div>
         <input
           className="py-2 mt-5 pl-3 rounded-lg w-full border-2"
           type="text"
           placeholder="Search chat logs..."
         />
-        <Card className="mt-5 p-3 mr-10 flex w-full items-center gap-4">
-          <div className="w-10 h-10 bg-gray-200 border-2 border-emerald-200 rounded-full">
-            <img alt="skin" />
-          </div>
-          <div className="w-full items-center flex justify-between">
-            <div>
-              <div>
-                <span className="mr-3 text-sm">Name : Player1</span>
-                <span className="text-gray-600 text-sm">|</span>
-                <span className="text-gray-600 text-sm ml-3">
-                  2 minutes ago
-                </span>
-              </div>
-              <div>
-                <span>Anyone want to trade golden apples?</span>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <div className="flex flex-col items-center cursor-pointer">
-                <Ban />
-                <strong className="text-red-500">Kick</strong>
-              </div>
-              <div className="flex flex-col items-center cursor-pointer">
-                <VolumeX />
-                <strong>Mute</strong>
-              </div>
-            </div>
-          </div>
-        </Card>
       </div>
     </div>
   );
