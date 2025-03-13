@@ -1,9 +1,32 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Ban, Bell, Filter, MessageSquare, VolumeX } from "lucide-react";
 import React from "react";
+import { fetchChatLogs, useChatStore } from "../store/store";
+import { useQuery } from "@tanstack/react-query";
+
+interface ChatLog {
+  id: number;
+  timestamp: number;
+  uuid: string;
+  playerName: string | null;
+  message: string;
+}
 
 function Chat() {
+  const {
+    data: chatLogs,
+    isLoading,
+    isError,
+  } = useQuery<ChatLog[]>({
+    queryKey: ["chatLogs"],
+    queryFn: () => fetchChatLogs({ limit: 50, player: "", search: "" }),
+  });
+
+  console.log(chatLogs);
+
   return (
     <div className="py-7 px-5 mx-7 my-12 border-2 bg-white rounded-lg">
       <div className=" flex justify-between">

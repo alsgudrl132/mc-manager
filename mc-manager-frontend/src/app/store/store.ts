@@ -1,0 +1,29 @@
+import { create } from "zustand";
+import axios from "axios";
+
+interface IChatFilter {
+  limit: number;
+  player: string;
+  search: string;
+}
+
+export const useChatStore = create((set) => ({
+  searchTerm: "",
+  playerFilter: "",
+  limit: 50,
+  setSearchTerm: (term: string) => set({ searchTerm: term }),
+  setPlayerFilter: (player: string) => set({ playerFilter: player }),
+  setLimit: (limit: number) => set({ limit: limit }),
+}));
+
+export const fetchChatLogs = async ({ limit, player, search }: IChatFilter) => {
+  const params = new URLSearchParams();
+  if (limit) params.append("limit", String(limit));
+  if (player) params.append("player", player);
+  if (search) params.append("search", search);
+
+  const { data } = await axios.get(
+    `http://localhost:8080/api/chat/logs?${params}`
+  );
+  return data;
+};

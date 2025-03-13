@@ -20,10 +20,19 @@ public class ServerStatus {
 
     private long timestamp;
     private double tps;
+
+    @Column(name = "online_players")
     private int onlinePlayers;
+
+    @Column(name = "max_players")
     private int maxPlayers;
+
+    @Column(name = "used_memory")
     private int usedMemory;
+
+    @Column(name = "total_memory")
     private int totalMemory;
+
     private String uptime;
 
     @Transient

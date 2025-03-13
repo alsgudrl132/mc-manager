@@ -18,6 +18,9 @@ public class ChatLog {
 
     private long timestamp;
     private String uuid;
+
+    @Column(name = "player_name")
     private String playerName;
+
     private String message;
 }
