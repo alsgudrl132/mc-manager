@@ -7,8 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ChatLogDTO {
-    private String player;
-    private String message;
-    private long timestamp;
+public class CommandRequest {
+    private String command;
 }
