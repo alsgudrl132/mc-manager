@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Ban, Bell, Filter, MessageSquare, VolumeX } from "lucide-react";
 import React from "react";
-import { fetchChatLogs, useChatStore } from "../store/store";
+import { fetchChatLogs } from "../store/store";
 import { useQuery } from "@tanstack/react-query";
 import CommonLoading from "../common/CommonLoading";
 
@@ -19,7 +19,7 @@ interface ChatLog {
 function Chat() {
   const { data: chatLogs, isLoading } = useQuery<ChatLog[]>({
     queryKey: ["chatLogs"],
-    queryFn: () => fetchChatLogs({ limit: 50, player: "", search: "" }),
+    queryFn: () => fetchChatLogs({ limit: 10, player: "", search: "" }),
   });
 
   if (isLoading) {

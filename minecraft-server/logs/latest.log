@@ -1,59 +1,29 @@
-[14:43:01] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.3+9-LTS; Amazon.com Inc. Corretto-21.0.3.9.1) on Mac OS X 15.3.1 (aarch64)
-[14:43:01] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) for Minecraft 1.21.4
-[14:43:02] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[14:43:03] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
-[14:43:03] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
- - ServerStatusPlugin (1.0.0)
-[14:43:06] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[14:43:07] [ServerMain/INFO]: Loaded 1370 recipes
-[14:43:07] [ServerMain/INFO]: Loaded 1481 advancements
-[14:43:07] [ServerMain/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
-[14:43:07] [ServerMain/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 129.7ms
-[14:43:07] [Server thread/INFO]: Starting minecraft server version 1.21.4
-[14:43:07] [Server thread/INFO]: Loading properties
-[14:43:07] [Server thread/INFO]: This server is running Paper version 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) (Implementing API version 1.21.4-R0.1-SNAPSHOT)
-[14:43:07] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
-[14:43:07] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[14:43:07] [Server thread/INFO]: Using 4 threads for Netty based IO
-[14:43:08] [Server thread/INFO]: [MoonriseCommon] Paper is using 2 worker threads, 1 I/O threads
-[14:43:08] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
-[14:43:08] [Server thread/INFO]: Default game type: SURVIVAL
-[14:43:08] [Server thread/INFO]: Generating keypair
-[14:43:08] [Server thread/INFO]: Starting Minecraft server on *:25565
-[14:43:08] [Server thread/INFO]: Using default channel type
-[14:43:08] [Server thread/INFO]: Paper: Using libdeflate (macOS ARM64 / Apple Silicon) compression from Velocity.
-[14:43:08] [Server thread/INFO]: Paper: Using native (macOS ARM64 / Apple Silicon) cipher from Velocity.
-[14:43:09] [Server thread/INFO]: [ServerStatusPlugin] Loading server plugin ServerStatusPlugin v1.0.0
-[14:43:09] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[14:43:09] [Server thread/INFO]: Preparing level "world"
-[14:43:09] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[14:43:09] [Server thread/INFO]: Preparing spawn area: 0%
-[14:43:09] [Server thread/INFO]: Time elapsed: 470 ms
-[14:43:09] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[14:43:09] [Server thread/INFO]: Preparing spawn area: 0%
-[14:43:09] [Server thread/INFO]: Time elapsed: 77 ms
-[14:43:09] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[14:43:09] [Server thread/INFO]: Preparing spawn area: 0%
-[14:43:09] [Server thread/INFO]: Time elapsed: 39 ms
-[14:43:09] [Server thread/INFO]: [ServerStatusPlugin] Enabling ServerStatusPlugin v1.0.0
-[14:43:10] [Server thread/INFO]: [ServerStatusPlugin] 필요한 데이터베이스 테이블이 생성되었습니다.
-[14:43:10] [Server thread/INFO]: [ServerStatusPlugin] 데이터베이스에 성공적으로 연결되었습니다.
-[14:43:10] [Server thread/INFO]: [ServerStatusPlugin] ServerStatusPlugin이 성공적으로 활성화되었습니다.
-[14:43:10] [Server thread/INFO]: [spark] Starting background profiler...
-[14:43:11] [Server thread/INFO]: Done preparing level "world" (2.203s)
-[14:43:11] [Server thread/INFO]: Starting remote control listener
-[14:43:11] [Server thread/INFO]: Thread RCON Listener started
-[14:43:11] [Server thread/INFO]: RCON running on 0.0.0.0:25575
-[14:43:11] [Server thread/INFO]: Running delayed init tasks
-[14:43:11] [Server thread/INFO]: Done (10.264s)! For help, type "help"
-[14:43:18] [User Authenticator #0/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
-[14:43:18] [Server thread/INFO]: Bico_ joined the game
-[14:43:18] [Server thread/INFO]: Bico_[/127.0.0.1:52034] logged in with entity id 68 at ([world]-138.60644951358248, 65.0, 38.14500169455666)
-[14:43:23] [Async Chat Thread - #1/INFO]: <Bico_> ㅅ1
-[14:46:21] [Server thread/INFO]: Bico_ was slain by Zombie
-[16:12:35] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 3838ms or 76 ticks behind
-[16:24:10] [Async Chat Thread - #3/INFO]: <Bico_> si
-[16:24:11] [Async Chat Thread - #3/INFO]: <Bico_> bal
-[16:26:01] [Async Chat Thread - #5/INFO]: <Bico_> ya
-[16:26:02] [Async Chat Thread - #5/INFO]: <Bico_> ma
-[16:26:33] [Server thread/INFO]: Bico_ was slain by Phantom
+[17:12:22] [Async Chat Thread - #6/INFO]: <Bico_> 1
+[17:12:24] [Async Chat Thread - #6/INFO]: <Bico_> 1
+[17:12:25] [Async Chat Thread - #7/INFO]: <Bico_> 1
+[17:12:25] [Async Chat Thread - #7/INFO]: <Bico_> 1
+[17:12:26] [Async Chat Thread - #7/INFO]: <Bico_> 1
+[17:12:26] [Async Chat Thread - #7/INFO]: <Bico_> 1
+[17:12:27] [Async Chat Thread - #7/INFO]: <Bico_> 1
+[17:12:27] [Async Chat Thread - #7/INFO]: <Bico_> 1
+[17:12:28] [Async Chat Thread - #7/INFO]: <Bico_> 1
+[17:12:28] [Async Chat Thread - #7/INFO]: <Bico_> 2
+[17:12:29] [Async Chat Thread - #7/INFO]: <Bico_> 2
+[17:12:29] [Async Chat Thread - #7/INFO]: <Bico_> 2
+[17:12:30] [Async Chat Thread - #7/INFO]: <Bico_> 3
+[17:12:30] [Async Chat Thread - #7/INFO]: <Bico_> 3
+[17:12:31] [Async Chat Thread - #6/INFO]: <Bico_> 3
+[17:12:31] [Async Chat Thread - #6/INFO]: <Bico_> 3
+[17:12:31] [Async Chat Thread - #6/INFO]: <Bico_> 3
+[17:12:31] [Async Chat Thread - #6/INFO]: <Bico_> 3
+[17:12:32] [Async Chat Thread - #6/INFO]: <Bico_> 3
+[17:12:33] [Async Chat Thread - #7/INFO]: <Bico_> tt4
+[17:12:35] [Async Chat Thread - #7/INFO]: <Bico_> 4
+[17:12:35] [Async Chat Thread - #7/INFO]: <Bico_> 4
+[17:12:35] [Async Chat Thread - #7/INFO]: <Bico_> 4
+[17:12:36] [Async Chat Thread - #7/INFO]: <Bico_> 4
+[17:12:36] [Async Chat Thread - #7/INFO]: <Bico_> 4
+[17:12:36] [Async Chat Thread - #7/INFO]: <Bico_> 4
+[17:12:37] [Async Chat Thread - #7/INFO]: <Bico_> 4
+[17:13:31] [Server thread/INFO]: Bico_ was slain by Zombie
+[17:31:22] [Server thread/INFO]: Bico_ was slain by Zombie

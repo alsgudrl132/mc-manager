@@ -59,8 +59,17 @@ public class DashboardServiceImpl implements DashboardService {
         if (serverStatusRepo == null) {
             return new ServerStatus(); // 임시 빈 객체 반환
         }
-        return serverStatusRepo.findTopByOrderByTimestampDesc()
+
+        ServerStatus status = serverStatusRepo.findTopByOrderByTimestampDesc()
                 .orElse(new ServerStatus());
+
+        // 온라인 플레이어 목록 추가
+        if (playerRepo != null) {
+            List<Player> onlinePlayers = playerRepo.findByIsOnlineTrue();
+            status.setPlayers(onlinePlayers);
+        }
+
+        return status;
     }
 
     @Override

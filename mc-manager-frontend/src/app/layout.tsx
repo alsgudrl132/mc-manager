@@ -30,13 +30,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex">
-          <CommonSideNavigation />
-          <div className="flex flex-col flex-1">
-            <CommonTopNavigation />
-            <Providers>{children}</Providers>
+        <Providers>
+          <div className="flex">
+            <CommonSideNavigation />
+            <div className="flex flex-col flex-1">
+              <CommonTopNavigation />
+              {children}
+            </div>
           </div>
-        </div>
+        </Providers>
       </body>
     </html>
   );

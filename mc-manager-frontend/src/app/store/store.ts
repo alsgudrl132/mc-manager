@@ -1,6 +1,8 @@
 import { create } from "zustand";
 import axios from "axios";
 
+const URL = "http://localhost:8080/api";
+
 interface IChatFilter {
   limit: number;
   player: string;
@@ -22,8 +24,11 @@ export const fetchChatLogs = async ({ limit, player, search }: IChatFilter) => {
   if (player) params.append("player", player);
   if (search) params.append("search", search);
 
-  const { data } = await axios.get(
-    `http://localhost:8080/api/chat/logs?${params}`
-  );
+  const { data } = await axios.get(`${URL}/chat/logs?${params}`);
+  return data;
+};
+
+export const fetchServerStatus = async () => {
+  const { data } = await axios.get(`${URL}/server/status`);
   return data;
 };
