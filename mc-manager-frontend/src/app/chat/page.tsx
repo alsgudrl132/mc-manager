@@ -3,8 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Ban, Bell, Filter, MessageSquare, VolumeX } from "lucide-react";
-import React from "react";
-import { fetchChatLogs } from "../store/store";
+import React, { useState } from "react";
+import { fetchChatLogs, kickPlayer } from "../store/store";
 import { useQuery } from "@tanstack/react-query";
 import CommonLoading from "../common/CommonLoading";
 
@@ -17,6 +17,8 @@ interface ChatLog {
 }
 
 function Chat() {
+  const [reason, setReason] = useState<string>("괘씸죄");
+
   const { data: chatLogs, isLoading } = useQuery<ChatLog[]>({
     queryKey: ["chatLogs"],
     queryFn: () => fetchChatLogs({ limit: 10, player: "", search: "" }),
@@ -25,6 +27,16 @@ function Chat() {
   if (isLoading) {
     return <CommonLoading />;
   }
+
+  const handleKick = async (uuid: string) => {
+    try {
+      const result = await kickPlayer(uuid, reason);
+      console.log(result);
+      alert("해당 플레이어가 추방되었습니다.");
+    } catch (error) {
+      alert(`킥에 실패하였습니다 ${error}`);
+    }
+  };
 
   function ChatData() {
     return (
@@ -56,7 +68,12 @@ function Chat() {
               <div className="flex gap-3">
                 <div className="flex flex-col items-center cursor-pointer">
                   <Ban />
-                  <strong className="text-red-500">Kick</strong>
+                  <strong
+                    onClick={() => handleKick(chatLog.uuid)}
+                    className="text-red-500"
+                  >
+                    Kick
+                  </strong>
                 </div>
                 <div className="flex flex-col items-center cursor-pointer">
                   <VolumeX />

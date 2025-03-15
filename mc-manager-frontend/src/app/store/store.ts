@@ -32,3 +32,16 @@ export const fetchServerStatus = async () => {
   const { data } = await axios.get(`${URL}/server/status`);
   return data;
 };
+
+export const kickPlayer = async (uuid: string, reason: string) => {
+  try {
+    await axios.post(
+      `${URL}/players/${uuid}/kick`,
+      {},
+      { params: { reason: reason } }
+    );
+  } catch (error) {
+    console.error("Error kicking player:", error);
+    throw error;
+  }
+};

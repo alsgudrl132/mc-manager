@@ -11,15 +11,12 @@ import com.mcmanager.mc_manager_backend.model.repository.ChatLogRepository;
 import com.mcmanager.mc_manager_backend.model.repository.PlayerRepository;
 import com.mcmanager.mc_manager_backend.model.repository.PlayerStatusRepository;
 import com.mcmanager.mc_manager_backend.model.repository.ServerStatusRepository;
+import com.mcmanager.mc_manager_backend.rcon.RconClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -67,6 +64,16 @@ public class DashboardServiceImpl implements DashboardService {
         if (playerRepo != null) {
             List<Player> onlinePlayers = playerRepo.findByIsOnlineTrue();
             status.setPlayers(onlinePlayers);
+
+            // 온라인 플레이어가 없고, onlinePlayers > 0인 경우 임시 처리
+            if (onlinePlayers.isEmpty() && status.getOnlinePlayers() > 0) {
+                List<Player> allPlayers = playerRepo.findAll();
+                if (!allPlayers.isEmpty()) {
+                    Player player = allPlayers.get(0);
+                    player.setOnline(true); // 메모리상에서만 설정
+                    status.setPlayers(List.of(player));
+                }
+            }
         }
 
         return status;
@@ -172,11 +179,6 @@ public class DashboardServiceImpl implements DashboardService {
                 return new CommandResponse(false, "Command cannot be empty");
             }
 
-            // 개발 모드에서는 RCON 없이 응답 시뮬레이션
-            if (rconHost == null || rconHost.equals("localhost")) {
-                return new CommandResponse(true, "Command executed (simulated): " + command);
-            }
-
             String response = sendRconCommand(command);
             return new CommandResponse(true, response);
         } catch (IOException e) {
@@ -187,7 +189,7 @@ public class DashboardServiceImpl implements DashboardService {
     @Override
     public CommandResponse kickPlayer(String uuid, String reason) {
         if (playerRepo == null) {
-            return new CommandResponse(true, "Player kicked (simulated)");
+            return new CommandResponse(false, "Player repository not available");
         }
 
         try {
@@ -197,11 +199,6 @@ public class DashboardServiceImpl implements DashboardService {
             String command = "kick " + player.getName();
             if (reason != null && !reason.isEmpty()) {
                 command += " " + reason;
-            }
-
-            // 개발 모드에서는 RCON 없이 응답 시뮬레이션
-            if (rconHost == null || rconHost.equals("localhost")) {
-                return new CommandResponse(true, "Player kicked (simulated): " + player.getName());
             }
 
             String response = sendRconCommand(command);
@@ -216,7 +213,7 @@ public class DashboardServiceImpl implements DashboardService {
     @Override
     public CommandResponse opPlayer(String uuid, boolean value) {
         if (playerRepo == null) {
-            return new CommandResponse(true, "Player op status changed (simulated)");
+            return new CommandResponse(false, "Player repository not available");
         }
 
         try {
@@ -224,11 +221,6 @@ public class DashboardServiceImpl implements DashboardService {
                     .orElseThrow(() -> new ResourceNotFoundException("Player not found with UUID: " + uuid));
 
             String command = value ? "op " + player.getName() : "deop " + player.getName();
-
-            // 개발 모드에서는 RCON 없이 응답 시뮬레이션
-            if (rconHost == null || rconHost.equals("localhost")) {
-                return new CommandResponse(true, "Player " + (value ? "opped" : "deopped") + " (simulated): " + player.getName());
-            }
 
             String response = sendRconCommand(command);
             return new CommandResponse(true, response);
@@ -242,7 +234,7 @@ public class DashboardServiceImpl implements DashboardService {
     @Override
     public CommandResponse setGameMode(String uuid, String gamemode) {
         if (playerRepo == null) {
-            return new CommandResponse(true, "Player gamemode changed (simulated)");
+            return new CommandResponse(false, "Player repository not available");
         }
 
         try {
@@ -250,11 +242,6 @@ public class DashboardServiceImpl implements DashboardService {
                     .orElseThrow(() -> new ResourceNotFoundException("Player not found with UUID: " + uuid));
 
             String command = "gamemode " + gamemode + " " + player.getName();
-
-            // 개발 모드에서는 RCON 없이 응답 시뮬레이션
-            if (rconHost == null || rconHost.equals("localhost")) {
-                return new CommandResponse(true, "Player gamemode changed to " + gamemode + " (simulated): " + player.getName());
-            }
 
             String response = sendRconCommand(command);
             return new CommandResponse(true, response);
@@ -274,11 +261,6 @@ public class DashboardServiceImpl implements DashboardService {
         try {
             String command = "broadcast " + message;
 
-            // 개발 모드에서는 RCON 없이 응답 시뮬레이션
-            if (rconHost == null || rconHost.equals("localhost")) {
-                return new CommandResponse(true, "Message broadcasted (simulated): " + message);
-            }
-
             String response = sendRconCommand(command);
             return new CommandResponse(true, response);
         } catch (IOException e) {
@@ -290,34 +272,105 @@ public class DashboardServiceImpl implements DashboardService {
      * RCON 프로토콜을 통해 마인크래프트 서버에 명령어 전송
      */
     private String sendRconCommand(String command) throws IOException {
-        // 개발 모드에서는 RCON 연결 시뮬레이션
-        if (rconHost == null || rconHost.equals("localhost")) {
-            return "Command executed (simulated): " + command;
-        }
-
-        try (Socket socket = new Socket(rconHost, rconPort)) {
-            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-
-            // RCON 인증
-            out.println("auth " + rconPassword);
-            String authResponse = in.readLine();
-
-            if (!"auth successful".equals(authResponse)) {
+        RconClient rcon = null;
+        try {
+            rcon = new RconClient(rconHost, rconPort);
+            if (rcon.authenticate(rconPassword)) {
+                return rcon.sendCommand(command);
+            } else {
                 throw new IOException("RCON authentication failed");
             }
+        } catch (IOException e) {
+            throw new IOException("RCON connection failed: " + e.getMessage(), e);
+        } finally {
+            if (rcon != null) {
+                rcon.close();
+            }
+        }
+    }
 
-            // 명령어 전송
-            out.println(command);
+    @Override
+    public CommandResponse mutePlayer(String uuid, int duration, String unit, String reason) {
+        if (playerRepo == null) {
+            return new CommandResponse(false, "Player repository not available");
+        }
 
-            // 응답 읽기
-            StringBuilder response = new StringBuilder();
-            String line;
-            while ((line = in.readLine()) != null && !line.isEmpty()) {
-                response.append(line).append("\n");
+        try {
+            Player player = playerRepo.findByUuid(uuid)
+                    .orElseThrow(() -> new ResourceNotFoundException("Player not found with UUID: " + uuid));
+
+            // 기본 명령어 구성
+            StringBuilder command = new StringBuilder("mute ");
+            command.append(player.getName());
+
+            // 기간이 지정된 경우 추가
+            if (duration > 0) {
+                command.append(" ").append(duration).append(unit);
             }
 
-            return response.toString();
+            // 사유가 지정된 경우 추가
+            if (reason != null && !reason.isEmpty()) {
+                command.append(" ").append(reason);
+            }
+
+            String response = sendRconCommand(command.toString());
+            return new CommandResponse(true, "Player " + player.getName() + " has been muted" +
+                    (duration > 0 ? " for " + duration + unit : ""));
+
+        } catch (IOException e) {
+            return new CommandResponse(false, "Failed to mute player: " + e.getMessage());
+        } catch (ResourceNotFoundException e) {
+            return new CommandResponse(false, e.getMessage());
+        }
+    }
+
+    @Override
+    public CommandResponse unmutePlayer(String uuid) {
+        if (playerRepo == null) {
+            return new CommandResponse(false, "Player repository not available");
+        }
+
+        try {
+            Player player = playerRepo.findByUuid(uuid)
+                    .orElseThrow(() -> new ResourceNotFoundException("Player not found with UUID: " + uuid));
+
+            String command = "unmute " + player.getName();
+            String response = sendRconCommand(command);
+            return new CommandResponse(true, "Player " + player.getName() + " has been unmuted");
+
+        } catch (IOException e) {
+            return new CommandResponse(false, "Failed to unmute player: " + e.getMessage());
+        } catch (ResourceNotFoundException e) {
+            return new CommandResponse(false, e.getMessage());
+        }
+    }
+
+    @Override
+    public CommandResponse isMuted(String uuid) {
+        if (playerRepo == null) {
+            return new CommandResponse(false, "Player repository not available");
+        }
+
+        try {
+            Player player = playerRepo.findByUuid(uuid)
+                    .orElseThrow(() -> new ResourceNotFoundException("Player not found with UUID: " + uuid));
+
+            String command = "muted " + player.getName();
+            String response = sendRconCommand(command);
+
+            // 응답을 파싱하여 뮤트 상태 확인
+            boolean isMuted = !response.contains("not muted") && !response.contains("No player was found");
+
+            if (isMuted) {
+                return new CommandResponse(true, "Player " + player.getName() + " is currently muted");
+            } else {
+                return new CommandResponse(true, "Player " + player.getName() + " is not muted");
+            }
+
+        } catch (IOException e) {
+            return new CommandResponse(false, "Failed to check mute status: " + e.getMessage());
+        } catch (ResourceNotFoundException e) {
+            return new CommandResponse(false, e.getMessage());
         }
     }
 }

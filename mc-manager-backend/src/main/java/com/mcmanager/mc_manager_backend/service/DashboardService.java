@@ -34,4 +34,10 @@ public interface DashboardService {
     CommandResponse setGameMode(String uuid, String gamemode);
 
     CommandResponse broadcast(String message);
+
+    CommandResponse mutePlayer(String uuid, int duration, String unit, String reason);
+
+    CommandResponse unmutePlayer(String uuid);
+
+    CommandResponse isMuted(String uuid);
 }
