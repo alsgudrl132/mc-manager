@@ -59,7 +59,7 @@ public class PlayerController {
 
         return ResponseEntity.ok(dashboardService.kickPlayer(uuid, reason));
     }
-    
+
     @PostMapping("/{uuid}/op")
     public ResponseEntity<CommandResponse> opPlayer(
             @PathVariable String uuid,
@@ -100,5 +100,20 @@ public class PlayerController {
             @PathVariable String uuid) {
 
         return ResponseEntity.ok(dashboardService.isMuted(uuid));
+    }
+
+    @PostMapping("/{uuid}/ban")
+    public ResponseEntity<CommandResponse> banPlayer(
+            @PathVariable String uuid,
+            @RequestParam(required = false) String reason) {
+
+        return ResponseEntity.ok(dashboardService.banPlayer(uuid, reason));
+    }
+
+    @PostMapping("/{uuid}/unban")
+    public ResponseEntity<CommandResponse> unbanPlayer(
+            @PathVariable String uuid) {
+
+        return ResponseEntity.ok(dashboardService.unbanPlayer(uuid));
     }
 }

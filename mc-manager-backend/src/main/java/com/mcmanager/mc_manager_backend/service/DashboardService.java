@@ -40,4 +40,8 @@ public interface DashboardService {
     CommandResponse unmutePlayer(String uuid);
 
     CommandResponse isMuted(String uuid);
+
+    CommandResponse banPlayer(String uuid, String reason);
+
+    CommandResponse unbanPlayer(String uuid);
 }

@@ -33,10 +33,14 @@ export const fetchServerStatus = async () => {
   return data;
 };
 
-export const kickPlayer = async (uuid: string, reason: string) => {
+export const kickBanPlayer = async (
+  uuid: string,
+  reason: string,
+  option: string
+) => {
   try {
     await axios.post(
-      `${URL}/players/${uuid}/kick`,
+      `${URL}/players/${uuid}/${option}`,
       {},
       { params: { reason: reason } }
     );

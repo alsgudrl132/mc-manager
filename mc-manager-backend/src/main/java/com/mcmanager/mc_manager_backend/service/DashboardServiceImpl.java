@@ -373,4 +373,50 @@ public class DashboardServiceImpl implements DashboardService {
             return new CommandResponse(false, e.getMessage());
         }
     }
+
+    @Override
+    public CommandResponse banPlayer(String uuid, String reason) {
+        if (playerRepo == null) {
+            return new CommandResponse(false, "Player repository not available");
+        }
+
+        try {
+            Player player = playerRepo.findByUuid(uuid)
+                    .orElseThrow(() -> new ResourceNotFoundException("Player not found with UUID: " + uuid));
+
+            String command = "ban " + player.getName();
+            if (reason != null && !reason.isEmpty()) {
+                command += " " + reason;
+            }
+
+            String response = sendRconCommand(command);
+            return new CommandResponse(true, "Player " + player.getName() + " has been banned" +
+                    (reason != null && !reason.isEmpty() ? " for: " + reason : ""));
+        } catch (IOException e) {
+            return new CommandResponse(false, "Failed to ban player: " + e.getMessage());
+        } catch (ResourceNotFoundException e) {
+            return new CommandResponse(false, e.getMessage());
+        }
+    }
+
+    @Override
+    public CommandResponse unbanPlayer(String uuid) {
+        if (playerRepo == null) {
+            return new CommandResponse(false, "Player repository not available");
+        }
+
+        try {
+            Player player = playerRepo.findByUuid(uuid)
+                    .orElseThrow(() -> new ResourceNotFoundException("Player not found with UUID: " + uuid));
+
+            String command = "pardon " + player.getName();
+            String response = sendRconCommand(command);
+
+            return new CommandResponse(true, "Player " + player.getName() + " has been unbanned");
+        } catch (IOException e) {
+            return new CommandResponse(false, "Failed to unban player: " + e.getMessage());
+        } catch (ResourceNotFoundException e) {
+            return new CommandResponse(false, e.getMessage());
+        }
+    }
 }

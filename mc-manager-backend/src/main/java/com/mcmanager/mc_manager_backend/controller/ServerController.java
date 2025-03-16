@@ -52,4 +52,19 @@ public class ServerController {
         String message = request.get("message");
         return ResponseEntity.ok(dashboardService.broadcast(message));
     }
+
+    @PostMapping("/{uuid}/ban")
+    public ResponseEntity<CommandResponse> banPlayer(
+            @PathVariable String uuid,
+            @RequestParam(required = false) String reason) {
+
+        return ResponseEntity.ok(dashboardService.banPlayer(uuid, reason));
+    }
+
+    @PostMapping("/{uuid}/unban")
+    public ResponseEntity<CommandResponse> unbanPlayer(
+            @PathVariable String uuid) {
+
+        return ResponseEntity.ok(dashboardService.unbanPlayer(uuid));
+    }
 }
