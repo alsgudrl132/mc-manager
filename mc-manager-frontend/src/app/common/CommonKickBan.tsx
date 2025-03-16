@@ -13,13 +13,13 @@ import { Ban, ShieldBan } from "lucide-react";
 import { useState } from "react";
 import { kickBanPlayer } from "../store/store";
 
-interface IKickProps {
+interface IKickBanProps {
   name: string;
   uuid: string;
   option: string;
 }
 
-export function CommonKickBan({ name, uuid, option }: IKickProps) {
+export function CommonKickBan({ name, uuid, option }: IKickBanProps) {
   const [reason, setReason] = useState("");
 
   const handleKickBan = async (option: string) => {
