@@ -17,9 +17,17 @@ interface IKickBanProps {
   name: string;
   uuid: string;
   option: string;
+  banned: boolean;
+  onActionComplete?: () => void;
 }
 
-export function CommonKickBan({ name, uuid, option }: IKickBanProps) {
+export function CommonKickBan({
+  name,
+  uuid,
+  option,
+  banned,
+  onActionComplete,
+}: IKickBanProps) {
   const [reason, setReason] = useState("");
 
   const handleKickBan = async (option: string) => {
@@ -30,6 +38,8 @@ export function CommonKickBan({ name, uuid, option }: IKickBanProps) {
       alert(
         `${name} 플레이어가 ${option === "kick" ? "추방" : "벤"} 되었습니다.`
       );
+
+      if (onActionComplete) onActionComplete();
     } catch (error) {
       alert(`${option === "kick" ? "추방" : "벤"} 에 실패하였습니다 ${error}`);
     }
@@ -42,8 +52,17 @@ export function CommonKickBan({ name, uuid, option }: IKickBanProps) {
           <div className="flex flex-col items-center cursor-pointer">
             {option === "ban" ? (
               <div className="flex flex-col justify-center items-center ">
-                <ShieldBan />
-                <strong className="text-red-500">Ban</strong>
+                {banned === false ? (
+                  <>
+                    <ShieldBan />
+                    <strong className="text-red-500">Ban</strong>
+                  </>
+                ) : (
+                  <>
+                    <ShieldBan />
+                    <strong className="text-green-500">Unban</strong>
+                  </>
+                )}
               </div>
             ) : (
               <div className="flex flex-col justify-center items-center">
