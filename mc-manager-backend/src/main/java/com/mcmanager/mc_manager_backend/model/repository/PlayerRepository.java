@@ -15,6 +15,9 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
 
     Optional<Player> findByUuid(String uuid);
 
+    // 추가: 플레이어 이름으로 검색
+    Optional<Player> findByName(String name);
+
     List<Player> findByIsOnlineTrue();
 
     List<Player> findByLastLoginGreaterThanEqual(long since);

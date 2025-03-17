@@ -21,6 +21,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Service
 public class DashboardServiceImpl implements DashboardService {
@@ -160,16 +164,60 @@ public class DashboardServiceImpl implements DashboardService {
             return new ArrayList<>();
         }
 
+        List<ChatLog> chatLogs;
+
         if (player != null && search != null) {
-            return chatLogRepo.findByPlayerNameContainingAndMessageContainingOrderByTimestampDesc(
+            chatLogs = chatLogRepo.findByPlayerNameContainingAndMessageContainingOrderByTimestampDesc(
                     player, search, limit);
         } else if (player != null) {
-            return chatLogRepo.findByPlayerNameContainingOrderByTimestampDesc(player, limit);
+            chatLogs = chatLogRepo.findByPlayerNameContainingOrderByTimestampDesc(player, limit);
         } else if (search != null) {
-            return chatLogRepo.findByMessageContainingOrderByTimestampDesc(search, limit);
+            chatLogs = chatLogRepo.findByMessageContainingOrderByTimestampDesc(search, limit);
         } else {
-            return chatLogRepo.findTopNOrderByTimestampDesc(limit);
+            chatLogs = chatLogRepo.findTopNOrderByTimestampDesc(limit);
         }
+
+        // 벤 목록 조회
+        Set<String> bannedPlayerUuids = getBannedPlayerUuids();
+
+        // 채팅 로그에 벤 상태 설정
+        for (ChatLog chatLog : chatLogs) {
+            chatLog.setBanned(bannedPlayerUuids.contains(chatLog.getUuid()));
+        }
+
+        return chatLogs;
+    }
+
+    // 벤된 플레이어 UUID 목록 조회
+    private Set<String> getBannedPlayerUuids() {
+        Set<String> bannedUuids = new HashSet<>();
+
+        try {
+            // RCON을 통해 벤 목록 가져오기
+            String banListResponse = sendRconCommand("banlist");
+
+            // 벤 목록 응답 파싱하기 (예: "There are 3 banned players: player1, player2, player3")
+            // 실제 응답 형식에 맞게 조정 필요
+            if (banListResponse != null && !banListResponse.contains("There are 0 banned players")) {
+                Pattern pattern = Pattern.compile("\\b([\\w]+)\\b");
+                Matcher matcher = pattern.matcher(banListResponse);
+
+                while (matcher.find()) {
+                    String playerName = matcher.group(1);
+                    // 플레이어 이름으로 UUID 찾기
+                    if (playerRepo != null) {
+                        playerRepo.findByName(playerName).ifPresent(player -> {
+                            bannedUuids.add(player.getUuid());
+                        });
+                    }
+                }
+            }
+        } catch (Exception e) {
+            // 오류 발생 시 빈 세트 반환
+            return new HashSet<>();
+        }
+
+        return bannedUuids;
     }
 
     @Override

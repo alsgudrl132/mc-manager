@@ -23,4 +23,7 @@ public class ChatLog {
     private String playerName;
 
     private String message;
+
+    @Transient
+    private boolean banned;
 }
