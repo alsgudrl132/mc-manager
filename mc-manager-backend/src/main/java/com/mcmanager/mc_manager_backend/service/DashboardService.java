@@ -44,4 +44,6 @@ public interface DashboardService {
     CommandResponse banPlayer(String uuid, String reason);
 
     CommandResponse unbanPlayer(String uuid);
+
+    List<PlayerDetails> getAllOnlinePlayersDetails();
 }

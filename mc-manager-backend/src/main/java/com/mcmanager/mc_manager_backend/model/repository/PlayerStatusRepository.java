@@ -14,4 +14,7 @@ public interface PlayerStatusRepository extends JpaRepository<PlayerStatus, Long
 
     List<PlayerStatus> findByUuidAndTimestampBetweenOrderByTimestamp(
             String uuid, long startTime, long endTime);
+
+    // 추가된 메소드
+    List<PlayerStatus> findByTimestampGreaterThan(long timestamp);
 }

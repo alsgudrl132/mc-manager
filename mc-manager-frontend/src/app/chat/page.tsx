@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Bell, Filter, MessageSquare } from "lucide-react";
 import { fetchChatLogs } from "../store/store";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import CommonLoading from "../common/CommonLoading";
 import { CommonKickBan } from "../common/CommonKickBan";
 
@@ -14,13 +14,20 @@ interface ChatLog {
   uuid: string;
   playerName: string | null;
   message: string;
+  banned: boolean;
 }
 
 function Chat() {
+  const queryClient = useQueryClient();
   const { data: chatLogs, isLoading } = useQuery<ChatLog[]>({
     queryKey: ["chatLogs"],
     queryFn: () => fetchChatLogs({ limit: 10, player: "", search: "" }),
   });
+
+  // 벤/언벤 후 데이터 새로고침 함수
+  const refreshChatLogs = () => {
+    queryClient.invalidateQueries({ queryKey: ["chatLogs"] });
+  };
 
   if (isLoading) {
     return <CommonLoading />;
@@ -58,11 +65,15 @@ function Chat() {
                   name={chatLog.playerName ?? ""}
                   uuid={chatLog.uuid}
                   option="kick"
+                  banned={chatLog.banned}
+                  onActionComplete={refreshChatLogs}
                 />
                 <CommonKickBan
                   name={chatLog.playerName ?? ""}
                   uuid={chatLog.uuid}
                   option="ban"
+                  banned={chatLog.banned}
+                  onActionComplete={refreshChatLogs}
                 />
               </div>
             </div>

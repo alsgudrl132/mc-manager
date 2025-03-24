@@ -49,3 +49,12 @@ export const kickBanPlayer = async (
     throw error;
   }
 };
+
+export const unbanPlayer = async (uuid: string) => {
+  try {
+    await axios.post(`${URL}/players/${uuid}/unban`);
+  } catch (error) {
+    console.error("Error unbaning player", error);
+    throw error;
+  }
+};

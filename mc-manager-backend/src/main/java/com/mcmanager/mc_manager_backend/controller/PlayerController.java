@@ -116,4 +116,9 @@ public class PlayerController {
 
         return ResponseEntity.ok(dashboardService.unbanPlayer(uuid));
     }
+
+    @GetMapping("/online/details")
+    public ResponseEntity<List<PlayerDetails>> getAllOnlinePlayersDetails() {
+        return ResponseEntity.ok(dashboardService.getAllOnlinePlayersDetails());
+    }
 }

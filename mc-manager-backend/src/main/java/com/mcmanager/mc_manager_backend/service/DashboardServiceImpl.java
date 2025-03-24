@@ -1,5 +1,6 @@
 package com.mcmanager.mc_manager_backend.service;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.mcmanager.mc_manager_backend.dto.CommandResponse;
 import com.mcmanager.mc_manager_backend.dto.PlayerDetails;
 import com.mcmanager.mc_manager_backend.exception.ResourceNotFoundException;
@@ -28,6 +29,7 @@ import java.util.regex.Pattern;
 
 @Service
 public class DashboardServiceImpl implements DashboardService {
+    private static final Logger logger = LoggerFactory.getLogger(DashboardServiceImpl.class);
 
     private final ServerStatusRepository serverStatusRepo;
     private final PlayerRepository playerRepo;
@@ -94,9 +96,46 @@ public class DashboardServiceImpl implements DashboardService {
     @Override
     public List<Player> getOnlinePlayers() {
         if (playerRepo == null) {
+            logger.error("Player repository is null");
             return new ArrayList<>();
         }
-        return playerRepo.findByIsOnlineTrue();
+
+        List<Player> onlinePlayers = playerRepo.findByIsOnlineTrue();
+        logger.info("Found {} online players in database", onlinePlayers.size());
+
+        // 온라인 플레이어가 없지만 서버에 플레이어가 있다고 보고되면 최근 활동 플레이어를 확인
+        if (onlinePlayers.isEmpty()) {
+            ServerStatus status = null;
+            if (serverStatusRepo != null) {
+                status = serverStatusRepo.findTopByOrderByTimestampDesc().orElse(null);
+            }
+
+            if (status != null && status.getOnlinePlayers() > 0) {
+                logger.info("Server reports {} online players but none found in database", status.getOnlinePlayers());
+
+                // 최근 활동 플레이어를 검색 (예: 10분 이내에 활동한 플레이어)
+                long recentCutoff = System.currentTimeMillis() - (10 * 60 * 1000); // 10분
+                List<PlayerStatus> recentStatuses = playerStatusRepo.findByTimestampGreaterThan(recentCutoff);
+
+                Set<String> recentUuids = new HashSet<>();
+                for (PlayerStatus ps : recentStatuses) {
+                    recentUuids.add(ps.getUuid());
+                }
+
+                logger.info("Found {} recently active players", recentUuids.size());
+
+                if (!recentUuids.isEmpty()) {
+                    List<Player> recentPlayers = playerRepo.findByUuidIn(new ArrayList<>(recentUuids));
+                    for (Player p : recentPlayers) {
+                        p.setOnline(true); // 메모리에서만 설정
+                    }
+                    logger.info("Returning {} players as potentially online", recentPlayers.size());
+                    return recentPlayers;
+                }
+            }
+        }
+
+        return onlinePlayers;
     }
 
     @Override
@@ -129,6 +168,20 @@ public class DashboardServiceImpl implements DashboardService {
 
             if (latestStatus != null) {
                 details.setCurrentStatus(latestStatus);
+
+                // 플레이어 객체에 최신 상태 정보 동기화
+                player.setHealth(latestStatus.getHealth());
+                player.setLevel(latestStatus.getLevel());
+                player.setWorld(latestStatus.getWorld());
+                player.setX(latestStatus.getX());
+                player.setY(latestStatus.getY());
+                player.setZ(latestStatus.getZ());
+
+                // 온라인 상태 확인 및 수정
+                long currentTime = System.currentTimeMillis();
+                if (currentTime - latestStatus.getTimestamp() < 60000) { // 1분 이내 데이터라면 온라인으로 간주
+                    player.setOnline(true);
+                }
             }
         }
 
@@ -136,12 +189,24 @@ public class DashboardServiceImpl implements DashboardService {
         long totalPlayTime = player.getPlayTime();
         Map<String, Object> stats = new HashMap<>();
         stats.put("totalPlayTimeMs", totalPlayTime);
-        stats.put("totalPlayTimeHours", Math.round(totalPlayTime / 3600000.0 * 10) / 10.0);
+        stats.put("totalPlayTimeHours", totalPlayTime > 0 ? Math.round(totalPlayTime / 3600000.0 * 10) / 10.0 : 0.0);
 
         // 최근 일주일 플레이 시간 계산
         if (playerRepo != null) {
             long weekAgo = System.currentTimeMillis() - (7 * 24 * 60 * 60 * 1000);
-            List<Map<String, Object>> dailyStats = playerRepo.getDailyPlayTime(uuid, weekAgo);
+            List<Map<String, Object>> originalDailyStats = playerRepo.getDailyPlayTime(uuid, weekAgo);
+
+            // 불변 객체를 새로운 리스트로 복사하고 수정
+            List<Map<String, Object>> dailyStats = new ArrayList<>();
+            for (Map<String, Object> stat : originalDailyStats) {
+                Map<String, Object> newStat = new HashMap<>(stat);
+                Object playTime = newStat.get("play_time");
+                if (playTime instanceof Number && ((Number) playTime).longValue() < 0) {
+                    newStat.put("play_time", 0L);
+                }
+                dailyStats.add(newStat);
+            }
+
             stats.put("dailyPlayTime", dailyStats);
         }
 
@@ -466,5 +531,23 @@ public class DashboardServiceImpl implements DashboardService {
         } catch (ResourceNotFoundException e) {
             return new CommandResponse(false, e.getMessage());
         }
+    }
+
+    @Override
+    public List<PlayerDetails> getAllOnlinePlayersDetails() {
+        List<Player> onlinePlayers = getOnlinePlayers();
+        List<PlayerDetails> detailsList = new ArrayList<>();
+
+        for (Player player : onlinePlayers) {
+            try {
+                PlayerDetails details = getPlayerDetails(player.getUuid());
+                detailsList.add(details);
+            } catch (Exception e) {
+                // 에러 로깅
+                logger.error("Error getting details for player " + player.getName() + ": " + e.getMessage());
+            }
+        }
+
+        return detailsList;
     }
 }

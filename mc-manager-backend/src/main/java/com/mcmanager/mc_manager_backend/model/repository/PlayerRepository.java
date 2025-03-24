@@ -20,6 +20,9 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
 
     List<Player> findByIsOnlineTrue();
 
+    // 추가된 메소드
+    List<Player> findByUuidIn(List<String> uuids);
+
     List<Player> findByLastLoginGreaterThanEqual(long since);
 
     @Query(value = "SELECT DATE(FROM_UNIXTIME(last_login/1000)) as day, " +

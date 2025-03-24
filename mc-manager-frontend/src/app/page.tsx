@@ -1,94 +1,100 @@
-"use client";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "@/components/ui/card";
-import { Activity, Database, Search, Users } from "lucide-react";
+import React from "react";
+import { Search, Shield, Ban, Navigation, Settings } from "lucide-react";
 
-export default function Home() {
+const OnlinePlayersComponent = () => {
   return (
-    <div>
-      <div className="flex">
-        <Card className="max-w-48  max-h-32 mt-10 ml-10 bg-white">
-          <CardContent className="mt-5">
-            <div className="flex justify-between">
-              <div>
-                <CardTitle className="mb-3 text-gray-500">
-                  Active Players
-                </CardTitle>
-                <CardDescription className="font-bold text-2xl text-black">
-                  Online
-                </CardDescription>
-              </div>
-              <div className="bg-emerald-100 p-2 rounded-lg h-10">
-                <Users className="text-green-500  " />
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="max-w-48 min-h-32 m-10 bg-white">
-          <CardContent className="mt-5">
-            <div className="flex justify-between">
-              <div>
-                <CardTitle className="mb-3 text-gray-500">
-                  Server Uptime
-                </CardTitle>
-                <CardDescription className="font-bold text-base text-black">
-                  1
-                </CardDescription>
-              </div>
-              <div className="bg-blue-100 p-2 rounded-lg h-10">
-                <Activity className="w-6 h-6 text-blue-600" />
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="max-w-48 max-h-32 mt-10 bg-white ">
-          <CardContent className="mt-5">
-            <div className="flex justify-between gap-4">
-              <div>
-                <CardTitle className="mb-3 text-gray-500">RAM Usage</CardTitle>
-                <CardDescription className="font-bold text-lg text-black">
-                  1
-                </CardDescription>
-              </div>
-              <div className="bg-amber-100 p-2 rounded-lg h-10">
-                <Database className="w-6 h-6 text-amber-600" />
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-      <Card className="ml-10 pl-10 pt-5 pb-5 w-[658px] bg-white">
-        <div className="flex gap-5 items-center mb-5">
-          <Users />
-          <CardTitle className="font-bold text-xl">Online Players</CardTitle>
+    <div className="p-6 bg-green-50 min-h-screen">
+      <div className="bg-white rounded-lg shadow-sm p-4 max-w-3xl">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-bold">Online Players</h2>
+          <div className="flex gap-2">
+            <button className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white">
+              <Shield size={18} />
+              <span>Whitelist</span>
+            </button>
+            <button className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white">
+              <Ban size={18} />
+              <span>Banned Players</span>
+            </button>
+          </div>
         </div>
-        <div className="flex pt-3 pb-3 mr-10 bg-white border-2 rounded-lg">
-          <Search className="ml-5" />
+
+        <div className="relative mb-6">
+          <Search className="absolute left-3 top-3 text-gray-400" size={18} />
           <input
-            className="ml-2 mr-2 w-full"
             type="text"
-            placeholder="Search Players..."
+            placeholder="Search players..."
+            className="w-full pl-10 py-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-green-500"
           />
         </div>
-        <Card className="mt-5 p-3 mr-10 flex items-center gap-4">
-          <div className="w-10 h-10 bg-gray-200 border-2 border-emerald-200 rounded-full">
-            <img src="skin" alt="skin" />
+
+        <div className="space-y-4">
+          <div className="border rounded-lg p-4">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden flex items-center justify-center">
+                  <div className="text-gray-400 text-2xl">•••</div>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold">Bico_</span>
+                    <span className="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded">
+                      online
+                    </span>
+                  </div>
+                  <div className="text-sm text-gray-500">Level: 0</div>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <button className="flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-md text-sm">
+                  <span>survival</span>
+                </button>
+                <button className="flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-md text-sm">
+                  <Navigation size={16} className="rotate-45" />
+                  <span>Teleport</span>
+                </button>
+                <button className="flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-md text-sm">
+                  <Settings size={16} />
+                  <span>Manage</span>
+                </button>
+                <button className="flex items-center gap-1 px-3 py-1 bg-red-500 text-white rounded-md text-sm">
+                  <Ban size={16} />
+                  <span>Kick</span>
+                </button>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4">
+              <div>
+                <div className="text-sm text-gray-500 mb-1">Health:</div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    className="bg-red-500 h-2 rounded-full"
+                    style={{ width: "44%" }}
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="text-sm text-gray-500 mb-1">XP:</div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    className="bg-green-500 h-2 rounded-full"
+                    style={{ width: "0%" }}
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <div className="text-sm text-gray-500 mb-1">Location:</div>
+                <div className="text-sm">world (-120.62, 67.0, 35.7)</div>
+              </div>
+            </div>
           </div>
-          <div>
-            <p>Name : Name</p>
-            <p>Level : 1</p>
-          </div>
-          <div>
-            <span className="rounded-lg text-white bg-black pt-1 pb-1 pl-3 pr-3">
-              online
-            </span>
-          </div>
-        </Card>
-      </Card>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default OnlinePlayersComponent;
