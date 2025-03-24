@@ -33,6 +33,11 @@ export const fetchServerStatus = async () => {
   return data;
 };
 
+export const fetchPlayersList = async () => {
+  const { data } = await axios.get(`${URL}/players/online/details`);
+  return data;
+};
+
 export const kickBanPlayer = async (
   uuid: string,
   reason: string,
