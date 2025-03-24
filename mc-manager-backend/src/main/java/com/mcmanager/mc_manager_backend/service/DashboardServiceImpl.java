@@ -103,6 +103,14 @@ public class DashboardServiceImpl implements DashboardService {
         List<Player> onlinePlayers = playerRepo.findByIsOnlineTrue();
         logger.info("Found {} online players in database", onlinePlayers.size());
 
+        // 벤 목록 조회
+        Set<String> bannedPlayerUuids = getBannedPlayerUuids();
+
+        // 각 플레이어에 벤 상태 설정
+        for (Player player : onlinePlayers) {
+            player.setBanned(bannedPlayerUuids.contains(player.getUuid()));
+        }
+
         // 온라인 플레이어가 없지만 서버에 플레이어가 있다고 보고되면 최근 활동 플레이어를 확인
         if (onlinePlayers.isEmpty()) {
             ServerStatus status = null;
@@ -128,6 +136,7 @@ public class DashboardServiceImpl implements DashboardService {
                     List<Player> recentPlayers = playerRepo.findByUuidIn(new ArrayList<>(recentUuids));
                     for (Player p : recentPlayers) {
                         p.setOnline(true); // 메모리에서만 설정
+                        p.setBanned(bannedPlayerUuids.contains(p.getUuid())); // 벤 상태도 설정
                     }
                     logger.info("Returning {} players as potentially online", recentPlayers.size());
                     return recentPlayers;

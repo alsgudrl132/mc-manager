@@ -45,4 +45,7 @@ public class Player {
 
     @Transient
     private String skinUrl;
+
+    @Transient
+    private boolean banned;
 }
