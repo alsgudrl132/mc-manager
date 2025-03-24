@@ -82,12 +82,7 @@ function CommonPlayerList() {
                 </div>
               </div>
               <div className="flex gap-2">
-                <CommonManage
-                  name={player.name ?? ""}
-                  uuid={player.uuid}
-                  banned={player.banned}
-                  onActionComplete={refreshPlayer}
-                />
+                <CommonManage name={player.name ?? ""} uuid={player.uuid} />
                 <CommonKickBan
                   name={player.name ?? ""}
                   uuid={player.uuid}

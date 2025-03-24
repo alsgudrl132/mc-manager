@@ -63,3 +63,23 @@ export const unbanPlayer = async (uuid: string) => {
     throw error;
   }
 };
+
+// op 권한 변경
+export const opStatusChange = async (uuid: string, option: boolean) => {
+  try {
+    await axios.post(`${URL}/players/${uuid}/op?value=${option}`);
+  } catch (error) {
+    console.error("Error opStatusChange", error);
+    throw error;
+  }
+};
+
+// 게임모드 변경
+export const gamemodeChange = async (uuid: string, option: string) => {
+  try {
+    await axios.post(`${URL}/players/${uuid}/gamemode?gamemode=${option}`);
+  } catch (error) {
+    console.error("Error gamemodeChange", error);
+    throw error;
+  }
+};
