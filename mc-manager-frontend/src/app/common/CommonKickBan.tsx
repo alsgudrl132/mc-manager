@@ -108,11 +108,11 @@ export function CommonKickBan({
           </div>
           {(option !== "ban" || !banned) && (
             <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="username" className="text-right">
+              <Label htmlFor="reason" className="text-right">
                 Reason
               </Label>
               <Input
-                id="username"
+                id="reason"
                 className="col-span-3"
                 onChange={(e) => setReason(e.target.value)}
                 placeholder="사유를 입력해주세요."

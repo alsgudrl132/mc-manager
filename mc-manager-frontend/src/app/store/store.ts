@@ -9,6 +9,12 @@ interface IChatFilter {
   search: string;
 }
 
+interface ILocation {
+  x: number;
+  y: number;
+  z: number;
+}
+
 export const useChatStore = create((set) => ({
   searchTerm: "",
   playerFilter: "",
@@ -80,6 +86,18 @@ export const gamemodeChange = async (uuid: string, option: string) => {
     await axios.post(`${URL}/players/${uuid}/gamemode?gamemode=${option}`);
   } catch (error) {
     console.error("Error gamemodeChange", error);
+    throw error;
+  }
+};
+
+// 텔레포트
+export const teleport = async (name: string, location: ILocation) => {
+  try {
+    await axios.post(`${URL}/server/command`, {
+      command: `tp ${name} ${location.x} ${location.y} ${location.z}`,
+    });
+  } catch (error) {
+    console.error("Error teleport", error);
     throw error;
   }
 };
