@@ -33,7 +33,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex">
             <CommonSideNavigation />
-            <div className="flex flex-col flex-1">
+            <div className="flex flex-col flex-1 h-screen">
               <CommonTopNavigation />
               {children}
             </div>

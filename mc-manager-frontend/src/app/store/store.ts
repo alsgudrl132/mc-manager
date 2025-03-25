@@ -101,3 +101,15 @@ export const teleport = async (name: string, location: ILocation) => {
     throw error;
   }
 };
+
+// 글로벌 메세지 전달
+export const sendMessage = async (message: string) => {
+  try {
+    await axios.post(`${URL}/server/broadcast`, {
+      message: message,
+    });
+  } catch (error) {
+    console.error("Error send message", error);
+    throw error;
+  }
+};

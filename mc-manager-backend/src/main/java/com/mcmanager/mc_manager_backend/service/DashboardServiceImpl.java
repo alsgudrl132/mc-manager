@@ -381,8 +381,7 @@ public class DashboardServiceImpl implements DashboardService {
         }
 
         try {
-            String command = "broadcast " + message;
-
+            String command = "say " + message;
             String response = sendRconCommand(command);
             return new CommandResponse(true, response);
         } catch (IOException e) {
