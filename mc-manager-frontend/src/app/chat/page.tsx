@@ -144,10 +144,6 @@ function Chat() {
           <MessageSquare className="w-6 h-6" />
           <span>Server Chat</span>
         </div>
-        <div className="flex gap-4">
-          <Filter className="w-6 h-6" />
-          <Bell className="w-6 h-6" />
-        </div>
       </div>
       <div className="mt-5 flex justify-between items-center gap-4">
         <input
