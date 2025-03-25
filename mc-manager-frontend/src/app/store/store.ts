@@ -18,7 +18,7 @@ interface ILocation {
 export const useChatStore = create((set) => ({
   searchTerm: "",
   playerFilter: "",
-  limit: 50,
+  limit: 100,
   setSearchTerm: (term: string) => set({ searchTerm: term }),
   setPlayerFilter: (player: string) => set({ playerFilter: player }),
   setLimit: (limit: number) => set({ limit: limit }),

@@ -44,7 +44,7 @@ function CommonPlayerList() {
   // 키워드에 따라 목록 필터링
   const handleFilterPlayer = (keyword: string) => {
     const result = players?.filter((player) =>
-      player.name.toLowerCase().includes(keyword)
+      player.name.toLowerCase().includes(keyword.toLowerCase())
     );
     setFilterPlayer(result);
   };
