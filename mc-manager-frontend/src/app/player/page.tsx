@@ -3,7 +3,7 @@ import { Ban, Gamepad, Map, Search, Settings, Users } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import React from "react";
 
-function player() {
+function Player() {
   return (
     <div>
       <Card className="py-7 px-5 mx-7 my-12 border-2 bg-white rounded-lg">
@@ -116,4 +116,4 @@ function player() {
   );
 }
 
-export default player;
+export default Player;

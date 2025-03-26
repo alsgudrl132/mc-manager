@@ -3,6 +3,8 @@ package org.test.plugin;
 import com.destroystokyo.paper.event.server.ServerTickStartEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -36,12 +38,16 @@ public class ServerStatusPlugin extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+
         try {
             // 설정 파일 로드
             saveDefaultConfig();
             loadConfig();
 
             startTime = System.currentTimeMillis();
+
+            // 백업 폴더설정
+            setupBackupFolder();
 
             // 데이터베이스 연결 설정
             setupDatabase();
@@ -565,5 +571,21 @@ public class ServerStatusPlugin extends JavaPlugin implements Listener {
             getLogger().severe("시간 설정 중 오류 발생: " + e.getMessage());
             return false;
         }
+    }
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (command.getName().equalsIgnoreCase("backup")) {
+            String reason = args.length > 0 ? String.join(" ", args) : "";
+            sender.sendMessage("백업을 시작합니다...");
+            String result = createBackup(reason);
+            if (result != null) {
+                sender.sendMessage("백업이 성공적으로 완료되었습니다: " + result);
+            } else {
+                sender.sendMessage("백업 중 오류가 발생했습니다.");
+            }
+            return true;
+        }
+        return false;
     }
 }

@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Bell, Filter, MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import { fetchChatLogs, sendMessage } from "../store/store";
 import { useQuery } from "@tanstack/react-query";
 import CommonLoading from "../common/CommonLoading";
