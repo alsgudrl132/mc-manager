@@ -2,6 +2,7 @@ package org.test.plugin;
 
 import com.destroystokyo.paper.event.server.ServerTickStartEvent;
 import org.bukkit.Bukkit;
+import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,8 +13,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.*;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 public class ServerStatusPlugin extends JavaPlugin implements Listener {
 
@@ -446,5 +451,119 @@ public class ServerStatusPlugin extends JavaPlugin implements Listener {
             getLogger().warning("서버 상태 이력 조회 중 오류 발생: " + e.getMessage());
         }
         return history;
+    }
+
+    // 서버 재시작/정지 기능
+    public boolean restartServer() {
+        getLogger().info("서버 재시작 명령이 실행됩니다...");
+        getServer().dispatchCommand(getServer().getConsoleSender(), "restart");
+        return true;
+    }
+
+    public boolean stopServer() {
+        getLogger().info("서버 정지 명령이 실행됩니다...");
+        getServer().dispatchCommand(getServer().getConsoleSender(), "stop");
+        return true;
+    }
+
+    // 백업 기능
+    private File backupFolder;
+
+    private void setupBackupFolder() {
+        backupFolder = new File(getDataFolder(), "backups");
+        if (!backupFolder.exists()) {
+            backupFolder.mkdirs();
+        }
+    }
+
+    public String createBackup(String reason) {
+        try {
+            String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
+            String backupName = "backup_" + timestamp + ".zip";
+            File backupFile = new File(backupFolder, backupName);
+
+            // 서버 저장 명령 실행
+            getServer().dispatchCommand(getServer().getConsoleSender(), "save-all");
+            Thread.sleep(2000); // 저장 완료를 위한 대기
+
+            // 월드 폴더 압축
+            World mainWorld = getServer().getWorlds().get(0);
+            File worldFolder = mainWorld.getWorldFolder();
+
+            try (ZipOutputStream zipOut = new ZipOutputStream(new FileOutputStream(backupFile))) {
+                zipFiles(worldFolder, worldFolder.getName(), zipOut);
+            }
+
+            getLogger().info("백업이 생성되었습니다: " + backupName);
+            return backupFile.getAbsolutePath();
+        } catch (Exception e) {
+            getLogger().severe("백업 생성 중 오류 발생: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    private void zipFiles(File folder, String parentFolder, ZipOutputStream zipOut) throws IOException {
+        for (File file : folder.listFiles()) {
+            if (file.isDirectory()) {
+                zipFiles(file, parentFolder + "/" + file.getName(), zipOut);
+                continue;
+            }
+
+            ZipEntry entry = new ZipEntry(parentFolder + "/" + file.getName());
+            zipOut.putNextEntry(entry);
+
+            try (FileInputStream fis = new FileInputStream(file)) {
+                byte[] buffer = new byte[1024];
+                int length;
+                while ((length = fis.read(buffer)) > 0) {
+                    zipOut.write(buffer, 0, length);
+                }
+            }
+
+            zipOut.closeEntry();
+        }
+    }
+
+    // 날씨 및 시간 설정
+    public boolean setWeather(String weather) {
+        try {
+            switch (weather.toLowerCase()) {
+                case "clear":
+                    getServer().dispatchCommand(getServer().getConsoleSender(), "weather clear");
+                    break;
+                case "rain":
+                    getServer().dispatchCommand(getServer().getConsoleSender(), "weather rain");
+                    break;
+                case "storm":
+                    getServer().dispatchCommand(getServer().getConsoleSender(), "weather thunder");
+                    break;
+                default:
+                    return false;
+            }
+            return true;
+        } catch (Exception e) {
+            getLogger().severe("날씨 설정 중 오류 발생: " + e.getMessage());
+            return false;
+        }
+    }
+
+    public boolean setTime(String time) {
+        try {
+            switch (time.toLowerCase()) {
+                case "day":
+                    getServer().dispatchCommand(getServer().getConsoleSender(), "time set day");
+                    break;
+                case "night":
+                    getServer().dispatchCommand(getServer().getConsoleSender(), "time set night");
+                    break;
+                default:
+                    return false;
+            }
+            return true;
+        } catch (Exception e) {
+            getLogger().severe("시간 설정 중 오류 발생: " + e.getMessage());
+            return false;
+        }
     }
 }
