@@ -21,20 +21,13 @@ const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT || 8080;
 
-// CORS 설정
+// CORS 설정 - 모든 출처 허용으로 수정
 app.use(
   cors({
-    origin:
-      process.env.CORS_ALLOWED_ORIGINS?.split(",") || "http://localhost:4000",
-    methods: process.env.CORS_ALLOWED_METHODS?.split(",") || [
-      "GET",
-      "POST",
-      "PUT",
-      "DELETE",
-      "OPTIONS",
-    ],
-    allowedHeaders: process.env.CORS_ALLOWED_HEADERS || "*",
-    credentials: process.env.CORS_ALLOW_CREDENTIALS === "true",
+    origin: true, // 모든 출처 허용 (개발 환경용)
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+    credentials: true,
   })
 );
 
@@ -48,13 +41,13 @@ app.use(
   })
 );
 
-// Socket.IO 설정
+// Socket.IO 설정도 수정
 const io = new SocketIOServer(server, {
   cors: {
-    origin:
-      process.env.CORS_ALLOWED_ORIGINS?.split(",") || "http://localhost:4000",
+    origin: true, // 모든 출처 허용 (개발 환경용)
     methods: ["GET", "POST"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
   },
 });
 

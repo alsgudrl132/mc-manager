@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "uuid": "6142d14b-9b65-4085-9636-b6f67c23a988",
+    "name": "Bico_",
+    "created": "2025-03-28 18:23:40 +0900",
+    "source": "Rcon",
+    "expires": "forever",
+    "reason": "123"
+  }
+]

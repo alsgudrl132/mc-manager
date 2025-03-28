@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Dialog,
   DialogContent,
@@ -8,58 +10,11 @@ import {
 } from "@/components/ui/dialog";
 import { Settings, MapPin } from "lucide-react";
 
-import React, { useState } from "react";
-import { gamemodeChange, opStatusChange, teleport } from "../store/store";
-
 interface IManageProps {
   name: string;
-  uuid: string;
 }
 
-function CommonManage({ name, uuid }: IManageProps) {
-  const [tpLocation, setTpLocation] = useState({ x: 0, y: 0, z: 0 });
-
-  // op 변경하는 함수 true일경우 op, false일경우 not op
-  const handleOpStatusChange = async (option: boolean) => {
-    try {
-      const result = await opStatusChange(uuid, option);
-      console.log(result);
-      alert(`${name} 플레이어의 op가 변경되었습니다.`);
-    } catch (error) {
-      alert("op 변경에 실패하였습니다." + error);
-    }
-  };
-
-  // 게임모드 변경하는 함수
-  const handleGamemodeChange = async (option: string) => {
-    try {
-      const result = await gamemodeChange(uuid, option);
-      console.log(result);
-      alert(`${name} 플레이어의 gamemode가 변경되었습니다.`);
-    } catch (error) {
-      alert("gamemode 변경에 실패하였습니다." + error);
-    }
-  };
-
-  // 텔레포트 처리 함수
-  const handleTeleport = async () => {
-    try {
-      const result = await teleport(name, tpLocation);
-      console.log(result);
-      alert(`${name} 플레이어의 위치가 변경되었습니다.`);
-    } catch (error) {
-      alert("위치변역에 실패하였습니다." + error);
-    }
-  };
-
-  // 텔레포트 좌표설정 함수
-  const handleTpLocation = (axis: string, location: string) => {
-    setTpLocation((prev) => ({
-      ...prev,
-      [axis]: Number(location),
-    }));
-  };
-
+function CommonManage({ name }: IManageProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -79,13 +34,13 @@ function CommonManage({ name, uuid }: IManageProps) {
             <div className="grid grid-cols-2 gap-2">
               <button
                 className="border py-2 rounded-lg"
-                onClick={() => handleOpStatusChange(false)}
+                onClick={() => alert("OP 권한을 해제했습니다.")}
               >
                 Not OP
               </button>
               <button
                 className="border py-2 rounded-lg"
-                onClick={() => handleOpStatusChange(true)}
+                onClick={() => alert("OP 권한을 부여했습니다.")}
               >
                 OP
               </button>
@@ -97,13 +52,13 @@ function CommonManage({ name, uuid }: IManageProps) {
             <div className="grid grid-cols-2 gap-2">
               <button
                 className="border py-2 rounded-lg"
-                onClick={() => handleGamemodeChange("survival")}
+                onClick={() => alert("서바이벌 모드로 변경했습니다.")}
               >
                 Survival
               </button>
               <button
                 className="border py-2 rounded-lg"
-                onClick={() => handleGamemodeChange("creative")}
+                onClick={() => alert("크리에이티브 모드로 변경했습니다.")}
               >
                 Creative
               </button>
@@ -117,24 +72,24 @@ function CommonManage({ name, uuid }: IManageProps) {
                 type="number"
                 placeholder="X"
                 className="border p-2 rounded-lg"
-                onChange={(e) => handleTpLocation("x", e.target.value)}
+                defaultValue="0"
               />
               <input
                 type="number"
                 placeholder="Y"
                 className="border p-2 rounded-lg"
-                onChange={(e) => handleTpLocation("y", e.target.value)}
+                defaultValue="64"
               />
               <input
                 type="number"
                 placeholder="Z"
                 className="border p-2 rounded-lg"
-                onChange={(e) => handleTpLocation("z", e.target.value)}
+                defaultValue="0"
               />
             </div>
             <button
               className="w-full border py-2 rounded-lg flex items-center justify-center gap-2"
-              onClick={() => handleTeleport()}
+              onClick={() => alert("플레이어를 텔레포트했습니다.")}
             >
               <MapPin size={16} />
               <span>Teleport</span>

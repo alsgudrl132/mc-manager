@@ -1,12 +1,9 @@
 "use client";
 
 import { Crown, MessageSquare, Users } from "lucide-react";
-import { useRouter } from "next/navigation";
 import React from "react";
 
 function NavigationCommon() {
-  const router = useRouter();
-
   return (
     <header className="flex flex-col bg-zinc-800 h-dvh w-[300px] items-center pt-5">
       <div className="text-emerald-500 font-bold text-2xl mb-10 cursor-pointer">
@@ -15,21 +12,21 @@ function NavigationCommon() {
       <div>
         <div
           className="text-green-50 mb-7 py-1 px-5 flex gap-2 cursor-pointer hover:bg-zinc-700 rounded-full transition-all"
-          onClick={() => router.push("/")}
+          onClick={() => (window.location.href = "/")}
         >
           <Users />
           <span>Player</span>
         </div>
         <div
-          className="text-green-50 mb-7  py-1 px-5 flex gap-2 cursor-pointer hover:bg-zinc-700 rounded-full transition-all"
-          onClick={() => router.push("/chat")}
+          className="text-green-50 mb-7 py-1 px-5 flex gap-2 cursor-pointer hover:bg-zinc-700 rounded-full transition-all"
+          onClick={() => (window.location.href = "/chat")}
         >
           <MessageSquare />
           <span>Chat</span>
         </div>
         <div
-          className="text-green-50 mb-7  py-1 px-5 flex gap-2 cursor-pointer hover:bg-zinc-700 rounded-full transition-all"
-          onClick={() => router.push("/admin")}
+          className="text-green-50 mb-7 py-1 px-5 flex gap-2 cursor-pointer hover:bg-zinc-700 rounded-full transition-all"
+          onClick={() => (window.location.href = "/admin")}
         >
           <Crown />
           <span>Admin</span>

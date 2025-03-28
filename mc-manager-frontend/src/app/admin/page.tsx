@@ -1,8 +1,9 @@
+"use client";
+
 import React from "react";
 import {
   RefreshCw,
   Power,
-  Pause,
   Database,
   Sun,
   Moon,
@@ -19,11 +20,17 @@ function Admin() {
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold text-green-600">Server Online</h2>
           <div className="flex gap-2">
-            <button className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white">
+            <button
+              className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
+              onClick={() => alert("서버를 재시작했습니다.")}
+            >
               <RefreshCw size={18} />
               <span>Restart</span>
             </button>
-            <button className="flex items-center gap-1 px-3 py-1 border rounded-md bg-red-500 text-white">
+            <button
+              className="flex items-center gap-1 px-3 py-1 border rounded-md bg-red-500 text-white"
+              onClick={() => alert("서버를 중지했습니다.")}
+            >
               <Power size={18} />
               <span>Stop</span>
             </button>
@@ -39,7 +46,10 @@ function Admin() {
             <h3 className="text-gray-600">Next Backup</h3>
             <p className="text-2xl font-bold">2h 15m</p>
           </div>
-          <button className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white">
+          <button
+            className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
+            onClick={() => alert("월드를 백업했습니다.")}
+          >
             <Database size={18} />
             <span>Backup</span>
           </button>
@@ -62,7 +72,44 @@ function Admin() {
       {/* 퍼포먼스 모니터링 카드 */}
       <div className="bg-white rounded-lg shadow-sm p-4">
         <h3 className="text-lg font-semibold mb-3">Performance Monitoring</h3>
-        {/* 여기에 차트나 퍼포먼스 지표를 추가할 수 있습니다 */}
+        <div className="grid gap-3">
+          <div>
+            <div className="flex justify-between mb-1">
+              <span className="text-sm">TPS</span>
+              <span className="text-sm font-medium">19.8/20</span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div
+                className="bg-green-500 h-2 rounded-full"
+                style={{ width: "99%" }}
+              ></div>
+            </div>
+          </div>
+          <div>
+            <div className="flex justify-between mb-1">
+              <span className="text-sm">Memory</span>
+              <span className="text-sm font-medium">3.2GB/4GB</span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div
+                className="bg-blue-500 h-2 rounded-full"
+                style={{ width: "80%" }}
+              ></div>
+            </div>
+          </div>
+          <div>
+            <div className="flex justify-between mb-1">
+              <span className="text-sm">CPU</span>
+              <span className="text-sm font-medium">45%</span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div
+                className="bg-yellow-500 h-2 rounded-full"
+                style={{ width: "45%" }}
+              ></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* 월드 설정 카드 */}
@@ -73,15 +120,24 @@ function Admin() {
         <div className="mb-4">
           <p className="text-md font-medium mb-2">Weather</p>
           <div className="grid grid-cols-3 gap-2">
-            <button className="flex items-center justify-center gap-2 border py-2 rounded-lg">
+            <button
+              className="flex items-center justify-center gap-2 border py-2 rounded-lg"
+              onClick={() => alert("날씨를 맑음으로 변경했습니다.")}
+            >
               <Cloud size={16} />
               <span>Clear</span>
             </button>
-            <button className="flex items-center justify-center gap-2 border py-2 rounded-lg">
+            <button
+              className="flex items-center justify-center gap-2 border py-2 rounded-lg"
+              onClick={() => alert("날씨를 비로 변경했습니다.")}
+            >
               <CloudRain size={16} />
               <span>Rain</span>
             </button>
-            <button className="flex items-center justify-center gap-2 border py-2 rounded-lg">
+            <button
+              className="flex items-center justify-center gap-2 border py-2 rounded-lg"
+              onClick={() => alert("날씨를 폭풍으로 변경했습니다.")}
+            >
               <CloudRain size={16} />
               <span>Storm</span>
             </button>
@@ -92,11 +148,17 @@ function Admin() {
         <div>
           <p className="text-md font-medium mb-2">Time</p>
           <div className="grid grid-cols-2 gap-2">
-            <button className="flex items-center justify-center gap-2 border py-2 rounded-lg">
+            <button
+              className="flex items-center justify-center gap-2 border py-2 rounded-lg"
+              onClick={() => alert("시간을 낮으로 변경했습니다.")}
+            >
               <Sun size={16} />
               <span>Day</span>
             </button>
-            <button className="flex items-center justify-center gap-2 border py-2 rounded-lg">
+            <button
+              className="flex items-center justify-center gap-2 border py-2 rounded-lg"
+              onClick={() => alert("시간을 밤으로 변경했습니다.")}
+            >
               <Moon size={16} />
               <span>Night</span>
             </button>
@@ -113,14 +175,20 @@ function Admin() {
           <div className="flex justify-between items-center">
             <div>
               <p className="font-medium">Latest Backup</p>
-              <p className="text-sm text-gray-600">2024-02-07 15:00</p>
+              <p className="text-sm text-gray-600">2025-03-28 15:00</p>
             </div>
             <div className="flex gap-2">
-              <button className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white">
+              <button
+                className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
+                onClick={() => alert("백업 파일을 다운로드합니다.")}
+              >
                 <ArrowDown size={16} />
                 <span>Download</span>
               </button>
-              <button className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white">
+              <button
+                className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
+                onClick={() => alert("이 백업으로 복원하시겠습니까?")}
+              >
                 <span>Restore</span>
               </button>
             </div>
@@ -132,14 +200,20 @@ function Admin() {
           <div className="flex justify-between items-center">
             <div>
               <p className="font-medium">Auto Backup</p>
-              <p className="text-sm text-gray-600">2024-02-07 10:00</p>
+              <p className="text-sm text-gray-600">2025-03-28 10:00</p>
             </div>
             <div className="flex gap-2">
-              <button className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white">
+              <button
+                className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
+                onClick={() => alert("백업 파일을 다운로드합니다.")}
+              >
                 <ArrowDown size={16} />
                 <span>Download</span>
               </button>
-              <button className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white">
+              <button
+                className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
+                onClick={() => alert("이 백업으로 복원하시겠습니까?")}
+              >
                 <span>Restore</span>
               </button>
             </div>
@@ -152,11 +226,11 @@ function Admin() {
         <h3 className="text-lg font-semibold mb-3">Server Logs</h3>
         <div className="bg-black text-green-400 p-3 rounded font-mono text-sm h-48 overflow-y-auto">
           <div>[15:00:23] Server backup completed successfully</div>
-          <div>[14:58:12] Player 'Player_1' logged in</div>
+          <div>[14:58:12] Player Player1 logged in</div>
           <div className="text-yellow-400">
             [14:55:01] Warning: TPS dropped to 19.5
           </div>
-          <div>[14:52:45] Player 'Player_2' logged out</div>
+          <div>[14:52:45] Player Player2 logged out</div>
           <div className="text-red-400">
             [14:50:30] Error: Failed to load chunk at (120, -340)
           </div>
