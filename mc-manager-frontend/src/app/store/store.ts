@@ -11,6 +11,16 @@ const BASE_HOST =
 const API_PORT = 8080; // 백엔드 포트
 const URL = `http://${BASE_HOST}:${API_PORT}/api`;
 
+export interface AxiosError {
+  response?: {
+    data?: {
+      message?: string;
+    };
+    status?: number;
+  };
+  message?: string;
+}
+
 interface IChatFilter {
   limit?: number;
   playerUuid?: string;
@@ -25,6 +35,13 @@ interface ILocation {
   world?: string;
 }
 
+interface IRegister {
+  username: string;
+  password: string;
+  email: string;
+  role: string;
+}
+
 interface ChatState {
   searchTerm: string;
   playerFilter: string;
@@ -33,58 +50,6 @@ interface ChatState {
   setPlayerFilter: (player: string) => void;
   setLimit: (limit: number) => void;
 }
-
-interface User {
-  id: string;
-  username: string;
-  email: string;
-  role: string;
-}
-
-interface AuthState {
-  user: User | null;
-  token: string | null;
-  login: (username: string, password: string) => Promise<void>;
-  register: (
-    username: string,
-    email: string,
-    password: string
-  ) => Promise<void>;
-  logout: () => void;
-}
-
-export const useAuthStore = create<AuthState>((set) => ({
-  user: null,
-  token: null,
-  login: async (username, password) => {
-    try {
-      const response = await axios.post(`${URL}/auth/login`, {
-        username,
-        password,
-      });
-      set({ user: response.data.data, token: response.data.data.token });
-    } catch (error) {
-      console.error("Error during login:", error);
-      throw error;
-    }
-  },
-  register: async (username, email, password) => {
-    try {
-      await axios.post(`${URL}/auth/register`, {
-        username,
-        email,
-        password,
-        role: "admin",
-      });
-    } catch (error) {
-      console.error("Error during registration:", error);
-      throw error;
-    }
-  },
-  logout: () => {
-    set({ user: null, token: null });
-  },
-}));
 
 export const useChatStore = create<ChatState>((set) => ({
   searchTerm: "",
@@ -107,6 +72,26 @@ authAxios.interceptors.request.use((config) => {
   }
   return config;
 });
+
+export const submitRegister = async ({
+  username,
+  password,
+  email,
+  role,
+}: IRegister) => {
+  try {
+    const { data } = await axios.post(`${URL}/auth/register`, {
+      username,
+      password,
+      email,
+      role,
+    });
+    return data;
+  } catch (error) {
+    console.error(`Error Register`, error);
+    throw error;
+  }
+};
 
 export const fetchChatLogs = async ({
   limit = 100,
