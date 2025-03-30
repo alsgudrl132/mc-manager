@@ -38,7 +38,7 @@ export default function RegisterPage() {
       const result = await submitRegister(user);
       if (result.success) {
         alert("회원가입에 성공하였습니다.");
-        router.push("/");
+        router.push("/login");
       } else {
         alert(result.message || "회원가입에 실패했습니다.");
       }

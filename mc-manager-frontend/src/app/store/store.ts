@@ -21,57 +21,49 @@ export interface AxiosError {
   message?: string;
 }
 
-interface IChatFilter {
-  limit?: number;
-  playerUuid?: string;
-  startTime?: number;
-  endTime?: number;
-}
-
-interface ILocation {
-  x: number;
-  y: number;
-  z: number;
-  world?: string;
-}
-
-interface IRegister {
+interface ILogin {
   username: string;
   password: string;
+}
+
+interface IRegister extends ILogin {
   email: string;
   role: string;
 }
 
-interface ChatState {
-  searchTerm: string;
-  playerFilter: string;
-  limit: number;
-  setSearchTerm: (term: string) => void;
-  setPlayerFilter: (player: string) => void;
-  setLimit: (limit: number) => void;
+interface User {
+  id: number;
+  username: string;
+  email: string;
+  role: string;
+  token?: string;
+  lastLogin?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
-export const useChatStore = create<ChatState>((set) => ({
-  searchTerm: "",
-  playerFilter: "",
-  limit: 100,
-  setSearchTerm: (term: string) => set({ searchTerm: term }),
-  setPlayerFilter: (player: string) => set({ playerFilter: player }),
-  setLimit: (limit: number) => set({ limit: limit }),
-}));
+interface LoginResponse {
+  success: boolean;
+  message: string;
+  data?: {
+    id: number;
+    username: string;
+    email: string;
+    role: string;
+    token: string;
+    lastLogin?: string;
+    createdAt?: string;
+    updatedAt?: string;
+  };
+}
 
-// 인증이 필요한 요청에 토큰 포함하기
-const authAxios = axios.create({
-  baseURL: URL,
-});
-
-authAxios.interceptors.request.use((config) => {
-  const token = useAuthStore.getState().token;
-  if (token) {
-    config.headers["Authorization"] = `Bearer ${token}`;
-  }
-  return config;
-});
+interface AuthState {
+  user: User | null;
+  token: string | null;
+  isAuthenticated: boolean;
+  login: (credentials: ILogin) => Promise<LoginResponse>;
+  logout: () => void;
+}
 
 export const submitRegister = async ({
   username,
@@ -93,137 +85,86 @@ export const submitRegister = async ({
   }
 };
 
-export const fetchChatLogs = async ({
-  limit = 100,
-  playerUuid,
-  startTime,
-  endTime,
-}: IChatFilter) => {
-  const params = new URLSearchParams();
-  if (limit) params.append("limit", String(limit));
-  if (playerUuid) params.append("playerUuid", playerUuid);
-  if (startTime) params.append("startTime", String(startTime));
-  if (endTime) params.append("endTime", String(endTime));
-
-  const { data } = await authAxios.get(`/chat/logs?${params}`);
-  return data.data;
-};
-
-export const fetchServerStatus = async () => {
-  const { data } = await authAxios.get(`/server/status`);
-  return data.data;
-};
-
-export const fetchPlayersList = async () => {
-  const { data } = await authAxios.get(`/players`);
-  return data.data;
-};
-
-export const kickBanPlayer = async (
-  playerName: string,
-  reason: string,
-  option: string
-) => {
+export const submitLogin = async ({ username, password }: ILogin) => {
   try {
-    const { data } = await authAxios.post(`/players/${playerName}/${option}`, {
-      reason,
+    const { data } = await axios.post(`${URL}/auth/login`, {
+      username,
+      password,
     });
     return data;
   } catch (error) {
-    console.error(`Error ${option} player:`, error);
+    console.error(`Error Login`, error);
     throw error;
   }
 };
 
-export const unbanPlayer = async (playerName: string) => {
-  try {
-    const { data } = await authAxios.post(`/players/${playerName}/unban`);
-    return data;
-  } catch (error) {
-    console.error("Error unbanning player", error);
-    throw error;
-  }
+// 로컬 스토리지에서 기존 인증 정보 불러오기
+const getStoredAuth = () => {
+  if (typeof window === "undefined")
+    return { user: null, token: null, isAuthenticated: false };
+
+  const storedToken = localStorage.getItem("token");
+  const storedUser = localStorage.getItem("user");
+
+  return {
+    token: storedToken,
+    user: storedUser ? JSON.parse(storedUser) : null,
+    isAuthenticated: !!storedToken,
+  };
 };
 
-export const opStatusChange = async (playerName: string, option: boolean) => {
-  try {
-    const endpoint = option ? "op" : "deop";
-    const { data } = await authAxios.post(`/players/${playerName}/${endpoint}`);
-    return data;
-  } catch (error) {
-    console.error("Error changing op status", error);
-    throw error;
-  }
-};
+export const useAuthStore = create<AuthState>((set) => ({
+  ...getStoredAuth(), // 로컬 스토리지에서 초기 상태 불러오기
 
-export const gamemodeChange = async (playerName: string, option: string) => {
-  try {
-    const { data } = await authAxios.post(`/players/${playerName}/gamemode`, {
-      gamemode: option,
-    });
-    return data;
-  } catch (error) {
-    console.error("Error changing gamemode", error);
-    throw error;
-  }
-};
-
-export const teleport = async (playerName: string, location: ILocation) => {
-  try {
-    const { data } = await authAxios.post(`/players/${playerName}/teleport`, {
-      x: location.x,
-      y: location.y,
-      z: location.z,
-      world: location.world,
-    });
-    return data;
-  } catch (error) {
-    console.error("Error teleporting", error);
-    throw error;
-  }
-};
-
-export const sendMessage = async (message: string) => {
-  try {
-    const { data } = await authAxios.post(`/chat/broadcast`, { message });
-    return data;
-  } catch (error) {
-    console.error("Error sending message", error);
-    throw error;
-  }
-};
-
-export const controlServer = async (option: string) => {
-  try {
-    const { data } = await authAxios.post(`/server/${option}`);
-    return data;
-  } catch (error) {
-    console.error(`Error ${option} server`, error);
-    throw error;
-  }
-};
-
-export const createBackupWorld = async () => {
-  try {
-    const { data } = await authAxios.post(`/backups`);
-    return data;
-  } catch (error) {
-    console.error("Error creating backup", error);
-    throw error;
-  }
-};
-
-export const useServerStore = create((set) => ({
-  serverStatus: null,
-  isLoading: true,
-  fetchServerStatus: async () => {
+  login: async (credential) => {
     try {
-      set({ isLoading: true });
-      const { data } = await authAxios.get(`/server/status`);
-      set({ serverStatus: data.data, isLoading: false });
+      const response = await submitLogin(credential);
+      if (response.success) {
+        // 로컬 스토리지에 토큰과 사용자 정보 저장
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("user", JSON.stringify(response.data));
+
+        // 상태 업데이트
+        set({
+          user: response.data,
+          token: response.data.token,
+          isAuthenticated: true,
+        });
+      }
+      return response; // 결과 반환 추가
     } catch (error) {
-      console.error("Error fetching server status", error);
-      set({ isLoading: false });
+      console.error("Login error:", error);
+      throw error;
     }
   },
+
+  logout: () => {
+    // 로컬 스토리지에서 인증 정보 제거
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+
+    // 상태 초기화
+    set({
+      user: null,
+      token: null,
+      isAuthenticated: false,
+    });
+  },
 }));
+
+// 인증된 API 요청을 위한 Axios 인스턴스
+export const authAxios = axios.create({
+  baseURL: URL,
+});
+
+// 요청 인터셉터 - 모든 요청에 인증 토큰 추가
+authAxios.interceptors.request.use(
+  (config) => {
+    const token = useAuthStore.getState().token;
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
