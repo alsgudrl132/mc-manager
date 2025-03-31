@@ -3,7 +3,9 @@
 import { KeyRound, LogIn, LogOut } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { useAuthStore } from "../store/store";
+import { fetchServerStatus, useAuthStore } from "../store/store";
+import { useQuery } from "@tanstack/react-query";
+import CommonLoading from "./CommonLoading";
 
 function CommonTopNavigation() {
   const router = useRouter();
@@ -22,16 +24,30 @@ function CommonTopNavigation() {
     router.push("/login");
   };
 
+  const {
+    data: serverStatus,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["serverStatus"],
+    queryFn: fetchServerStatus,
+    refetchInterval: 5000,
+  });
+
+  console.log(serverStatus);
+
   if (!mounted) {
     return null;
   }
+  if (isLoading) return <CommonLoading />;
+  if (error) return <div>오류 발생: {error.message}</div>;
 
   return (
     <nav className="flex justify-between items-center w-full h-12 py-3 bg-zinc-800 pl-5 pr-5 border-l-2 border-t-2 border-b-2 border-black">
       <div className="text-green-50 flex gap-10">
-        <span>Server : Online</span>
-        <span>TPS : 19.8</span>
-        <span>Players : 10</span>
+        <span>Server : {serverStatus?.data.data.status}</span>
+        <span>TPS : {serverStatus?.data.data.tps}</span>
+        <span>Players : {serverStatus?.data.data.onlinePlayers}</span>
       </div>
 
       {isAuthenticated ? (

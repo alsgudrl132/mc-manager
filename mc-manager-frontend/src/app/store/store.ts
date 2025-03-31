@@ -168,3 +168,12 @@ authAxios.interceptors.request.use(
   },
   (error) => Promise.reject(error)
 );
+
+export const fetchServerStatus = async () => {
+  try {
+    return await axios.get(`${URL}/server/status`);
+  } catch (error) {
+    console.error(`fetchServerStatus Error`, error);
+    throw error;
+  }
+};

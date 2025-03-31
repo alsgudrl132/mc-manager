@@ -1,70 +1,14 @@
-[17:27:49] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.3+9-LTS; Amazon.com Inc. Corretto-21.0.3.9.1) on Mac OS X 15.3.2 (aarch64)
-[17:27:49] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) for Minecraft 1.21.4
-[17:27:50] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[17:27:50] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
-[17:27:50] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
- - ServerStatusPlugin (1.0.0)
-[17:27:53] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[17:27:54] [ServerMain/INFO]: Loaded 1370 recipes
-[17:27:54] [ServerMain/INFO]: Loaded 1481 advancements
-[17:27:54] [ServerMain/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
-[17:27:54] [ServerMain/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 143.1ms
-[17:27:54] [Server thread/INFO]: Starting minecraft server version 1.21.4
-[17:27:54] [Server thread/INFO]: Loading properties
-[17:27:54] [Server thread/INFO]: This server is running Paper version 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) (Implementing API version 1.21.4-R0.1-SNAPSHOT)
-[17:27:54] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
-[17:27:54] [Server thread/INFO]: Using 4 threads for Netty based IO
-[17:27:54] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[17:27:55] [Server thread/INFO]: [MoonriseCommon] Paper is using 2 worker threads, 1 I/O threads
-[17:27:55] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
-[17:27:55] [Server thread/INFO]: Default game type: SURVIVAL
-[17:27:55] [Server thread/INFO]: Generating keypair
-[17:27:55] [Server thread/INFO]: Starting Minecraft server on *:25565
-[17:27:55] [Server thread/INFO]: Using default channel type
-[17:27:56] [Server thread/INFO]: Paper: Using libdeflate (macOS ARM64 / Apple Silicon) compression from Velocity.
-[17:27:56] [Server thread/INFO]: Paper: Using native (macOS ARM64 / Apple Silicon) cipher from Velocity.
-[17:27:56] [Server thread/INFO]: [ServerStatusPlugin] Loading server plugin ServerStatusPlugin v1.0.0
-[17:27:56] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[17:27:56] [Server thread/INFO]: Preparing level "world"
-[17:27:56] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[17:27:56] [Server thread/INFO]: Preparing spawn area: 0%
-[17:27:57] [Server thread/INFO]: Preparing spawn area: 8%
-[17:27:57] [Server thread/INFO]: Time elapsed: 505 ms
-[17:27:57] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
-[17:27:57] [Server thread/INFO]: Preparing spawn area: 0%
-[17:27:57] [Server thread/INFO]: Time elapsed: 69 ms
-[17:27:57] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
-[17:27:57] [Server thread/INFO]: Preparing spawn area: 0%
-[17:27:57] [Server thread/INFO]: Time elapsed: 67 ms
-[17:27:57] [Server thread/INFO]: [ServerStatusPlugin] Enabling ServerStatusPlugin v1.0.0
-[17:27:57] [Server thread/INFO]: [ServerStatusPlugin] 필요한 데이터베이스 테이블이 생성되었습니다.
-[17:27:57] [Server thread/INFO]: [ServerStatusPlugin] 데이터베이스에 성공적으로 연결되었습니다.
-[17:27:57] [Server thread/INFO]: [ServerStatusPlugin] ServerStatusPlugin이 성공적으로 활성화되었습니다.
-[17:27:57] [Server thread/INFO]: [spark] Starting background profiler...
-[17:28:00] [Server thread/INFO]: Done preparing level "world" (3.695s)
-[17:28:00] [Server thread/INFO]: Starting remote control listener
-[17:28:00] [Server thread/INFO]: Thread RCON Listener started
-[17:28:00] [Server thread/INFO]: RCON running on 0.0.0.0:25575
-[17:28:00] [Server thread/INFO]: Running delayed init tasks
-[17:28:00] [Server thread/INFO]: Done (11.303s)! For help, type "help"
-[17:28:02] [User Authenticator #0/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
-[17:28:03] [Server thread/INFO]: Bico_ joined the game
-[17:28:03] [Server thread/INFO]: Bico_[/127.0.0.1:61377] logged in with entity id 63 at ([world]-119.30000001192093, 67.0, 24.30000001192093)
-[17:28:20] [Async Chat Thread - #1/INFO]: <Bico_> 11
-[18:19:54] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
-[18:19:54] [Server thread/INFO]: [Rcon: Made Bico_ no longer a server operator]
-[18:19:59] [Server thread/INFO]: [Rcon: Made Bico_ a server operator]
-[18:20:06] [Server thread/INFO]: [Rcon: Set Bico_'s game mode to Creative Mode]
-[18:20:10] [Server thread/INFO]: [Rcon: Set Bico_'s game mode to Survival Mode]
-[18:20:34] [Server thread/INFO]: [Rcon: Banned Bico_: 123]
-[18:20:34] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
-[18:20:34] [Server thread/INFO]: Bico_ left the game
-[18:21:33] [Server thread/INFO]: Unbanned Bico_
-[18:21:33] [Server thread/INFO]: Server empty for 60 seconds, pausing
-[18:21:36] [User Authenticator #1/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
-[18:21:36] [Server thread/INFO]: Bico_ joined the game
-[18:21:36] [Server thread/INFO]: Bico_[/127.0.0.1:62269] logged in with entity id 3425 at ([world]-119.30000001192093, 67.0, 24.30000001192093)
-[18:23:40] [Server thread/INFO]: [Rcon: Banned Bico_: 123]
-[18:23:40] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
-[18:23:40] [Server thread/INFO]: Bico_ left the game
-[18:24:40] [Server thread/INFO]: Server empty for 60 seconds, pausing
+[15:08:19] [Server thread/INFO]: Bico_ (/127.0.0.1:58663) lost connection: Disconnected
+[15:09:51] [User Authenticator #2/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[15:09:52] [Server thread/INFO]: Disconnecting Bico_ (/127.0.0.1:58755): You are banned from this server.
+Reason: 123
+[15:09:52] [Server thread/INFO]: Disconnecting Bico_ (/127.0.0.1:58755): You are banned from this server.
+Reason: 123
+[15:09:52] [Server thread/INFO]: Disconnecting Bico_ (/127.0.0.1:58755): You are banned from this server.
+Reason: 123
+[15:09:52] [Server thread/INFO]: Bico_ (/127.0.0.1:58755) lost connection: You are banned from this server.
+Reason: 123
+[15:10:07] [Server thread/INFO]: Unbanned Bico_
+[15:10:11] [User Authenticator #2/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[15:10:12] [Server thread/INFO]: Bico_ joined the game
+[15:10:12] [Server thread/INFO]: Bico_[/127.0.0.1:58758] logged in with entity id 3612 at ([world]-119.30000001192093, 67.0, 24.30000001192093)
