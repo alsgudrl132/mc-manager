@@ -12,3 +12,15 @@ Reason: 123
 [15:10:11] [User Authenticator #2/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
 [15:10:12] [Server thread/INFO]: Bico_ joined the game
 [15:10:12] [Server thread/INFO]: Bico_[/127.0.0.1:58758] logged in with entity id 3612 at ([world]-119.30000001192093, 67.0, 24.30000001192093)
+[15:52:22] [Server thread/INFO]: Bico_ issued server command: /op Bico)
+[15:52:25] [Server thread/INFO]: Bico_ issued server command: /op Bico_
+[15:52:33] [Server thread/INFO]: Bico_ issued server command: /gamemode creative
+[15:52:33] [Server thread/INFO]: [Bico_: Set own game mode to Creative Mode]
+[15:53:02] [Server thread/INFO]: Bico_ issued server command: /gamemode survival
+[15:53:02] [Server thread/INFO]: [Bico_: Set own game mode to Survival Mode]
+[15:53:07] [Server thread/INFO]: Bico_ issued server command: /gamemode creative
+[15:53:07] [Server thread/INFO]: [Bico_: Set own game mode to Creative Mode]
+[15:53:20] [Server thread/INFO]: Bico_ issued server command: /gamemode survival
+[15:53:20] [Server thread/INFO]: [Bico_: Set own game mode to Survival Mode]
+[15:53:24] [Server thread/INFO]: Bico_ issued server command: /time set 0
+[15:53:24] [Server thread/INFO]: [Bico_: Set the time to 0]

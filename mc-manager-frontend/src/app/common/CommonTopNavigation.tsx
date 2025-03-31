@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import { fetchServerStatus, useAuthStore } from "../store/store";
 import { useQuery } from "@tanstack/react-query";
 import CommonLoading from "./CommonLoading";
+import CommonError from "./CommonError";
 
 function CommonTopNavigation() {
   const router = useRouter();
@@ -34,13 +35,11 @@ function CommonTopNavigation() {
     refetchInterval: 5000,
   });
 
-  console.log(serverStatus);
-
   if (!mounted) {
     return null;
   }
   if (isLoading) return <CommonLoading />;
-  if (error) return <div>오류 발생: {error.message}</div>;
+  if (error) return <CommonError />;
 
   return (
     <nav className="flex justify-between items-center w-full h-12 py-3 bg-zinc-800 pl-5 pr-5 border-l-2 border-t-2 border-b-2 border-black">
