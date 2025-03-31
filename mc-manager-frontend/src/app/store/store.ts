@@ -177,3 +177,16 @@ export const fetchServerStatus = async () => {
     throw error;
   }
 };
+
+export const kickBanPlayer = async (
+  name: string,
+  option: string,
+  reason: string
+) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/${option}`, { reason });
+  } catch (error) {
+    console.error(`kickBanPlayer Error`, error);
+    throw error;
+  }
+};

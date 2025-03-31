@@ -24,3 +24,38 @@ Reason: 123
 [15:53:20] [Server thread/INFO]: [Bico_: Set own game mode to Survival Mode]
 [15:53:24] [Server thread/INFO]: Bico_ issued server command: /time set 0
 [15:53:24] [Server thread/INFO]: [Bico_: Set the time to 0]
+[16:14:47] [Server thread/INFO]: Bico_ lost connection: 123
+[16:14:47] [Server thread/INFO]: Bico_ left the game
+[16:14:47] [Server thread/INFO]: [Rcon: Kicked Bico_: 123]
+[16:14:55] [User Authenticator #3/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:14:55] [Server thread/INFO]: Bico_ joined the game
+[16:14:55] [Server thread/INFO]: Bico_[/127.0.0.1:60043] logged in with entity id 9154 at ([world]-117.41082735730245, 65.0, 22.527206823804026)
+[16:31:02] [Server thread/INFO]: Bico_ lost connection: 1
+[16:31:02] [Server thread/INFO]: Bico_ left the game
+[16:31:02] [Server thread/INFO]: [Rcon: Kicked Bico_: 1]
+[16:31:10] [User Authenticator #4/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:31:10] [Server thread/INFO]: Bico_ joined the game
+[16:31:10] [Server thread/INFO]: Bico_[/127.0.0.1:60442] logged in with entity id 10550 at ([world]-117.41082735730245, 65.0, 22.527206823804026)
+[16:31:17] [Server thread/INFO]: [Rcon: Banned Bico_: 12]
+[16:31:17] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
+[16:31:17] [Server thread/INFO]: Bico_ left the game
+[16:31:55] [Server thread/INFO]: Unbanned Bico_
+[16:31:58] [User Authenticator #4/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:31:58] [Server thread/INFO]: Bico_ joined the game
+[16:31:58] [Server thread/INFO]: Bico_[/127.0.0.1:60464] logged in with entity id 10576 at ([world]-117.41082735730245, 65.0, 22.527206823804026)
+[16:32:07] [Server thread/INFO]: Bico_ lost connection: 13
+[16:32:07] [Server thread/INFO]: Bico_ left the game
+[16:32:07] [Server thread/INFO]: [Rcon: Kicked Bico_: 13]
+[16:33:04] [User Authenticator #5/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:33:04] [Server thread/INFO]: Bico_ joined the game
+[16:33:04] [Server thread/INFO]: Bico_[/127.0.0.1:60502] logged in with entity id 10590 at ([world]-117.41082735730245, 65.0, 22.527206823804026)
+[16:33:13] [Server thread/INFO]: Bico_ lost connection: 테스트
+[16:33:13] [Server thread/INFO]: Bico_ left the game
+[16:33:13] [Server thread/INFO]: [Rcon: Kicked Bico_: 테스트]
+[16:34:13] [Server thread/INFO]: Server empty for 60 seconds, pausing
+[16:36:03] [User Authenticator #6/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:36:03] [Server thread/INFO]: Bico_ joined the game
+[16:36:03] [Server thread/INFO]: Bico_[/127.0.0.1:60577] logged in with entity id 10596 at ([world]-117.41082735730245, 65.0, 22.527206823804026)
+[16:36:17] [Server thread/INFO]: Bico_ lost connection: test
+[16:36:18] [Server thread/INFO]: Bico_ left the game
+[16:36:18] [Server thread/INFO]: [Rcon: Kicked Bico_: test]
