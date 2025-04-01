@@ -66,7 +66,12 @@ const CommonPlayerList = ({ players }: IPropsPlayers) => {
                 </div>
               </div>
               <div className="flex gap-2">
-                <CommonManage name={player.name} />
+                <CommonManage
+                  name={player.name}
+                  currentLocationX={player.x}
+                  currentLocationY={player.y}
+                  currentLocationZ={player.z}
+                />
                 <CommonKickBan name={player.name} option="kick" />
                 <CommonKickBan name={player.name} option="ban" />
               </div>

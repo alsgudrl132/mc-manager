@@ -214,3 +214,13 @@ export const gamemodeManage = async (name: string, option: string) => {
     throw error;
   }
 };
+
+// 유저 텔레포트
+export const teleportMange = async (name: string, location: object) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/teleport`, location);
+  } catch (error) {
+    console.error(`teleportMange Error`, error);
+    throw error;
+  }
+};

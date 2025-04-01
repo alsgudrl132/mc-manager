@@ -9,16 +9,33 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Settings, MapPin } from "lucide-react";
-import { gamemodeManage, operatorStatusManage } from "../store/store";
+import {
+  gamemodeManage,
+  operatorStatusManage,
+  teleportMange,
+} from "../store/store";
 import { useState } from "react";
 import CommonLoading from "./CommonLoading";
 
 interface IManageProps {
   name: string;
+  currentLocationX: number;
+  currentLocationY: number;
+  currentLocationZ: number;
 }
 
-function CommonManage({ name }: IManageProps) {
+function CommonManage({
+  name,
+  currentLocationX,
+  currentLocationY,
+  currentLocationZ,
+}: IManageProps) {
   const [loading, setLoading] = useState(false);
+  const [location, setLocation] = useState({
+    x: currentLocationX,
+    y: currentLocationY,
+    z: currentLocationZ,
+  });
 
   const operatorStatusHandler = async (option: string) => {
     setLoading(true);
@@ -41,6 +58,27 @@ function CommonManage({ name }: IManageProps) {
       } else {
         alert(result.data.data.response);
       }
+    } catch (error) {
+      alert(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const locationHandler = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    option: string
+  ) => {
+    setLocation((prevState) => {
+      return { ...prevState, [option]: event?.target.value };
+    });
+  };
+
+  const teleportHandler = async () => {
+    setLoading(true);
+    try {
+      const result = await teleportMange(name, location);
+      alert(result.data.data.response);
     } catch (error) {
       alert(error);
     } finally {
@@ -107,24 +145,33 @@ function CommonManage({ name }: IManageProps) {
                 type="number"
                 placeholder="X"
                 className="border p-2 rounded-lg"
-                defaultValue="0"
+                value={location.x}
+                onChange={(e) => {
+                  locationHandler(e, "x");
+                }}
               />
               <input
                 type="number"
                 placeholder="Y"
                 className="border p-2 rounded-lg"
-                defaultValue="64"
+                value={location.y}
+                onChange={(e) => {
+                  locationHandler(e, "y");
+                }}
               />
               <input
                 type="number"
                 placeholder="Z"
                 className="border p-2 rounded-lg"
-                defaultValue="0"
+                value={location.z}
+                onChange={(e) => {
+                  locationHandler(e, "z");
+                }}
               />
             </div>
             <button
               className="w-full border py-2 rounded-lg flex items-center justify-center gap-2"
-              onClick={() => alert("플레이어를 텔레포트했습니다.")}
+              onClick={() => teleportHandler()}
             >
               <MapPin size={16} />
               <span>Teleport</span>
