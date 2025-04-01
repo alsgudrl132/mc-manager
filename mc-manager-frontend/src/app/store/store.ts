@@ -202,3 +202,15 @@ export const operatorStatusManage = async (name: string, option: string) => {
     throw error;
   }
 };
+
+// 유저 게임모드 변경 survival/creative
+export const gamemodeManage = async (name: string, option: string) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/gamemode`, {
+      gamemode: option,
+    });
+  } catch (error) {
+    console.error(`gamemodeManage Error`, error);
+    throw error;
+  }
+};

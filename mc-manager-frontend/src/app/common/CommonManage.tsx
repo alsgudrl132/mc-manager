@@ -9,7 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Settings, MapPin } from "lucide-react";
-import { operatorStatusManage } from "../store/store";
+import { gamemodeManage, operatorStatusManage } from "../store/store";
 import { useState } from "react";
 import CommonLoading from "./CommonLoading";
 
@@ -25,6 +25,22 @@ function CommonManage({ name }: IManageProps) {
     try {
       const result = await operatorStatusManage(name, option);
       alert(result.data.data.response);
+    } catch (error) {
+      alert(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const gamemodeHandler = async (option: string) => {
+    setLoading(true);
+    try {
+      const result = await gamemodeManage(name, option);
+      if (result.data.data.response === "") {
+        alert(`${name} is already in ${option} mode.`);
+      } else {
+        alert(result.data.data.response);
+      }
     } catch (error) {
       alert(error);
     } finally {
@@ -71,13 +87,13 @@ function CommonManage({ name }: IManageProps) {
             <div className="grid grid-cols-2 gap-2">
               <button
                 className="border py-2 rounded-lg"
-                onClick={() => alert("서바이벌 모드로 변경했습니다.")}
+                onClick={() => gamemodeHandler("survival")}
               >
                 Survival
               </button>
               <button
                 className="border py-2 rounded-lg"
-                onClick={() => alert("크리에이티브 모드로 변경했습니다.")}
+                onClick={() => gamemodeHandler("creative")}
               >
                 Creative
               </button>
