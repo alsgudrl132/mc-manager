@@ -179,6 +179,16 @@ export const fetchServerStatus = async () => {
   }
 };
 
+// 유저 상태 불러오기
+export const fetchPlayersStatus = async () => {
+  try {
+    return await authAxios.get(`${URL}/players`);
+  } catch (error) {
+    console.error(`fetchPlayersStatus Error`, error);
+    throw error;
+  }
+};
+
 // 유저 킥 또는 벤
 export const kickBanPlayer = async (
   name: string,
@@ -189,6 +199,16 @@ export const kickBanPlayer = async (
     return await authAxios.post(`${URL}/players/${name}/${option}`, { reason });
   } catch (error) {
     console.error(`kickBanPlayer Error`, error);
+    throw error;
+  }
+};
+
+// 유저 언벤
+export const unBanPlayer = async (name: string) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/unban`);
+  } catch (error) {
+    console.error(`unBanPlayer Error`, error);
     throw error;
   }
 };

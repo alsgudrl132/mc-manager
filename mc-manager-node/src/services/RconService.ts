@@ -195,6 +195,47 @@ class RconService {
   async getOnlinePlayers(userId?: number): Promise<string> {
     return this.executeCommand("list", userId);
   }
+
+  // 벤 목록 가져오기
+  async getBannedPlayers(userId?: number): Promise<string[]> {
+    try {
+      const response = await this.executeCommand("banlist", userId);
+
+      // 디버깅을 위해 응답 로깅
+      logger.info(`Banlist response: "${response}"`);
+
+      // 응답이 비어있으면 빈 배열 반환
+      if (!response) return [];
+
+      // "There are 0 ban(s):" 또는 비슷한 형식이면 빈 배열 반환
+      if (response.includes("There are 0 ban")) return [];
+
+      // 형식: "There are X ban(s):name1 was banned by reason, name2 was banned by reason..."
+      const bannedPlayers: string[] = [];
+      const match = response.match(/There are \d+ ban\(s\):(.*)/);
+
+      if (match && match[1]) {
+        // 전체 문자열에서 이름들을 추출
+        const bannedInfo = match[1].trim();
+
+        // 각 밴 항목별로 처리 (콤마로 구분된 경우)
+        const entries = bannedInfo.split(",");
+
+        for (const entry of entries) {
+          // "이름 was banned by ..." 형식에서 이름 추출
+          const nameMatch = entry.match(/^(.*?) was banned by/);
+          if (nameMatch && nameMatch[1]) {
+            bannedPlayers.push(nameMatch[1].trim());
+          }
+        }
+      }
+
+      return bannedPlayers;
+    } catch (error) {
+      logger.error("Error fetching banned players list:", error);
+      return [];
+    }
+  }
 }
 
 export default new RconService();

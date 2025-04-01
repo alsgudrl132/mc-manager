@@ -62,6 +62,9 @@ class MonitoringService {
         );
       }
 
+      // 벤 목록 가져오기
+      const bannedPlayers = await rconService.getBannedPlayers();
+
       // 플레이어 데이터와 상태 정보 결합
       const players = playerData.map((player) => {
         const status = playerStatus.find(
@@ -79,6 +82,7 @@ class MonitoringService {
           y: status?.y || 0,
           z: status?.z || 0,
           skinUrl: `https://mc-heads.net/avatar/${player.uuid}`,
+          isBanned: bannedPlayers.includes(player.name), // 벤 여부 추가
         };
       });
 
@@ -365,6 +369,9 @@ class MonitoringService {
     try {
       const playerData = await PlayerData.findAll();
 
+      // 벤 목록 가져오기
+      const bannedPlayers = await rconService.getBannedPlayers();
+
       return playerData.map((player) => ({
         uuid: player.uuid,
         name: player.name,
@@ -373,6 +380,7 @@ class MonitoringService {
         isOnline: player.is_online,
         playTime: player.play_time,
         skinUrl: `https://mc-heads.net/avatar/${player.uuid}`,
+        isBanned: bannedPlayers.includes(player.name), // 벤 여부 추가
       }));
     } catch (error) {
       logger.error("Error fetching player list:", error);

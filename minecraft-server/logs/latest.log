@@ -91,3 +91,50 @@
 [15:36:01] [Server thread/INFO]: [Rcon: Made Bico_ no longer a server operator]
 [15:36:03] [Server thread/INFO]: [Rcon: Set Bico_'s game mode to Survival Mode]
 [15:36:05] [Server thread/INFO]: [Rcon: Teleported Bico_ to -110.500000, -11.000000, -9.500000]
+[15:41:14] [RCON Client /127.0.0.1 #3/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[15:45:01] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[15:45:23] [Server thread/INFO]: [Rcon: Banned Bico_: 123]
+[15:45:23] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
+[15:45:23] [Server thread/INFO]: Bico_ left the game
+[15:46:23] [Server thread/INFO]: Server empty for 60 seconds, pausing
+[15:48:37] [RCON Client /127.0.0.1 #4/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[15:49:04] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[15:49:12] [User Authenticator #1/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[15:49:13] [Server thread/INFO]: Disconnecting Bico_ (/127.0.0.1:51817): You are banned from this server.
+Reason: 123
+[15:49:13] [Server thread/INFO]: Disconnecting Bico_ (/127.0.0.1:51817): You are banned from this server.
+Reason: 123
+[15:49:13] [Server thread/INFO]: Bico_ (/127.0.0.1:51817) lost connection: You are banned from this server.
+Reason: 123
+[15:50:13] [RCON Client /127.0.0.1 #5/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[15:50:20] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[16:09:57] [Server thread/INFO]: [Rcon: Unbanned Bico_]
+[16:14:09] [Server thread/INFO]: [Rcon: Banned Bico_: 123]
+[16:16:30] [Server thread/INFO]: [Rcon: Unbanned Bico_]
+[16:16:36] [Server thread/INFO]: [Rcon: Banned Bico_: 123]
+[16:16:40] [Server thread/INFO]: [Rcon: Unbanned Bico_]
+[16:16:48] [User Authenticator #2/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:16:49] [Server thread/INFO]: Bico_ joined the game
+[16:16:49] [Server thread/INFO]: Bico_[/127.0.0.1:52583] logged in with entity id 6120 at ([world]-110.69999998807907, -11.0, -10.300000011920929)
+[16:19:58] [Server thread/INFO]: [Rcon: Banned Bico_: 123]
+[16:19:58] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
+[16:19:58] [Server thread/INFO]: Bico_ left the game
+[16:20:04] [Server thread/INFO]: [Rcon: Unbanned Bico_]
+[16:20:11] [User Authenticator #3/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:20:12] [Server thread/INFO]: Bico_ joined the game
+[16:20:12] [Server thread/INFO]: Bico_[/127.0.0.1:52657] logged in with entity id 6297 at ([world]-137.5, 65.0, 29.5)
+[16:26:51] [Server thread/INFO]: [Rcon: Banned Bico_: 123]
+[16:26:51] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
+[16:26:51] [Server thread/INFO]: Bico_ left the game
+[16:27:51] [Server thread/INFO]: Server empty for 60 seconds, pausing
+[16:30:58] [Server thread/INFO]: [Rcon: Unbanned Bico_]
+[16:31:02] [User Authenticator #4/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:31:02] [Server thread/INFO]: Bico_ joined the game
+[16:31:02] [Server thread/INFO]: Bico_[/127.0.0.1:52856] logged in with entity id 6857 at ([world]-137.5, 65.0, 29.5)
+[16:31:20] [Server thread/INFO]: [Rcon: Made Bico_ a server operator]
+[16:31:21] [Server thread/INFO]: [Rcon: Set Bico_'s game mode to Creative Mode]
+[16:31:26] [Server thread/INFO]: [Rcon: Teleported Bico_ to -136.500000, 65.000000, 30.500000]
+[16:38:28] [Server thread/INFO]: [Rcon: Banned Bico_: 123]
+[16:38:28] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
+[16:38:28] [Server thread/INFO]: Bico_ left the game
+[16:39:28] [Server thread/INFO]: Server empty for 60 seconds, pausing
