@@ -15,9 +15,10 @@ interface Player {
 
 interface IPropsPlayers {
   players: Player[] | undefined;
+  onActionComplete?: () => void;
 }
 
-function CommonBanPlayerList({ players }: IPropsPlayers) {
+function CommonBanPlayerList({ players, onActionComplete }: IPropsPlayers) {
   const [searchTerm, setSearchTerm] = useState("");
 
   // 벤된 플레이어만 필터링
@@ -82,7 +83,7 @@ function CommonBanPlayerList({ players }: IPropsPlayers) {
                     name={player.name}
                     option="unban"
                     isBanned={true}
-                    onActionComplete={() => {}}
+                    onActionComplete={onActionComplete}
                   />
                 </div>
               </div>

@@ -20,9 +20,10 @@ interface Player {
 // 컴포넌트 props를 위한 인터페이스
 interface IPropsPlayers {
   players: Player[] | undefined;
+  onActionComplete?: () => void;
 }
 
-const CommonPlayerList = ({ players }: IPropsPlayers) => {
+const CommonPlayerList = ({ players, onActionComplete }: IPropsPlayers) => {
   const [searchTerm, setSearchTerm] = useState("");
   // 검색어로 추가 필터링
   const filteredPlayers = players?.filter((player) =>
@@ -89,12 +90,12 @@ const CommonPlayerList = ({ players }: IPropsPlayers) => {
                   <CommonKickBan
                     name={player.name}
                     option="kick"
-                    onActionComplete={() => {}}
+                    onActionComplete={onActionComplete}
                   />
                   <CommonKickBan
                     name={player.name}
                     option="ban"
-                    onActionComplete={() => {}}
+                    onActionComplete={onActionComplete}
                   />
                 </div>
               </div>

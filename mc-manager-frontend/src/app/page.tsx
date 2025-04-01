@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import CommonPlayerList from "./common/CommonPlayerList";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { fetchPlayersStatus, fetchServerStatus } from "./store/store";
 import CommonLoading from "./common/CommonLoading";
 import CommonError from "./common/CommonError";
@@ -19,6 +19,7 @@ interface Player {
 }
 const OnlinePlayersComponent = () => {
   const [category, setCategory] = useState<"online" | "ban">("online");
+  const queryClient = useQueryClient();
   const {
     data: serverStatus,
     isLoading,
@@ -38,6 +39,11 @@ const OnlinePlayersComponent = () => {
     queryFn: fetchPlayersStatus,
     refetchInterval: 5000,
   });
+
+  const onActionHandler = () => {
+    queryClient.invalidateQueries({ queryKey: ["serverStatus"] });
+    queryClient.invalidateQueries({ queryKey: ["playerStatus"] });
+  };
 
   if (isLoading || playerStatusIsLoading) return <CommonLoading />;
   if (error || playerStatusError) return <CommonError />;
@@ -77,9 +83,15 @@ const OnlinePlayersComponent = () => {
           </div>
         </div>
         {category === "online" ? (
-          <CommonPlayerList players={serverStatus?.data.data.players} />
+          <CommonPlayerList
+            players={serverStatus?.data.data.players}
+            onActionComplete={onActionHandler}
+          />
         ) : (
-          <CommonBanPlayerList players={playerStatus?.data.data} />
+          <CommonBanPlayerList
+            players={playerStatus?.data.data}
+            onActionComplete={onActionHandler}
+          />
         )}
       </div>
     </div>

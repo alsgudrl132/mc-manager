@@ -138,3 +138,26 @@ Reason: 123
 [16:38:28] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
 [16:38:28] [Server thread/INFO]: Bico_ left the game
 [16:39:28] [Server thread/INFO]: Server empty for 60 seconds, pausing
+[17:15:38] [Server thread/INFO]: [Rcon: Unbanned Bico_]
+[17:15:45] [User Authenticator #5/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[17:15:45] [Server thread/INFO]: Bico_ joined the game
+[17:15:45] [Server thread/INFO]: Bico_[/127.0.0.1:53626] logged in with entity id 7469 at ([world]-136.5, 65.0, 30.5)
+[17:15:55] [Server thread/INFO]: Bico_ lost connection: 123
+[17:15:55] [Server thread/INFO]: Bico_ left the game
+[17:15:55] [Server thread/INFO]: [Rcon: Kicked Bico_: 123]
+[17:16:00] [User Authenticator #5/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[17:16:00] [Server thread/INFO]: Bico_ joined the game
+[17:16:00] [Server thread/INFO]: Bico_[/127.0.0.1:53636] logged in with entity id 7490 at ([world]-136.5, 65.0, 30.5)
+[17:16:06] [Server thread/INFO]: [Rcon: Banned Bico_: 123]
+[17:16:06] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
+[17:16:06] [Server thread/INFO]: Bico_ left the game
+[17:16:09] [Server thread/INFO]: [Rcon: Unbanned Bico_]
+[17:16:23] [User Authenticator #5/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[17:16:23] [Server thread/INFO]: Bico_ joined the game
+[17:16:23] [Server thread/INFO]: Bico_[/127.0.0.1:53655] logged in with entity id 7497 at ([world]-136.5, 65.0, 30.5)
+[17:16:29] [Server thread/INFO]: Bico_ lost connection: Kicked by an operator
+[17:16:29] [Server thread/INFO]: Bico_ left the game
+[17:16:29] [Server thread/INFO]: [Rcon: Kicked Bico_: Kicked by an operator]
+[17:16:42] [User Authenticator #5/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[17:16:42] [Server thread/INFO]: Bico_ joined the game
+[17:16:42] [Server thread/INFO]: Bico_[/127.0.0.1:53665] logged in with entity id 7511 at ([world]-136.5, 65.0, 30.5)
