@@ -32,9 +32,9 @@ function CommonManage({
 }: IManageProps) {
   const [loading, setLoading] = useState(false);
   const [location, setLocation] = useState({
-    x: currentLocationX,
-    y: currentLocationY,
-    z: currentLocationZ,
+    x: Math.round(currentLocationX),
+    y: Math.round(currentLocationY),
+    z: Math.round(currentLocationZ),
   });
 
   const operatorStatusHandler = async (option: string) => {
@@ -86,8 +86,6 @@ function CommonManage({
     }
   };
 
-  if (loading) <CommonLoading />;
-
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -97,10 +95,16 @@ function CommonManage({
         </button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
+        {loading && (
+          <div className="absolute inset-0 bg-white/70 flex items-center justify-center z-50">
+            <CommonLoading />
+          </div>
+        )}
         <DialogHeader>
           <DialogTitle>Manage Player</DialogTitle>
           <DialogDescription>{name} 플레이어 관리</DialogDescription>
         </DialogHeader>
+
         <div className="space-y-4">
           <div className="border rounded-lg p-4">
             <div className="font-medium mb-3">Operator Status</div>
