@@ -169,6 +169,7 @@ authAxios.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
+// 서버 상태 불러오기
 export const fetchServerStatus = async () => {
   try {
     return await axios.get(`${URL}/server/status`);
@@ -178,6 +179,7 @@ export const fetchServerStatus = async () => {
   }
 };
 
+// 유저 킥 또는 벤
 export const kickBanPlayer = async (
   name: string,
   option: string,
@@ -187,6 +189,16 @@ export const kickBanPlayer = async (
     return await authAxios.post(`${URL}/players/${name}/${option}`, { reason });
   } catch (error) {
     console.error(`kickBanPlayer Error`, error);
+    throw error;
+  }
+};
+
+// 유저 op 또는 deop
+export const operatorStatusManage = async (name: string, option: string) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/${option}`);
+  } catch (error) {
+    console.error(`operatorStatusManage Error`, error);
     throw error;
   }
 };

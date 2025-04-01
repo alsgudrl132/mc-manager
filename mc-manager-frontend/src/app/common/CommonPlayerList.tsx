@@ -86,7 +86,7 @@ const CommonPlayerList = ({ players }: IPropsPlayers) => {
               <div>
                 <div className="text-sm text-gray-500 mb-1">Location:</div>
                 <div className="text-sm">
-                  world (${Math.round(player.x)}, ${Math.round(player.y)}, $
+                  world ({Math.round(player.x)}, {Math.round(player.y)},
                   {Math.round(player.z)})
                 </div>
               </div>

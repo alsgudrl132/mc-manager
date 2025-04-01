@@ -9,12 +9,31 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Settings, MapPin } from "lucide-react";
+import { operatorStatusManage } from "../store/store";
+import { useState } from "react";
+import CommonLoading from "./CommonLoading";
 
 interface IManageProps {
   name: string;
 }
 
 function CommonManage({ name }: IManageProps) {
+  const [loading, setLoading] = useState(false);
+
+  const operatorStatusHandler = async (option: string) => {
+    setLoading(true);
+    try {
+      const result = await operatorStatusManage(name, option);
+      alert(result.data.data.response);
+    } catch (error) {
+      alert(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) <CommonLoading />;
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -34,13 +53,13 @@ function CommonManage({ name }: IManageProps) {
             <div className="grid grid-cols-2 gap-2">
               <button
                 className="border py-2 rounded-lg"
-                onClick={() => alert("OP 권한을 해제했습니다.")}
+                onClick={() => operatorStatusHandler("deop")}
               >
                 Not OP
               </button>
               <button
                 className="border py-2 rounded-lg"
-                onClick={() => alert("OP 권한을 부여했습니다.")}
+                onClick={() => operatorStatusHandler("op")}
               >
                 OP
               </button>
