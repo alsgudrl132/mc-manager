@@ -13,3 +13,26 @@ Reason: 123
 [14:12:52] [Async Chat Thread - #6/INFO]: <Bico_> ㅅ2
 [14:12:52] [Async Chat Thread - #6/INFO]: <Bico_> ㅅ3
 [14:46:21] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 3056ms or 61 ticks behind
+[16:06:02] [Server thread/INFO]: Bico_ lost connection: 123
+[16:06:03] [Server thread/INFO]: Bico_ left the game
+[16:06:03] [Server thread/INFO]: [Rcon: Kicked Bico_: 123]
+[16:06:07] [User Authenticator #7/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:06:07] [Server thread/INFO]: Bico_ joined the game
+[16:06:07] [Server thread/INFO]: Bico_[/127.0.0.1:56354] logged in with entity id 12758 at ([world]-136.5, 65.0, 30.5)
+[16:06:14] [Server thread/INFO]: [Rcon: Banned Bico_: 1]
+[16:06:14] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
+[16:06:14] [Server thread/INFO]: Bico_ left the game
+[16:06:28] [Server thread/INFO]: [Rcon: Unbanned Bico_]
+[16:07:14] [Server thread/INFO]: Server empty for 60 seconds, pausing
+[16:09:44] [RCON Client /127.0.0.1 #6/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[16:12:38] [User Authenticator #8/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:12:39] [Server thread/INFO]: Bico_ joined the game
+[16:12:39] [Server thread/INFO]: Bico_[/127.0.0.1:56589] logged in with entity id 12771 at ([world]-136.5, 65.0, 30.5)
+[16:13:25] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[16:17:25] [Server thread/INFO]: [Rcon: Banned Bico_: 123]
+[16:17:25] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
+[16:17:26] [Server thread/INFO]: Bico_ left the game
+[16:17:31] [Server thread/INFO]: [Rcon: Unbanned Bico_]
+[16:17:36] [User Authenticator #9/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[16:17:36] [Server thread/INFO]: Bico_ joined the game
+[16:17:36] [Server thread/INFO]: Bico_[/127.0.0.1:56678] logged in with entity id 13175 at ([world]-135.77337663484923, 70.0, 19.717082747018416)

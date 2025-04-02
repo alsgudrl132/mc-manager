@@ -7,7 +7,7 @@ import logger from "../utils/logger";
 
 const router = Router();
 
-// 채팅 로그 조회
+// 채팅 로그 조회 (사용자 밴 상태 포함)
 router.get("/logs", verifyToken, async (req: Request, res: Response) => {
   try {
     const startTime = req.query.startTime
@@ -18,12 +18,14 @@ router.get("/logs", verifyToken, async (req: Request, res: Response) => {
       : undefined;
     const limit = req.query.limit ? parseInt(req.query.limit as string) : 100;
     const playerUuid = req.query.playerUuid as string;
+    const includeBanStatus = req.query.includeBanStatus === "true";
 
     const logs = await monitoringService.getChatLogs(
       startTime,
       endTime,
       limit,
-      playerUuid
+      playerUuid,
+      includeBanStatus
     );
 
     res.status(200).json({
@@ -55,6 +57,7 @@ router.post(
           success: false,
           message: "Message is required",
         });
+        return;
       }
 
       const result = await rconService.broadcastMessage(
@@ -94,6 +97,7 @@ router.post(
           success: false,
           message: "Player name and message are required",
         });
+        return;
       }
 
       const result = await rconService.tellPlayer(

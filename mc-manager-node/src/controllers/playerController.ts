@@ -36,6 +36,7 @@ export const getPlayerHistory = async (req: Request, res: Response) => {
         success: false,
         message: "Player UUID is required",
       });
+      return;
     }
 
     const history = await monitoringService.getPlayerHistory(
@@ -69,6 +70,7 @@ export const kickPlayer = async (req: Request, res: Response) => {
         success: false,
         message: "Player name is required",
       });
+      return;
     }
 
     const result = await rconService.kickPlayer(
@@ -103,6 +105,7 @@ export const banPlayer = async (req: Request, res: Response) => {
         success: false,
         message: "Player name is required",
       });
+      return;
     }
 
     const result = await rconService.banPlayer(
@@ -136,6 +139,7 @@ export const unbanPlayer = async (req: Request, res: Response) => {
         success: false,
         message: "Player name is required",
       });
+      return;
     }
 
     const result = await rconService.unbanPlayer(
@@ -168,6 +172,7 @@ export const opPlayer = async (req: Request, res: Response) => {
         success: false,
         message: "Player name is required",
       });
+      return;
     }
 
     const result = await rconService.opPlayer(
@@ -200,6 +205,7 @@ export const deopPlayer = async (req: Request, res: Response) => {
         success: false,
         message: "Player name is required",
       });
+      return;
     }
 
     const result = await rconService.deopPlayer(
@@ -233,6 +239,7 @@ export const teleportPlayer = async (req: Request, res: Response) => {
         success: false,
         message: "Player name and coordinates (x, y, z) are required",
       });
+      return;
     }
 
     const result = await rconService.teleportPlayer(
@@ -270,6 +277,7 @@ export const setGamemode = async (req: Request, res: Response) => {
         success: false,
         message: "Player name and gamemode are required",
       });
+      return;
     }
 
     const result = await rconService.setGamemode(
@@ -304,6 +312,7 @@ export const giveItem = async (req: Request, res: Response) => {
         success: false,
         message: "Player name and item are required",
       });
+      return;
     }
 
     const result = await rconService.giveItem(

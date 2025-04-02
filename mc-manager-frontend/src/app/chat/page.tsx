@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { MessageSquare } from "lucide-react";
 import { CommonKickBan } from "../common/CommonKickBan";
 import { fetchChatLogs } from "../store/store";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import CommonError from "../common/CommonError";
 import CommonLoading from "../common/CommonLoading";
 interface IChatLogs {
@@ -14,8 +14,12 @@ interface IChatLogs {
   uuid: string;
   playerName: string;
   message: string;
+  isBanned: boolean;
 }
+
 function Chat() {
+  const queryClient = useQueryClient();
+
   const {
     data: chatLogs,
     isLoading,
@@ -25,6 +29,10 @@ function Chat() {
     queryFn: fetchChatLogs,
     refetchInterval: 5000,
   });
+
+  const onActionHandler = () => {
+    queryClient.invalidateQueries({ queryKey: ["chatLogs"] });
+  };
 
   if (isLoading) return <CommonLoading />;
   if (error) return <CommonError />;
@@ -98,8 +106,18 @@ function Chat() {
                     </div>
                   </div>
                   <div className="flex gap-3 flex-shrink-0">
-                    <CommonKickBan name="Player1" option="kick" />
-                    <CommonKickBan name="Player1" option="ban" />
+                    <CommonKickBan
+                      name={chat.playerName}
+                      option="kick"
+                      isBanned={chat.isBanned}
+                      onActionComplete={onActionHandler}
+                    />
+                    <CommonKickBan
+                      name={chat.playerName}
+                      option="ban"
+                      isBanned={chat.isBanned}
+                      onActionComplete={onActionHandler}
+                    />
                   </div>
                 </div>
               </div>

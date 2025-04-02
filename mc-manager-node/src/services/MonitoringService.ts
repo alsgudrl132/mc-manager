@@ -182,7 +182,8 @@ class MonitoringService {
     startTime: number = Date.now() - 86400000, // 기본 24시간
     endTime: number = Date.now(),
     limit: number = 100,
-    playerUuid?: string
+    playerUuid?: string,
+    includeBanStatus: boolean = false
   ): Promise<any[]> {
     try {
       const whereClause: any = {
@@ -203,6 +204,23 @@ class MonitoringService {
         limit,
       });
 
+      // 밴 상태 포함 옵션이 활성화된 경우
+      if (includeBanStatus && chatLogs.length > 0) {
+        // 벤 목록 가져오기
+        const bannedPlayers = await rconService.getBannedPlayers();
+
+        // 채팅 로그 매핑 및 벤 상태 추가
+        return chatLogs.map((log) => ({
+          id: log.id,
+          timestamp: log.timestamp,
+          uuid: log.uuid,
+          playerName: log.player_name,
+          message: log.message,
+          isBanned: bannedPlayers.includes(log.player_name),
+        }));
+      }
+
+      // 기본 로그 반환 (벤 상태 없음)
       return chatLogs.map((log) => ({
         id: log.id,
         timestamp: log.timestamp,

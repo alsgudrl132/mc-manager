@@ -248,7 +248,7 @@ export const teleportMange = async (name: string, location: object) => {
 //채팅로그 불러오기
 export const fetchChatLogs = async () => {
   try {
-    return await authAxios.get(`${URL}/chat/logs`);
+    return await authAxios.get(`${URL}/chat/logs?includeBanStatus=true`);
   } catch (error) {
     console.error(`fetchChatLogs Error`, error);
     throw error;
