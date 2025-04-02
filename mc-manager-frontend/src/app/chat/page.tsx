@@ -4,10 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageSquare } from "lucide-react";
 import { CommonKickBan } from "../common/CommonKickBan";
-import { fetchChatLogs } from "../store/store";
+import { fetchChatLogs, sendGlobalMessage } from "../store/store";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import CommonError from "../common/CommonError";
 import CommonLoading from "../common/CommonLoading";
+import { useRef, useState } from "react";
 interface IChatLogs {
   id: number;
   timestamp: number;
@@ -18,6 +19,9 @@ interface IChatLogs {
 }
 
 function Chat() {
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
   const queryClient = useQueryClient();
 
   const {
@@ -32,6 +36,25 @@ function Chat() {
 
   const onActionHandler = () => {
     queryClient.invalidateQueries({ queryKey: ["chatLogs"] });
+  };
+
+  const onSendGlobalMessageHandler = async () => {
+    setLoading(true);
+    try {
+      if (message === "") {
+        if (inputRef.current) {
+          inputRef.current.focus();
+        }
+      } else {
+        const result = await sendGlobalMessage(message);
+        alert(result.data.message + " " + message);
+        setMessage("");
+      }
+    } catch (error) {
+      alert(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (isLoading) return <CommonLoading />;
@@ -49,11 +72,14 @@ function Chat() {
         <input
           className="py-2 pl-3 rounded-lg w-full border-2"
           type="text"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          ref={inputRef}
           placeholder="Send global message..."
         />
         <Button
           className="py-5 bg-green-400 text-black hover:bg-green-600"
-          onClick={() => alert("메시지를 전송했습니다!")}
+          onClick={() => onSendGlobalMessageHandler()}
         >
           Send Global Message
         </Button>

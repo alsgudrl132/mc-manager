@@ -245,12 +245,22 @@ export const teleportMange = async (name: string, location: object) => {
   }
 };
 
-//채팅로그 불러오기
+// 채팅로그 불러오기
 export const fetchChatLogs = async () => {
   try {
     return await authAxios.get(`${URL}/chat/logs?includeBanStatus=true`);
   } catch (error) {
     console.error(`fetchChatLogs Error`, error);
+    throw error;
+  }
+};
+
+// 글로벌메세지 보내기
+export const sendGlobalMessage = async (message: string) => {
+  try {
+    return await authAxios.post(`${URL}/chat/broadcast`, { message: message });
+  } catch (error) {
+    console.error(`sendGlobalMessage Error`, error);
     throw error;
   }
 };
