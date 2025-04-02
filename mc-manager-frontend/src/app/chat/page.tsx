@@ -2,13 +2,14 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MessageSquare } from "lucide-react";
+import { Loader2, MessageSquare } from "lucide-react";
 import { CommonKickBan } from "../common/CommonKickBan";
 import { fetchChatLogs, sendGlobalMessage } from "../store/store";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import CommonError from "../common/CommonError";
 import CommonLoading from "../common/CommonLoading";
 import { useRef, useState } from "react";
+import { formatTimestamp } from "../../utils/util";
 interface IChatLogs {
   id: number;
   timestamp: number;
@@ -21,7 +22,11 @@ interface IChatLogs {
 function Chat() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [selectOption, setSelectOption] = useState("name");
+  const [searchTerm, setSearchTerm] = useState("");
+
   const inputRef = useRef<HTMLInputElement>(null);
+
   const queryClient = useQueryClient();
 
   const {
@@ -38,7 +43,7 @@ function Chat() {
     queryClient.invalidateQueries({ queryKey: ["chatLogs"] });
   };
 
-  const onSendGlobalMessageHandler = async () => {
+  const sendGlobalMessageHandler = async () => {
     setLoading(true);
     try {
       if (message === "") {
@@ -56,6 +61,21 @@ function Chat() {
       setLoading(false);
     }
   };
+
+  const resetHandler = () => {
+    setMessage("");
+    setSelectOption("name");
+    setSearchTerm("");
+  };
+
+  const filteredChatLogs =
+    selectOption === "name"
+      ? chatLogs?.data.data.filter((chat: IChatLogs) =>
+          chat.playerName.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+      : chatLogs?.data.data.filter((chat: IChatLogs) =>
+          chat.message.toLowerCase().includes(searchTerm.toLowerCase())
+        );
 
   if (isLoading) return <CommonLoading />;
   if (error) return <CommonError />;
@@ -77,34 +97,61 @@ function Chat() {
           ref={inputRef}
           placeholder="Send global message..."
         />
+
         <Button
           className="py-5 bg-green-400 text-black hover:bg-green-600"
-          onClick={() => onSendGlobalMessageHandler()}
+          onClick={() => sendGlobalMessageHandler()}
         >
-          Send Global Message
+          {loading ? (
+            <span className="flex items-center justify-center">
+              <Loader2 className="animate-spin mr-2 h-4 w-4" />
+              Loading...
+            </span>
+          ) : (
+            "Send Global Message"
+          )}
         </Button>
       </div>
       <div className="flex items-center mt-5 justify-center gap-2">
+        <select
+          className="py-2.5 pl-3 rounded-lg border-2 bg-white"
+          onChange={(e) => {
+            setSelectOption(e.target.value);
+            setSearchTerm("");
+          }}
+        >
+          <option value="name">name</option>
+          <option value="chat">chat</option>
+        </select>
         <input
           className="py-2 pl-3 rounded-lg w-full border-2"
           type="text"
-          placeholder="Search chat logs..."
+          value={searchTerm}
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
+          placeholder={
+            selectOption === "name"
+              ? "Filter by player name"
+              : "Filter by chat log"
+          }
         />
-        <input
-          className="py-2 pl-3 rounded-lg w-full border-2"
-          type="text"
-          placeholder="Filter by player name"
-        />
+        <Button
+          className="py-5 bg-green-400 text-black hover:bg-green-600"
+          onClick={() => resetHandler()}
+        >
+          Reset
+        </Button>
       </div>
       <Card className="mt-5 p-3 mr-10 w-full">
         <div className="max-h-96 overflow-y-auto">
           {/* 채팅 로그 */}
-          {chatLogs?.data.length === 0 ? (
+          {filteredChatLogs?.length === 0 ? (
             <div className="text-center text-gray-500 py-4">
               검색 결과가 없습니다.
             </div>
           ) : (
-            chatLogs?.data?.data.map((chat: IChatLogs) => (
+            filteredChatLogs?.map((chat: IChatLogs) => (
               <div
                 key={chat.id}
                 className="mb-2 w-full flex items-center gap-4"
@@ -124,7 +171,7 @@ function Chat() {
                       </span>
                       <span className="text-gray-600 text-sm">|</span>
                       <span className="text-gray-600 text-sm ml-3">
-                        {chat.timestamp}
+                        {formatTimestamp(chat.timestamp)}
                       </span>
                     </div>
                     <div className="break-words">
