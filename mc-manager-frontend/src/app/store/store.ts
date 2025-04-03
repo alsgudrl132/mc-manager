@@ -264,3 +264,38 @@ export const sendGlobalMessage = async (message: string) => {
     throw error;
   }
 };
+
+// 서버 시작, 중지, 재시작
+export const serverStartManage = async (
+  option: string,
+  delay?: number,
+  message?: string
+) => {
+  try {
+    let requestConfig = {};
+
+    // 중지 또는 재시작인 경우 && (딜레이 또는 메시지가 있는 경우)
+    if ((option === "stop" || option === "restart") && (delay || message)) {
+      // 요청 본문 구성
+      const requestBody: { delay?: number; message?: string } = {};
+
+      // 딜레이가 있는 경우에만 추가
+      if (delay && delay > 0) {
+        requestBody.delay = delay;
+      }
+
+      // 메시지가 있는 경우에만 추가
+      if (message && message.trim() !== "") {
+        requestBody.message = message;
+      }
+
+      // 요청 설정에 본문 추가
+      requestConfig = { data: requestBody };
+    }
+
+    return await authAxios.post(`${URL}/server/${option}`, requestConfig);
+  } catch (error) {
+    console.error(`serverStartManage Error`, error);
+    throw error;
+  }
+};

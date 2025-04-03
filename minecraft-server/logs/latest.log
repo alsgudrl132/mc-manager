@@ -1,45 +1,37 @@
-[14:12:30] [User Authenticator #6/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
-[14:12:30] [Server thread/INFO]: Disconnecting Bico_ (/127.0.0.1:55523): You are banned from this server.
-Reason: 123
-[14:12:30] [Server thread/INFO]: Disconnecting Bico_ (/127.0.0.1:55523): You are banned from this server.
-Reason: 123
-[14:12:30] [Server thread/INFO]: Bico_ (/127.0.0.1:55523) lost connection: You are banned from this server.
-Reason: 123
-[14:12:40] [Server thread/INFO]: [Rcon: Unbanned Bico_]
-[14:12:46] [User Authenticator #6/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
-[14:12:46] [Server thread/INFO]: Bico_ joined the game
-[14:12:46] [Server thread/INFO]: Bico_[/127.0.0.1:55546] logged in with entity id 8959 at ([world]-136.5, 65.0, 30.5)
-[14:12:51] [Async Chat Thread - #6/INFO]: <Bico_> 1
-[14:12:52] [Async Chat Thread - #6/INFO]: <Bico_> ㅅ2
-[14:12:52] [Async Chat Thread - #6/INFO]: <Bico_> ㅅ3
-[14:46:21] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 3056ms or 61 ticks behind
-[16:06:02] [Server thread/INFO]: Bico_ lost connection: 123
-[16:06:03] [Server thread/INFO]: Bico_ left the game
-[16:06:03] [Server thread/INFO]: [Rcon: Kicked Bico_: 123]
-[16:06:07] [User Authenticator #7/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
-[16:06:07] [Server thread/INFO]: Bico_ joined the game
-[16:06:07] [Server thread/INFO]: Bico_[/127.0.0.1:56354] logged in with entity id 12758 at ([world]-136.5, 65.0, 30.5)
-[16:06:14] [Server thread/INFO]: [Rcon: Banned Bico_: 1]
-[16:06:14] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
-[16:06:14] [Server thread/INFO]: Bico_ left the game
-[16:06:28] [Server thread/INFO]: [Rcon: Unbanned Bico_]
-[16:07:14] [Server thread/INFO]: Server empty for 60 seconds, pausing
-[16:09:44] [RCON Client /127.0.0.1 #6/INFO]: Thread RCON Client /127.0.0.1 shutting down
-[16:12:38] [User Authenticator #8/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
-[16:12:39] [Server thread/INFO]: Bico_ joined the game
-[16:12:39] [Server thread/INFO]: Bico_[/127.0.0.1:56589] logged in with entity id 12771 at ([world]-136.5, 65.0, 30.5)
-[16:13:25] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
-[16:17:25] [Server thread/INFO]: [Rcon: Banned Bico_: 123]
-[16:17:25] [Server thread/INFO]: Bico_ lost connection: You are banned from this server
-[16:17:26] [Server thread/INFO]: Bico_ left the game
-[16:17:31] [Server thread/INFO]: [Rcon: Unbanned Bico_]
-[16:17:36] [User Authenticator #9/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
-[16:17:36] [Server thread/INFO]: Bico_ joined the game
-[16:17:36] [Server thread/INFO]: Bico_[/127.0.0.1:56678] logged in with entity id 13175 at ([world]-135.77337663484923, 70.0, 19.717082747018416)
-[16:27:53] [Server thread/INFO]: [Not Secure] [Rcon] 123
-[16:28:04] [Server thread/INFO]: [Not Secure] [Rcon] 삐용삐용
-[16:28:38] [Server thread/INFO]: [Not Secure] [Rcon] 123
-[16:28:49] [Server thread/INFO]: [Not Secure] [Rcon] 123
-[16:29:11] [Server thread/INFO]: [Not Secure] [Rcon] 111
-[16:30:09] [Server thread/INFO]: [Not Secure] [Rcon] 1
-[16:32:56] [Server thread/INFO]: [Not Secure] [Rcon] 432
+[23:19:02] [Server thread/INFO]: Bico_ lost connection: Disconnected
+[23:19:04] [Server thread/INFO]: Bico_ left the game
+[23:19:08] [Server thread/INFO]: [Rcon: Stopping the server]
+[23:19:08] [Server thread/INFO]: Stopping server
+[23:19:08] [Server thread/INFO]: [ServerStatusPlugin] Disabling ServerStatusPlugin v1.0.0
+[23:19:08] [Server thread/INFO]: [ServerStatusPlugin] 데이터베이스 연결이 종료되었습니다.
+[23:19:08] [Server thread/INFO]: Saving players
+[23:19:08] [Server thread/INFO]: Saving worlds
+[23:19:08] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[23:19:08] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[23:19:08] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[23:19:08] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Saved 4 block chunks, 138 entity chunks, 0 poi chunks in world 'world' in 0.11s
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world'
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world'
+[23:19:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 1 entity chunks, 0 poi chunks in world 'world_nether' in 0.01s
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_nether'
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_nether'
+[23:19:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 10 entity chunks, 0 poi chunks in world 'world_the_end' in 0.02s
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_the_end'
+[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_the_end'
+[23:19:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[23:19:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[23:19:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[23:19:09] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[23:19:09] [Server thread/INFO]: Waiting for I/O tasks to complete...
+[23:19:09] [Server thread/INFO]: All I/O tasks to complete
+[23:19:09] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
+[23:19:09] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...
