@@ -3,14 +3,12 @@
 import { KeyRound, LogIn, LogOut } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { fetchServerStatus, useAuthStore } from "../store/store";
-import { useQuery } from "@tanstack/react-query";
-import CommonLoading from "./CommonLoading";
-import CommonError from "./CommonError";
+import { useAuthStore, useServerStateStore } from "../store/store";
 
 function CommonTopNavigation() {
   const router = useRouter();
   const { isAuthenticated, logout } = useAuthStore();
+  const { tps, status, onlinePlayers, fetchServer } = useServerStateStore();
 
   // 클라이언트 사이드 렌더링 처리
   const [mounted, setMounted] = useState(false);
@@ -19,34 +17,34 @@ function CommonTopNavigation() {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (mounted) {
+      fetchServer();
+
+      const interval = setInterval(() => {
+        fetchServer();
+      }, 5000);
+
+      return () => clearInterval(interval);
+    }
+  }, [mounted, fetchServer]);
+
   // 로그아웃 처리 함수
   const handleLogout = () => {
     logout();
     router.push("/login");
   };
 
-  const {
-    data: serverStatus,
-    isLoading,
-    error,
-  } = useQuery({
-    queryKey: ["serverStatus"],
-    queryFn: fetchServerStatus,
-    refetchInterval: 5000,
-  });
-
   if (!mounted) {
     return null;
   }
-  if (isLoading) return <CommonLoading />;
-  if (error) return <CommonError />;
 
   return (
     <nav className="flex justify-between items-center w-full h-12 py-3 bg-zinc-800 pl-5 pr-5 border-l-2 border-t-2 border-b-2 border-black">
       <div className="text-green-50 flex gap-10">
-        <span>Server : {serverStatus?.data.data.status}</span>
-        <span>TPS : {serverStatus?.data.data.tps}</span>
-        <span>Players : {serverStatus?.data.data.onlinePlayers}</span>
+        <span>Server : {status}</span>
+        <span>TPS : {tps}</span>
+        <span>Players : {onlinePlayers}</span>
       </div>
 
       {isAuthenticated ? (

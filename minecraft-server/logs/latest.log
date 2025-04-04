@@ -1,37 +1,18 @@
-[23:19:02] [Server thread/INFO]: Bico_ lost connection: Disconnected
-[23:19:04] [Server thread/INFO]: Bico_ left the game
-[23:19:08] [Server thread/INFO]: [Rcon: Stopping the server]
-[23:19:08] [Server thread/INFO]: Stopping server
-[23:19:08] [Server thread/INFO]: [ServerStatusPlugin] Disabling ServerStatusPlugin v1.0.0
-[23:19:08] [Server thread/INFO]: [ServerStatusPlugin] 데이터베이스 연결이 종료되었습니다.
-[23:19:08] [Server thread/INFO]: Saving players
-[23:19:08] [Server thread/INFO]: Saving worlds
-[23:19:08] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[23:19:08] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
-[23:19:08] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
-[23:19:08] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Saved 4 block chunks, 138 entity chunks, 0 poi chunks in world 'world' in 0.11s
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world'
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world'
-[23:19:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 1 entity chunks, 0 poi chunks in world 'world_nether' in 0.01s
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_nether'
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_nether'
-[23:19:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 10 entity chunks, 0 poi chunks in world 'world_the_end' in 0.02s
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_the_end'
-[23:19:09] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_the_end'
-[23:19:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[23:19:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[23:19:09] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[23:19:09] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[23:19:09] [Server thread/INFO]: Waiting for I/O tasks to complete...
-[23:19:09] [Server thread/INFO]: All I/O tasks to complete
-[23:19:09] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
-[23:19:09] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...
+[14:44:54] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.3+9-LTS; Amazon.com Inc. Corretto-21.0.3.9.1) on Mac OS X 15.3.2 (aarch64)
+[14:44:54] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) for Minecraft 1.21.4
+[14:44:55] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[14:44:55] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[14:44:55] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+ - ServerStatusPlugin (1.0.0)
+[14:44:58] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[14:44:58] [ServerMain/ERROR]: Failed to start the minecraft server
+net.minecraft.util.DirectoryLock$LockException: /Users/min/dev/mc-manager/minecraft-server/./world/session.lock: already locked (possibly by other Minecraft instance?)
+	at net.minecraft.util.DirectoryLock$LockException.alreadyLocked(DirectoryLock.java:100) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
+	at net.minecraft.util.DirectoryLock.create(DirectoryLock.java:30) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
+	at net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.<init>(LevelStorageSource.java:435) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
+	at net.minecraft.world.level.storage.LevelStorageSource.validateAndCreateAccess(LevelStorageSource.java:350) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
+	at net.minecraft.server.Main.main(Main.java:184) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
+	at io.papermc.paper.PaperBootstrap.boot(PaperBootstrap.java:21) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
+	at org.bukkit.craftbukkit.Main.main(Main.java:281) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
+	at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:42) ~[app:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]

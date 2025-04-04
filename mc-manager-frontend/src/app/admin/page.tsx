@@ -1,43 +1,13 @@
 "use client";
 
 import React from "react";
-import {
-  RefreshCw,
-  Power,
-  Database,
-  Sun,
-  Moon,
-  CloudRain,
-  Cloud,
-  ArrowDown,
-} from "lucide-react";
+import { Database, Sun, Moon, CloudRain, Cloud, ArrowDown } from "lucide-react";
+import CommonServerRun from "../common/CommonServerRun";
 
 function Admin() {
   return (
     <div className="p-6 space-y-6">
-      {/* 서버 상태 카드 */}
-      <div className="bg-white rounded-lg shadow-sm p-4">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-bold text-green-600">Server Online</h2>
-          <div className="flex gap-2">
-            <button
-              className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
-              onClick={() => alert("서버를 재시작했습니다.")}
-            >
-              <RefreshCw size={18} />
-              <span>Restart</span>
-            </button>
-            <button
-              className="flex items-center gap-1 px-3 py-1 border rounded-md bg-red-500 text-white"
-              onClick={() => alert("서버를 중지했습니다.")}
-            >
-              <Power size={18} />
-              <span>Stop</span>
-            </button>
-          </div>
-        </div>
-        <p className="text-gray-600">Running for 24d 12h</p>
-      </div>
+      <CommonServerRun />
 
       {/* 다음 백업 카드 */}
       <div className="bg-white rounded-lg shadow-sm p-4">

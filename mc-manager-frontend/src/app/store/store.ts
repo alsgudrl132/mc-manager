@@ -65,6 +65,34 @@ interface AuthState {
   logout: () => void;
 }
 
+interface Players {
+  uuid: string;
+  name: string;
+  lastLogin: number;
+  playTime: number;
+  health: number;
+  level: number;
+  world: string;
+  x: number;
+  y: number;
+  z: number;
+  skinUrl: string;
+  isBanned: boolean;
+}
+
+interface ServerStatus {
+  status: string;
+  timestamp: number;
+  tps: number;
+  onlinePlayers: number;
+  maxPlayers: number;
+  usedMemory: number;
+  totalMemory: number;
+  uptime: string;
+  players: Players[];
+  fetchServer: () => Promise<void>;
+}
+
 export const submitRegister = async ({
   username,
   password,
@@ -152,6 +180,50 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
 }));
 
+// 서버 상태 불러오기
+export const fetchServerStatus = async () => {
+  try {
+    return await axios.get(`${URL}/server/status`);
+  } catch (error) {
+    console.error(`fetchServerStatus Error`, error);
+    throw error;
+  }
+};
+
+export const useServerStateStore = create<ServerStatus>((set) => ({
+  // 상태
+  status: "",
+  timestamp: 0,
+  tps: 0,
+  onlinePlayers: 0,
+  maxPlayers: 0,
+  usedMemory: 0,
+  totalMemory: 0,
+  uptime: "",
+  players: [],
+
+  fetchServer: async () => {
+    try {
+      const response = await fetchServerStatus();
+      console.log(response);
+
+      set({
+        status: response.data.data.status,
+        timestamp: response.data.data.timestamp,
+        tps: response.data.data.tps,
+        onlinePlayers: response.data.data.onlinePlayers,
+        maxPlayers: response.data.data.maxPlayers,
+        usedMemory: response.data.data.usedMemory,
+        totalMemory: response.data.data.totalMemory,
+        uptime: response.data.data.uptime,
+        players: response.data.data.players,
+      });
+    } catch (error) {
+      console.error("fetchServer", error);
+    }
+  },
+}));
+
 // 인증된 API 요청을 위한 Axios 인스턴스
 export const authAxios = axios.create({
   baseURL: URL,
@@ -168,16 +240,6 @@ authAxios.interceptors.request.use(
   },
   (error) => Promise.reject(error)
 );
-
-// 서버 상태 불러오기
-export const fetchServerStatus = async () => {
-  try {
-    return await axios.get(`${URL}/server/status`);
-  } catch (error) {
-    console.error(`fetchServerStatus Error`, error);
-    throw error;
-  }
-};
 
 // 유저 상태 불러오기
 export const fetchPlayersStatus = async () => {
