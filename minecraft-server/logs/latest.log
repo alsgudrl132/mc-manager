@@ -1,18 +1,91 @@
-[14:44:54] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.3+9-LTS; Amazon.com Inc. Corretto-21.0.3.9.1) on Mac OS X 15.3.2 (aarch64)
-[14:44:54] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) for Minecraft 1.21.4
-[14:44:55] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[14:44:55] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
-[14:44:55] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+[13:39:14] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.3+9-LTS; Amazon.com Inc. Corretto-21.0.3.9.1) on Mac OS X 15.3.2 (aarch64)
+[13:39:14] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) for Minecraft 1.21.4
+[13:39:14] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[13:39:15] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[13:39:15] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
  - ServerStatusPlugin (1.0.0)
-[14:44:58] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[14:44:58] [ServerMain/ERROR]: Failed to start the minecraft server
-net.minecraft.util.DirectoryLock$LockException: /Users/min/dev/mc-manager/minecraft-server/./world/session.lock: already locked (possibly by other Minecraft instance?)
-	at net.minecraft.util.DirectoryLock$LockException.alreadyLocked(DirectoryLock.java:100) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
-	at net.minecraft.util.DirectoryLock.create(DirectoryLock.java:30) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
-	at net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.<init>(LevelStorageSource.java:435) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
-	at net.minecraft.world.level.storage.LevelStorageSource.validateAndCreateAccess(LevelStorageSource.java:350) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
-	at net.minecraft.server.Main.main(Main.java:184) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
-	at io.papermc.paper.PaperBootstrap.boot(PaperBootstrap.java:21) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
-	at org.bukkit.craftbukkit.Main.main(Main.java:281) ~[paper-1.21.4.jar:1.21.4-138-5395ae3]
-	at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:42) ~[app:?]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[13:39:17] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[13:39:18] [ServerMain/INFO]: Loaded 1370 recipes
+[13:39:18] [ServerMain/INFO]: Loaded 1481 advancements
+[13:39:18] [ServerMain/INFO]: [MCTypeRegistry] Initialising converters for DataConverter...
+[13:39:18] [ServerMain/INFO]: [MCTypeRegistry] Finished initialising converters for DataConverter in 123.0ms
+[13:39:18] [Server thread/INFO]: Starting minecraft server version 1.21.4
+[13:39:18] [Server thread/INFO]: Loading properties
+[13:39:18] [Server thread/INFO]: This server is running Paper version 1.21.4-138-main@5395ae3 (2025-02-02T21:42:11Z) (Implementing API version 1.21.4-R0.1-SNAPSHOT)
+[13:39:18] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[13:39:18] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[13:39:18] [Server thread/INFO]: Using 4 threads for Netty based IO
+[13:39:19] [Server thread/INFO]: [MoonriseCommon] Paper is using 2 worker threads, 1 I/O threads
+[13:39:19] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using population gen parallelism: true
+[13:39:19] [Server thread/INFO]: Default game type: SURVIVAL
+[13:39:19] [Server thread/INFO]: Generating keypair
+[13:39:19] [Server thread/INFO]: Starting Minecraft server on *:25565
+[13:39:19] [Server thread/INFO]: Using default channel type
+[13:39:19] [Server thread/INFO]: Paper: Using libdeflate (macOS ARM64 / Apple Silicon) compression from Velocity.
+[13:39:19] [Server thread/INFO]: Paper: Using native (macOS ARM64 / Apple Silicon) cipher from Velocity.
+[13:39:19] [Server thread/INFO]: [ServerStatusPlugin] Loading server plugin ServerStatusPlugin v1.0.0
+[13:39:19] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[13:39:19] [Server thread/INFO]: Preparing level "world"
+[13:39:20] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[13:39:20] [Server thread/INFO]: Preparing spawn area: 0%
+[13:39:20] [Server thread/INFO]: Time elapsed: 467 ms
+[13:39:20] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[13:39:20] [Server thread/INFO]: Preparing spawn area: 0%
+[13:39:20] [Server thread/INFO]: Time elapsed: 66 ms
+[13:39:20] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[13:39:20] [Server thread/INFO]: Preparing spawn area: 0%
+[13:39:20] [Server thread/INFO]: Time elapsed: 40 ms
+[13:39:20] [Server thread/INFO]: [ServerStatusPlugin] Enabling ServerStatusPlugin v1.0.0
+[13:39:20] [Server thread/INFO]: [ServerStatusPlugin] 필요한 데이터베이스 테이블이 생성되었습니다.
+[13:39:20] [Server thread/INFO]: [ServerStatusPlugin] 데이터베이스에 성공적으로 연결되었습니다.
+[13:39:20] [Server thread/INFO]: [ServerStatusPlugin] ServerStatusPlugin이 성공적으로 활성화되었습니다.
+[13:39:20] [Server thread/INFO]: [spark] Starting background profiler...
+[13:39:22] [Server thread/INFO]: Done preparing level "world" (2.489s)
+[13:39:22] [Server thread/INFO]: Starting remote control listener
+[13:39:22] [Server thread/INFO]: Thread RCON Listener started
+[13:39:22] [Server thread/INFO]: RCON running on 0.0.0.0:25575
+[13:39:22] [Server thread/INFO]: Running delayed init tasks
+[13:39:22] [Server thread/INFO]: Done (9.074s)! For help, type "help"
+[13:39:24] [User Authenticator #0/INFO]: UUID of player Bico_ is 6142d14b-9b65-4085-9636-b6f67c23a988
+[13:39:24] [Server thread/INFO]: Bico_ joined the game
+[13:39:24] [Server thread/INFO]: Bico_[/127.0.0.1:52844] logged in with entity id 67 at ([world]-85.5, 64.0, -48.5)
+[13:39:26] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[13:39:33] [Server thread/INFO]: [Not Secure] [Rcon] 서버가 곧 종료됩니다 (30초 후)
+[13:39:39] [Server thread/INFO]: [Not Secure] [Rcon] 서버가 곧 종료됩니다 (30초 후)
+[13:40:03] [Server thread/INFO]: [Rcon: Stopping the server]
+[13:40:03] [Server thread/INFO]: Stopping server
+[13:40:03] [Server thread/INFO]: [ServerStatusPlugin] Disabling ServerStatusPlugin v1.0.0
+[13:40:03] [Server thread/INFO]: [ServerStatusPlugin] 데이터베이스 연결이 종료되었습니다.
+[13:40:03] [Server thread/INFO]: Saving players
+[13:40:03] [Server thread/INFO]: Bico_ lost connection: Server closed
+[13:40:03] [Server thread/INFO]: Bico_ left the game
+[13:40:04] [Server thread/INFO]: Saving worlds
+[13:40:04] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[13:40:04] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[13:40:04] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[13:40:04] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Saved 650 block chunks, 650 entity chunks, 0 poi chunks in world 'world' in 1.07s
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world'
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world'
+[13:40:05] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Saved 49 block chunks, 49 entity chunks, 0 poi chunks in world 'world_nether' in 0.05s
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_nether'
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_nether'
+[13:40:05] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Saved 49 block chunks, 49 entity chunks, 0 poi chunks in world 'world_the_end' in 0.05s
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk I/O to halt for world 'world_the_end'
+[13:40:05] [Server thread/INFO]: [ChunkHolderManager] Halted I/O scheduler for world 'world_the_end'
+[13:40:05] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[13:40:05] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[13:40:05] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[13:40:05] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[13:40:05] [Server thread/INFO]: Waiting for I/O tasks to complete...
+[13:40:05] [Server thread/INFO]: All I/O tasks to complete
+[13:40:05] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of worker pool for up to 60s...
+[13:40:05] [Server thread/INFO]: [MoonriseCommon] Awaiting termination of I/O pool for up to 60s...

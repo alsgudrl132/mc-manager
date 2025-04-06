@@ -68,28 +68,112 @@ class ServerManagementService {
     }
   }
 
-  async stopServer(userId?: number): Promise<boolean> {
+  async stopServer(
+    userId?: number,
+    delay?: number,
+    message?: string
+  ): Promise<boolean> {
     try {
-      // RCON을 통해 서버 중지 명령 전송
-      await rconService.stopServer(userId);
-      logger.info("Server stop command executed");
-      return true;
+      logger.info(
+        `stopServer called with delay: ${delay}, message: ${message}`
+      );
+
+      // 딜레이가 있는 경우
+      if (delay && delay > 0) {
+        logger.info(`Delay is enabled: ${delay} seconds`);
+        if (message) {
+          await rconService.broadcastMessage(
+            `${message} (${delay}초 후)`,
+            userId
+          );
+          logger.info(`Broadcast message sent: ${message}`);
+        }
+
+        // 백그라운드에서 타이머 시작
+        logger.info(`Setting timer for ${delay} seconds`);
+        setTimeout(async () => {
+          try {
+            logger.info(`Timer elapsed, executing stop command`);
+            // RCON을 통해 서버 중지 명령 전송
+            await rconService.stopServer(userId);
+            logger.info("Server stop command executed after delay");
+          } catch (error) {
+            logger.error("Error stopping server after delay:", error);
+          }
+        }, delay * 1000);
+
+        logger.info(`Server stop scheduled in ${delay} seconds`);
+        return true;
+      } else {
+        logger.info(`No delay or invalid delay, stopping immediately`);
+        // 딜레이가 없는 경우 즉시 중지
+        await rconService.stopServer(userId);
+        logger.info("Server stop command executed immediately");
+        return true;
+      }
     } catch (error) {
       logger.error("Error stopping server:", error);
       throw new Error(`Failed to stop server: ${error}`);
     }
   }
 
-  async restartServer(userId?: number): Promise<boolean> {
+  async restartServer(
+    userId?: number,
+    delay?: number,
+    message?: string
+  ): Promise<boolean> {
     try {
-      // 서버 중지
-      await this.stopServer(userId);
+      logger.info(
+        `restartServer called with delay: ${delay}, message: ${message}`
+      );
 
-      // 서버가 완전히 종료될 때까지 대기
-      await new Promise((resolve) => setTimeout(resolve, 5000));
+      // 딜레이가 있는 경우
+      if (delay && delay > 0) {
+        logger.info(`Delay is enabled: ${delay} seconds`);
+        if (message) {
+          await rconService.broadcastMessage(
+            `${message} (${delay}초 후)`,
+            userId
+          );
+          logger.info(`Broadcast message sent: ${message}`);
+        }
 
-      // 서버 시작
-      return await this.startServer();
+        // 백그라운드에서 타이머 시작
+        logger.info(`Setting timer for ${delay} seconds`);
+        setTimeout(async () => {
+          try {
+            logger.info(`Timer elapsed, executing restart sequence`);
+            // 서버 중지
+            await rconService.stopServer(userId);
+            logger.info("Server stop command executed for restart after delay");
+
+            // 서버가 완전히 종료될 때까지 대기
+            await new Promise((resolve) => setTimeout(resolve, 5000));
+
+            // 서버 시작
+            await this.startServer();
+            logger.info("Server restarted successfully after delay");
+          } catch (error) {
+            logger.error("Error restarting server after delay:", error);
+          }
+        }, delay * 1000);
+
+        logger.info(`Server restart scheduled in ${delay} seconds`);
+        return true;
+      } else {
+        logger.info(`No delay or invalid delay, restarting immediately`);
+        // 딜레이가 없는 경우 즉시 재시작
+        // 서버 중지
+        await rconService.stopServer(userId);
+
+        // 서버가 완전히 종료될 때까지 대기
+        await new Promise((resolve) => setTimeout(resolve, 5000));
+
+        // 서버 시작
+        await this.startServer();
+        logger.info("Server restarted immediately");
+        return true;
+      }
     } catch (error) {
       logger.error("Error restarting server:", error);
       throw new Error(`Failed to restart server: ${error}`);

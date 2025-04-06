@@ -76,8 +76,16 @@ export const startServer = async (req: Request, res: Response) => {
 export const stopServer = async (req: Request, res: Response) => {
   try {
     const userId = req.user?.id;
+    const { delay, message } = req.body;
+
+    logger.info(
+      `stopServer controller called: delay=${delay}, message=${message}`
+    );
+
     const result = await serverManagementService.stopServer(
-      userId ? Number(userId) : undefined
+      userId ? Number(userId) : undefined,
+      delay ? Number(delay) : undefined,
+      message
     );
 
     res.status(200).json({
@@ -98,8 +106,16 @@ export const stopServer = async (req: Request, res: Response) => {
 export const restartServer = async (req: Request, res: Response) => {
   try {
     const userId = req.user?.id;
+    const { delay, message } = req.body;
+
+    logger.info(
+      `restartServer controller called: delay=${delay}, message=${message}`
+    );
+
     const result = await serverManagementService.restartServer(
-      userId ? Number(userId) : undefined
+      userId ? Number(userId) : undefined,
+      delay ? Number(delay) : undefined,
+      message
     );
 
     res.status(200).json({
@@ -144,6 +160,7 @@ export const updateServerProperties = async (req: Request, res: Response) => {
         success: false,
         message: "No properties provided",
       });
+      return;
     }
 
     const result = await monitoringService.updateServerProperties(properties);
@@ -173,6 +190,7 @@ export const executeCommand = async (req: Request, res: Response) => {
         success: false,
         message: "Command is required",
       });
+      return;
     }
 
     const result = await rconService.executeCommand(

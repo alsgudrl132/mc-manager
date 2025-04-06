@@ -205,7 +205,6 @@ export const useServerStateStore = create<ServerStatus>((set) => ({
   fetchServer: async () => {
     try {
       const response = await fetchServerStatus();
-      console.log(response);
 
       set({
         status: response.data.data.status,
@@ -334,28 +333,23 @@ export const serverStartManage = async (
   message?: string
 ) => {
   try {
-    let requestConfig = {};
+    // 요청 본문 구성
+    const requestBody: { delay?: number; message?: string } = {};
 
-    // 중지 또는 재시작인 경우 && (딜레이 또는 메시지가 있는 경우)
-    if ((option === "stop" || option === "restart") && (delay || message)) {
-      // 요청 본문 구성
-      const requestBody: { delay?: number; message?: string } = {};
-
-      // 딜레이가 있는 경우에만 추가
-      if (delay && delay > 0) {
-        requestBody.delay = delay;
-      }
-
-      // 메시지가 있는 경우에만 추가
-      if (message && message.trim() !== "") {
-        requestBody.message = message;
-      }
-
-      // 요청 설정에 본문 추가
-      requestConfig = { data: requestBody };
+    // 딜레이가 있는 경우에만 추가
+    if (delay && delay > 0) {
+      requestBody.delay = delay;
     }
 
-    return await authAxios.post(`${URL}/server/${option}`, requestConfig);
+    // 메시지가 있는 경우에만 추가
+    if (message && message.trim() !== "") {
+      requestBody.message = message;
+    }
+
+    console.log(`Sending ${option} request with:`, requestBody);
+
+    // 빈 객체인 경우에도 전송 (서버에서 처리)
+    return await authAxios.post(`${URL}/server/${option}`, requestBody);
   } catch (error) {
     console.error(`serverStartManage Error`, error);
     throw error;
