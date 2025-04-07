@@ -54,3 +54,11 @@
 [11:18:13] [Server thread/INFO]: [Bico_: Gave 1 [Stone] to Bico_]
 [11:18:24] [Server thread/INFO]: Bico_ issued server command: /give Bico_ minecraft:diamond
 [11:18:24] [Server thread/INFO]: [Bico_: Gave 1 [Diamond] to Bico_]
+[11:47:25] [Server thread/INFO]: [Rcon: Teleported Bico_ to -83.500000, 64.000000, -39.500000]
+[15:59:23] [Server thread/INFO]: [Rcon: Gave 1 [Gold Ingot] to Bico_]
+[15:59:38] [Server thread/INFO]: [Rcon: Gave 1 [Enchanted Golden Apple] to Bico_]
+[16:00:33] [Server thread/INFO]: Bico_ issued server command: /give Bico_ minecraft:diamond_block
+[16:00:33] [Server thread/INFO]: [Bico_: Gave 1 [Block of Diamond] to Bico_]
+[16:01:10] [Server thread/INFO]: [Rcon: Gave 66 [Diamond] to Bico_]
+[16:01:18] [Server thread/INFO]: [Rcon: Gave 66 [Diamond Hoe] to Bico_]
+[16:01:39] [Server thread/INFO]: Bico_ issued server command: /give bico_ i

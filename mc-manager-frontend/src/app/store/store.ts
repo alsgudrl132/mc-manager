@@ -361,7 +361,20 @@ export const getItems = async () => {
   try {
     return await axios.get(`https://minecraft-api.vercel.app/api/items`);
   } catch (error) {
-    console.error(`getItems`, error);
+    console.error(`getItems Error`, error);
+    throw error;
+  }
+};
+
+// 아이템 지급하기
+export const giveItems = async (name: string, item: string, amount: number) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/give`, {
+      item: item,
+      amount: amount,
+    });
+  } catch (error) {
+    console.error(`giveItems Error`, error);
     throw error;
   }
 };

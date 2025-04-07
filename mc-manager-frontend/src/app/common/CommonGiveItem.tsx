@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { getItems } from "../store/store";
+import { getItems, giveItems } from "../store/store";
 import { useQuery } from "@tanstack/react-query";
 
 interface Items {
@@ -23,11 +23,35 @@ interface Items {
   renewable: boolean;
 }
 
-function CommonGiveItem() {
+interface IPlayerName {
+  playerName: string;
+}
+
+function CommonGiveItem({ playerName }: IPlayerName) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [amount, setAmount] = useState(1);
+
   const { data: items } = useQuery({
     queryKey: ["getItems"],
     queryFn: getItems,
   });
+
+  const filteredItems = items?.data.filter((item: Items) =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const giveItemsHandler = async (item: string) => {
+    try {
+      const result = await giveItems(
+        playerName,
+        item.toLowerCase().split(" ").join("_"),
+        amount
+      );
+      console.log(result);
+    } catch (error) {
+      alert(error);
+    }
+  };
 
   return (
     <Dialog>
@@ -59,80 +83,84 @@ function CommonGiveItem() {
               id="itme-name"
               placeholder="diamond"
               className="border-gray-300"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
 
           {/* 아이템 그리드 */}
           <div className="max-h-[400px] overflow-auto">
             <div className="grid grid-cols-9 gap-1">
-              {items?.data.map((item: Items, index: number) => (
+              {filteredItems?.map((item: Items, index: number) => (
                 <div
                   key={index}
                   title={item.name}
                   className="relative w-12 h-12 bg-gray-100 border border-gray-300 hover:border-blue-500 cursor-pointer"
                 >
-                  <div className="w-full h-full flex items-center justify-center">
-                    <img src={item.image} alt={item.name} />
-                  </div>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <div className="w-full h-full flex items-center justify-center">
+                        <img src={item.image} alt={item.name} />
+                      </div>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[400px] bg-white border-gray-200">
+                      <DialogHeader>
+                        <DialogTitle>아이템 지급</DialogTitle>
+                        <DialogDescription>
+                          {playerName}에게 지급할 수량을 입력하세요
+                        </DialogDescription>
+                      </DialogHeader>
+
+                      <div className="py-4 text-center ">
+                        <span>{item.name}</span>
+                        <div className="flex items-center justify-center mb-4">
+                          <div className="w-16 h-16 bg-gray-100 border border-gray-300 flex items-center justify-center">
+                            <div className="w-full h-full flex items-center justify-center">
+                              <img src={item.image} alt={item.name} />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-4 justify-center">
+                          <Button
+                            variant="outline"
+                            className="h-10 w-10 p-0 border-gray-300"
+                          >
+                            -
+                          </Button>
+                          <Input
+                            type="number"
+                            min="1"
+                            max="64"
+                            value={amount}
+                            onChange={(e) => setAmount(Number(e.target.value))}
+                            className="w-20 text-center border-gray-300"
+                          />
+                          <Button
+                            variant="outline"
+                            className="h-10 w-10 p-0 border-gray-300"
+                          >
+                            +
+                          </Button>
+                        </div>
+                      </div>
+
+                      <DialogFooter>
+                        <Button
+                          className="bg-green-600 hover:bg-green-700 text-white"
+                          onClick={() => giveItemsHandler(item.name)}
+                        >
+                          지급하기
+                        </Button>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </DialogContent>
-
-      {/* 수량 입력 모달 구조 */}
-      <Dialog>
-        <DialogContent className="sm:max-w-[400px] bg-white border-gray-200">
-          <DialogHeader>
-            <DialogTitle>아이템 지급</DialogTitle>
-            <DialogDescription>지급할 수량을 입력하세요</DialogDescription>
-          </DialogHeader>
-
-          <div className="py-4">
-            <div className="flex items-center justify-center mb-4">
-              <div className="w-16 h-16 bg-gray-100 border border-gray-300 flex items-center justify-center">
-                {/* 선택한 아이템 이미지 자리 */}
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 justify-center">
-              <Button
-                variant="outline"
-                className="h-10 w-10 p-0 border-gray-300"
-              >
-                -
-              </Button>
-              <Input
-                type="number"
-                min="1"
-                max="64"
-                defaultValue="1"
-                className="w-20 text-center border-gray-300"
-              />
-              <Button
-                variant="outline"
-                className="h-10 w-10 p-0 border-gray-300"
-              >
-                +
-              </Button>
-            </div>
-
-            <div className="flex justify-center mt-2">
-              <span className="text-gray-500 text-sm">최대 64개</span>
-            </div>
-          </div>
-
-          <DialogFooter>
-            <Button variant="outline" className="border-gray-300">
-              취소
-            </Button>
-            <Button className="bg-green-600 hover:bg-green-700 text-white">
-              지급하기
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
     </Dialog>
   );
 }

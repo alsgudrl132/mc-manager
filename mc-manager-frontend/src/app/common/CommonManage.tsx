@@ -182,7 +182,7 @@ function CommonManage({
               <span>Teleport</span>
             </button>
           </div>
-          <CommonGiveItem />
+          <CommonGiveItem playerName={name} />
         </div>
       </DialogContent>
     </Dialog>
