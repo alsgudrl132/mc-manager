@@ -355,3 +355,13 @@ export const serverStartManage = async (
     throw error;
   }
 };
+
+// 아이템 불러오기
+export const getItems = async () => {
+  try {
+    return await axios.get(`https://minecraft-api.vercel.app/api/items`);
+  } catch (error) {
+    console.error(`getItems`, error);
+    throw error;
+  }
+};

@@ -11,7 +11,8 @@ function CommonServerRun() {
   const serverStartHandler = async (option: string) => {
     try {
       const result = await serverStartManage(option);
-      console.log(result);
+      console.log("Server command result:", result);
+      alert(`서버 시작 명령이 실행되었습니다.`);
     } catch (error) {
       alert(error);
     }

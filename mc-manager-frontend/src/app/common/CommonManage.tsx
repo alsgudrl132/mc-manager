@@ -16,6 +16,7 @@ import {
 } from "../store/store";
 import { useState } from "react";
 import CommonLoading from "./CommonLoading";
+import CommonGiveItem from "./CommonGiveItem";
 
 interface IManageProps {
   name: string;
@@ -181,6 +182,7 @@ function CommonManage({
               <span>Teleport</span>
             </button>
           </div>
+          <CommonGiveItem />
         </div>
       </DialogContent>
     </Dialog>
