@@ -378,3 +378,13 @@ export const giveItems = async (name: string, item: string, amount: number) => {
     throw error;
   }
 };
+
+// 백업하기
+export const serverBackup = async () => {
+  try {
+    return await authAxios.post(`${URL}/backups`);
+  } catch (error) {
+    console.error(`serverBackup Error`, error);
+    throw error;
+  }
+};

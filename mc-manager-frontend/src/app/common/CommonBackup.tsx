@@ -1,9 +1,24 @@
 "use client";
 
-import { Database } from "lucide-react";
-import React from "react";
+import { Database, Loader2 } from "lucide-react";
+import React, { useState } from "react";
+import { serverBackup } from "../store/store";
 
 function CommonBackup() {
+  const [loading, setLoading] = useState(false);
+  const backupHandler = async () => {
+    setLoading(true);
+    try {
+      const result = await serverBackup();
+      if (result.data.success)
+        alert(result.data.message + "\n" + result.data.data.name);
+    } catch (error) {
+      alert(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-sm p-4">
       <div className="flex justify-between items-center">
@@ -12,11 +27,20 @@ function CommonBackup() {
           <p className="text-2xl font-bold">2h 15m</p>
         </div>
         <button
-          className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
-          onClick={() => alert("월드를 백업했습니다.")}
+          className="px-3 py-1 border rounded-md bg-white"
+          onClick={() => backupHandler()}
         >
-          <Database size={18} />
-          <span>Backup</span>
+          {loading ? (
+            <span className="flex items-center justify-center">
+              <Loader2 className="animate-spin mr-2 h-4 w-4" />
+              Loading...
+            </span>
+          ) : (
+            <div className="flex items-center gap-1">
+              <Database size={18} />
+              <span>Backup</span>
+            </div>
+          )}
         </button>
       </div>
     </div>

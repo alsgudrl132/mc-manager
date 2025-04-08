@@ -315,22 +315,19 @@ class MonitoringService {
       // RCON을 통해 서버에 저장 명령 실행
       await rconService.executeCommand("save-all", userId);
 
-      // 백업 생성 명령 실행
-      await rconService.executeCommand(`backup ${description}`, userId);
+      // 서버가 저장을 완료할 시간을 주기 위해 잠시 대기
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+
+      // 직접 백업 명령 실행 (zip 명령어 사용)
+      logger.info(`Creating backup: ${backupPath}`);
+
+      // 서버 디렉토리를 zip 파일로 압축
+      await execPromise(
+        `zip -r "${backupPath}" "${this.serverDirectory}" -x "${this.serverDirectory}/*cache*" -x "${this.serverDirectory}/*logs*" -x "${this.serverDirectory}/*.jar"`
+      );
 
       // 백업 파일이 생성되었는지 확인
-      await new Promise<void>((resolve) => {
-        setTimeout(async () => {
-          try {
-            await fs.access(backupPath);
-            resolve();
-          } catch (err) {
-            // 파일이 아직 없으면 기다림
-            logger.info(`Waiting for backup file to be created: ${backupPath}`);
-            setTimeout(resolve, 5000);
-          }
-        }, 2000);
-      });
+      await fs.access(backupPath);
 
       // 백업 파일 크기 확인
       const stats = await fs.stat(backupPath);
