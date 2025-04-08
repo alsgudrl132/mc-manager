@@ -148,7 +148,7 @@ function CommonGiveItem({ playerName }: IPlayerName) {
                       <DialogFooter>
                         <Button
                           className="bg-green-600 hover:bg-green-700 text-white"
-                          onClick={() => giveItemsHandler(item.name)}
+                          onClick={() => giveItemsHandler(item.namespacedId)}
                         >
                           지급하기
                         </Button>
