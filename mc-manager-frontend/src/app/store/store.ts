@@ -99,8 +99,11 @@ interface TimeInterval {
 }
 
 interface BackupStore {
-  backupDelayTime: number;
+  backupDelayTime: number; // 지정된 백업 시간
+  currentRemainingTime: number; // 현재 남은 시간
+  lastUpdated: number; // 마지막 업데이트 시간
   setStoreTimeInterval: (timeInterval: TimeInterval) => void;
+  updateTimer: () => boolean; // 타이머 업데이트
 }
 
 export const submitRegister = async ({
@@ -399,18 +402,57 @@ export const serverBackup = async () => {
   }
 };
 
-export const useBackupStore = create<BackupStore>((set) => ({
+export const useBackupStore = create<BackupStore>((set, get) => ({
   // 상태
   backupDelayTime: 9000000,
+  currentRemainingTime: 9000000, // 처음에는 backupDelayTime과 동일
+  lastUpdated: Date.now(),
+
   setStoreTimeInterval: (timeInterval: TimeInterval) => {
     try {
+      const newTime =
+        (timeInterval.hours * 60 * 60 + timeInterval.minutes * 60) * 1000;
       set({
-        // 시간과 분을 받아서 ms로 변환하여 time 지정
-        backupDelayTime:
-          (timeInterval.hours * 60 * 60 + timeInterval.minutes * 60) * 1000,
+        backupDelayTime: newTime,
+        currentRemainingTime: newTime, // 새 시간으로 남은 시간도 재설정
+        lastUpdated: Date.now(),
       });
     } catch (error) {
       console.error(`setStoreTimeInterval`, error);
     }
+  },
+
+  updateTimer: () => {
+    const { currentRemainingTime, lastUpdated, backupDelayTime } = get();
+
+    const now = Date.now();
+    const elapsed = now - lastUpdated;
+
+    // 1분(60000ms) 이상 경과했는지 확인
+    if (elapsed >= 60000) {
+      // 1분 단위로 시간을 감소
+      const minutesToSubtract = Math.floor(elapsed / 60000);
+      const newRemainingTime = Math.max(
+        0,
+        currentRemainingTime - minutesToSubtract * 60000
+      );
+
+      // 시간이 0이 되면 기본값으로 리셋
+      if (newRemainingTime === 0) {
+        set({
+          currentRemainingTime: backupDelayTime,
+          lastUpdated: now,
+        });
+      } else {
+        set({
+          currentRemainingTime: newRemainingTime,
+          lastUpdated: now,
+        });
+      }
+
+      return true; // 시간이 변경되었음을 나타냄
+    }
+
+    return false; // 시간이 변경되지 않음
   },
 }));

@@ -36,6 +36,19 @@ function CommonBackupSetup() {
 
   const { setStoreTimeInterval } = useBackupStore();
 
+  const setTimeIntervalHandler = () => {
+    if (
+      timeInterval.hours > 200 ||
+      timeInterval.minutes > 59 ||
+      timeInterval.hours < 0 ||
+      timeInterval.minutes < 0
+    )
+      alert("알맞은 시간을 선택해주세요.");
+    else {
+      setStoreTimeInterval(timeInterval);
+    }
+  };
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -76,10 +89,7 @@ function CommonBackupSetup() {
           </div>
         </div>
         <DialogFooter>
-          <Button
-            type="submit"
-            onClick={() => setStoreTimeInterval(timeInterval)}
-          >
+          <Button type="submit" onClick={() => setTimeIntervalHandler()}>
             Save changes
           </Button>
         </DialogFooter>
