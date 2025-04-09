@@ -3,6 +3,7 @@
 import { Database, Loader2 } from "lucide-react";
 import React, { useState } from "react";
 import { serverBackup } from "../store/store";
+import CommonBackupSetup from "./CommonBackupSetup";
 
 function CommonBackup() {
   const [loading, setLoading] = useState(false);
@@ -26,22 +27,25 @@ function CommonBackup() {
           <h3 className="text-gray-600">Next Backup</h3>
           <p className="text-2xl font-bold">2h 15m</p>
         </div>
-        <button
-          className="px-3 py-1 border rounded-md bg-white"
-          onClick={() => backupHandler()}
-        >
-          {loading ? (
-            <span className="flex items-center justify-center">
-              <Loader2 className="animate-spin mr-2 h-4 w-4" />
-              Loading...
-            </span>
-          ) : (
-            <div className="flex items-center gap-1">
-              <Database size={18} />
-              <span>Backup</span>
-            </div>
-          )}
-        </button>
+        <div className="flex gap-2">
+          <CommonBackupSetup />
+          <button
+            className="px-3 py-1 border rounded-md bg-white"
+            onClick={() => backupHandler()}
+          >
+            {loading ? (
+              <span className="flex items-center justify-center">
+                <Loader2 className="animate-spin mr-2 h-4 w-4" />
+                Loading...
+              </span>
+            ) : (
+              <div className="flex items-center gap-1">
+                <Database size={18} />
+                <span>Backup</span>
+              </div>
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );

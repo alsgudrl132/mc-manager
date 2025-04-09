@@ -7,7 +7,7 @@ import CommonBackup from "../common/CommonBackup";
 
 function Admin() {
   return (
-    <div className="p-6 space-y-6">
+    <div className="p-6 space-y-6 overflow-auto">
       <CommonServerRun />
 
       {/* 백업 카드 */}
