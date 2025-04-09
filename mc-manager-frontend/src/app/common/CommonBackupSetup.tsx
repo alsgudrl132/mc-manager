@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useBackupStore } from "../store/store";
 
 interface TimeInterval {
   hours: number;
@@ -32,6 +33,8 @@ function CommonBackupSetup() {
     const value = parseInt(e.target.value) || 0;
     setTimeInterval((prev) => ({ ...prev, minutes: value }));
   };
+
+  const { setStoreTimeInterval } = useBackupStore();
 
   return (
     <Dialog>
@@ -73,7 +76,12 @@ function CommonBackupSetup() {
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit">Save changes</Button>
+          <Button
+            type="submit"
+            onClick={() => setStoreTimeInterval(timeInterval)}
+          >
+            Save changes
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

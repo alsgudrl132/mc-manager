@@ -93,6 +93,16 @@ interface ServerStatus {
   fetchServer: () => Promise<void>;
 }
 
+interface TimeInterval {
+  hours: number;
+  minutes: number;
+}
+
+interface BackupStore {
+  backupDelayTime: number;
+  setStoreTimeInterval: (timeInterval: TimeInterval) => void;
+}
+
 export const submitRegister = async ({
   username,
   password,
@@ -388,3 +398,19 @@ export const serverBackup = async () => {
     throw error;
   }
 };
+
+export const useBackupStore = create<BackupStore>((set) => ({
+  // 상태
+  backupDelayTime: 9000000,
+  setStoreTimeInterval: (timeInterval: TimeInterval) => {
+    try {
+      set({
+        // 시간과 분을 받아서 ms로 변환하여 time 지정
+        backupDelayTime:
+          (timeInterval.hours * 60 * 60 + timeInterval.minutes * 60) * 1000,
+      });
+    } catch (error) {
+      console.error(`setStoreTimeInterval`, error);
+    }
+  },
+}));
