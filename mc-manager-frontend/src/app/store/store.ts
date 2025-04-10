@@ -120,6 +120,16 @@ interface BackupStore {
   performBackup: () => Promise<void>; // 백업 실행 함수
 }
 
+// 날씨 관련 인터페이스
+export interface Weather {
+  weather: "clear" | "rain" | "thunder";
+}
+
+// 시간 관련 인터페이스
+export interface Time {
+  time: "day" | "night";
+}
+
 // ====================================
 // API 요청 함수
 // ====================================
@@ -323,6 +333,26 @@ export const getItems = async () => {
     return await axios.get(`https://minecraft-api.vercel.app/api/items`);
   } catch (error) {
     console.error(`getItems Error`, error);
+    throw error;
+  }
+};
+
+// 날씨 지정 API
+export const setWeather = async (weather: Weather) => {
+  try {
+    return await authAxios.post(`${URL}/server/weather`, weather);
+  } catch (error) {
+    console.error(`setWeather Error`, error);
+    throw error;
+  }
+};
+
+// 시간 지정 API
+export const setTime = async (time: Time) => {
+  try {
+    return await authAxios.post(`${URL}/server/time`, time);
+  } catch (error) {
+    console.error(`setTime Error`, error);
     throw error;
   }
 };

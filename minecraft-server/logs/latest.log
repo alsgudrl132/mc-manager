@@ -144,3 +144,12 @@
 [15:54:12] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
 [15:54:59] [Server thread/INFO]: [Rcon: Set the time to 1000]
 [15:55:07] [Server thread/INFO]: [Rcon: Set the time to 13000]
+[16:27:42] [Server thread/INFO]: [Rcon: Set the weather to clear]
+[16:28:05] [Server thread/INFO]: [Rcon: Set the weather to clear]
+[16:28:06] [Server thread/INFO]: [Rcon: Set the weather to rain]
+[16:28:47] [Server thread/INFO]: [Rcon: Set the weather to clear]
+[16:28:47] [Server thread/INFO]: [Rcon: Set the weather to rain]
+[16:28:47] [Server thread/INFO]: [Rcon: Set the weather to rain]
+[16:28:48] [Server thread/INFO]: [Rcon: Set the weather to rain & thunder]
+[16:28:53] [Server thread/INFO]: [Rcon: Set the time to 1000]
+[16:28:54] [Server thread/INFO]: [Rcon: Set the time to 13000]

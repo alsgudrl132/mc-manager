@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { Sun, Moon, CloudRain, Cloud } from "lucide-react";
 import CommonServerRun from "../common/CommonServerRun";
 import CommonBackup from "../common/CommonBackup";
 import CommonBackupManage from "../common/CommonBackupManage";
+import CommonWorldManage from "../common/CommonWorldManage";
 
 function Admin() {
   return (
@@ -71,58 +71,7 @@ function Admin() {
       </div>
 
       {/* 월드 설정 카드 */}
-      <div className="bg-white rounded-lg shadow-sm p-4">
-        <h3 className="text-lg font-semibold mb-3">World Settings</h3>
-
-        {/* 날씨 설정 */}
-        <div className="mb-4">
-          <p className="text-md font-medium mb-2">Weather</p>
-          <div className="grid grid-cols-3 gap-2">
-            <button
-              className="flex items-center justify-center gap-2 border py-2 rounded-lg"
-              onClick={() => alert("날씨를 맑음으로 변경했습니다.")}
-            >
-              <Cloud size={16} />
-              <span>Clear</span>
-            </button>
-            <button
-              className="flex items-center justify-center gap-2 border py-2 rounded-lg"
-              onClick={() => alert("날씨를 비로 변경했습니다.")}
-            >
-              <CloudRain size={16} />
-              <span>Rain</span>
-            </button>
-            <button
-              className="flex items-center justify-center gap-2 border py-2 rounded-lg"
-              onClick={() => alert("날씨를 폭풍으로 변경했습니다.")}
-            >
-              <CloudRain size={16} />
-              <span>Storm</span>
-            </button>
-          </div>
-        </div>
-
-        {/* 시간 설정 */}
-        <div>
-          <p className="text-md font-medium mb-2">Time</p>
-          <div className="grid grid-cols-2 gap-2">
-            <button
-              className="flex items-center justify-center gap-2 border py-2 rounded-lg"
-              onClick={() => alert("시간을 낮으로 변경했습니다.")}
-            >
-              <Sun size={16} />
-              <span>Day</span>
-            </button>
-            <button
-              className="flex items-center justify-center gap-2 border py-2 rounded-lg"
-              onClick={() => alert("시간을 밤으로 변경했습니다.")}
-            >
-              <Moon size={16} />
-              <span>Night</span>
-            </button>
-          </div>
-        </div>
-      </div>
+      <CommonWorldManage />
 
       {/* 서버 로그 카드 */}
       <div className="bg-white rounded-lg shadow-sm p-4">
