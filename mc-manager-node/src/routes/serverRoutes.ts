@@ -1,3 +1,4 @@
+// src/routes/serverRoutes.ts
 import { Router } from "express";
 import * as serverController from "../controllers/serverController";
 import {
@@ -33,5 +34,7 @@ router.put(
   serverController.updateServerProperties
 );
 router.post("/command", verifyToken, isAdmin, serverController.executeCommand);
+router.post("/weather", verifyToken, isAdmin, serverController.setWeather);
+router.post("/time", verifyToken, isAdmin, serverController.setTime);
 
 export default router;

@@ -121,3 +121,26 @@
 [15:12:14] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
 [15:12:26] [Server thread/INFO]: [Rcon: Saved the game]
 [15:12:38] [Server thread/INFO]: [Rcon: Saved the game]
+[15:14:59] [Server thread/INFO]: [Rcon: Gave 1 [Bone Meal] to Bico_]
+[15:15:01] [Server thread/INFO]: [Rcon: Gave 1 [Bone Meal] to Bico_]
+[15:42:16] [RCON Client /127.0.0.1 #7/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[15:42:27] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[15:43:43] [RCON Client /127.0.0.1 #8/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[15:43:47] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[15:45:25] [RCON Client /127.0.0.1 #9/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[15:45:32] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[15:46:39] [RCON Client /127.0.0.1 #10/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[15:46:42] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[15:46:54] [RCON Client /127.0.0.1 #11/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[15:49:02] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[15:49:04] [RCON Client /127.0.0.1 #12/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[15:50:17] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[15:51:14] [Server thread/INFO]: [Rcon: Set the weather to rain]
+[15:51:24] [Server thread/INFO]: [Rcon: Set the weather to rain & thunder]
+[15:51:33] [Server thread/INFO]: [Rcon: Set the weather to clear]
+[15:53:24] [RCON Client /127.0.0.1 #13/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[15:53:27] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[15:53:34] [RCON Client /127.0.0.1 #14/INFO]: Thread RCON Client /127.0.0.1 shutting down
+[15:54:12] [RCON Listener #1/INFO]: Thread RCON Client /127.0.0.1 started
+[15:54:59] [Server thread/INFO]: [Rcon: Set the time to 1000]
+[15:55:07] [Server thread/INFO]: [Rcon: Set the time to 13000]

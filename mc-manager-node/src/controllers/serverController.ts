@@ -212,3 +212,76 @@ export const executeCommand = async (req: Request, res: Response) => {
     });
   }
 };
+
+export const setWeather = async (req: Request, res: Response) => {
+  try {
+    const { weather } = req.body;
+    const userId = req.user?.id;
+
+    // 유효한 날씨 타입 검증
+    const validWeatherTypes = ["clear", "rain", "thunder"];
+    if (!weather || !validWeatherTypes.includes(weather)) {
+      res.status(400).json({
+        success: false,
+        message: "Invalid weather type. Use 'clear', 'rain', or 'thunder'",
+      });
+      return;
+    }
+
+    // RCON을 통해 날씨 변경 명령 실행
+    const result = await rconService.setWeather(
+      weather,
+      userId ? Number(userId) : undefined
+    );
+
+    res.status(200).json({
+      success: true,
+      message: `Weather changed to ${weather}`,
+      data: { response: result },
+    });
+  } catch (error: any) {
+    logger.error("Set weather error:", error);
+
+    res.status(500).json({
+      success: false,
+      message: error.message || "Failed to set weather",
+    });
+  }
+};
+
+export const setTime = async (req: Request, res: Response) => {
+  try {
+    const { time } = req.body;
+    const userId = req.user?.id;
+
+    const validTimes = ["day", "night", "noon", "midnight"];
+    const isNumericTime = !isNaN(Number(time));
+
+    if (!time || (!validTimes.includes(time) && !isNumericTime)) {
+      res.status(400).json({
+        success: false,
+        message:
+          "Invalid time. Use 'day', 'night', 'noon', 'midnight' or a tick number.",
+      });
+      return;
+    }
+
+    const result = await rconService.executeCommand(
+      `time set ${time}`,
+      userId ? Number(userId) : undefined
+    );
+
+    res.status(200).json({
+      success: true,
+      message: `Time set to ${time}`,
+      data: { response: result },
+    });
+  } catch (error: any) {
+    logger.error("Set time error:", error);
+
+    res.status(500).json({
+      success: false,
+      message: error.message || "Failed to set time",
+    });
+  }
+};
