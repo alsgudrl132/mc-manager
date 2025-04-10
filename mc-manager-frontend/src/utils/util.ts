@@ -30,3 +30,13 @@ export const formatMillisecondsToHoursMinutes = (ms: number) => {
 
   return `${hoursStr}h ${minutesStr}m`;
 };
+
+export function bytesToSize(bytes: number): string {
+  if (bytes === 0) return "0 Bytes";
+
+  const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
+  const i = Math.floor(Math.log(bytes) / Math.log(1024));
+
+  // 소수점 둘째 자리까지 표시
+  return parseFloat((bytes / Math.pow(1024, i)).toFixed(2)) + " " + sizes[i];
+}

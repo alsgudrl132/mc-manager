@@ -323,7 +323,7 @@ class MonitoringService {
 
       // 서버 디렉토리를 zip 파일로 압축
       await execPromise(
-        `zip -r "${backupPath}" "${this.serverDirectory}" -x "${this.serverDirectory}/*cache*" -x "${this.serverDirectory}/*logs*" -x "${this.serverDirectory}/*.jar"`
+        `zip -r "${backupPath}" "${this.serverDirectory}/world" "${this.serverDirectory}/world_nether" "${this.serverDirectory}/world_the_end" "${this.serverDirectory}/server.properties" "${this.serverDirectory}/ops.json" "${this.serverDirectory}/whitelist.json"`
       );
 
       // 백업 파일이 생성되었는지 확인
@@ -400,6 +400,33 @@ class MonitoringService {
     } catch (error) {
       logger.error("Error fetching player list:", error);
       throw new Error(`Failed to get player list: ${error}`);
+    }
+  }
+
+  async getBackupById(backupId: number): Promise<any> {
+    try {
+      // Backup 모델 동적 임포트 (순환 참조 방지)
+      const { Backup } = await import("../models");
+
+      // 특정 ID의 백업 조회
+      const backup = await Backup.findByPk(backupId);
+
+      if (!backup) {
+        return null;
+      }
+
+      return {
+        id: backup.id,
+        timestamp: backup.timestamp,
+        name: backup.name,
+        size: backup.size,
+        userId: backup.userId,
+        description: backup.description,
+        path: backup.path, // 파일 경로도 함께 반환
+      };
+    } catch (error) {
+      logger.error(`Error getting backup by ID ${backupId}:`, error);
+      throw new Error(`Failed to get backup: ${error}`);
     }
   }
 }

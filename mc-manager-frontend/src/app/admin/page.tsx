@@ -1,17 +1,15 @@
 "use client";
 
 import React from "react";
-import { Sun, Moon, CloudRain, Cloud, ArrowDown } from "lucide-react";
+import { Sun, Moon, CloudRain, Cloud } from "lucide-react";
 import CommonServerRun from "../common/CommonServerRun";
 import CommonBackup from "../common/CommonBackup";
+import CommonBackupManage from "../common/CommonBackupManage";
 
 function Admin() {
   return (
     <div className="p-6 space-y-6 overflow-auto">
       <CommonServerRun />
-
-      {/* 백업 카드 */}
-      <CommonBackup />
 
       {/* 다음 재시작 카드 */}
       <div className="bg-white rounded-lg shadow-sm p-4">
@@ -20,11 +18,14 @@ function Admin() {
             <h3 className="text-gray-600">Next Restart</h3>
             <p className="text-2xl font-bold">6h 00m</p>
           </div>
-          <button className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white opacity-50 cursor-not-allowed">
-            <span>?</span>
-          </button>
         </div>
       </div>
+
+      {/* 백업 카드 */}
+      <CommonBackup />
+
+      {/* 백업 관리 카드 */}
+      <CommonBackupManage />
 
       {/* 퍼포먼스 모니터링 카드 */}
       <div className="bg-white rounded-lg shadow-sm p-4">
@@ -119,61 +120,6 @@ function Admin() {
               <Moon size={16} />
               <span>Night</span>
             </button>
-          </div>
-        </div>
-      </div>
-
-      {/* 백업 관리 카드 */}
-      <div className="bg-white rounded-lg shadow-sm p-4">
-        <h3 className="text-lg font-semibold mb-3">Backup Management</h3>
-
-        {/* 최신 백업 */}
-        <div className="border-b pb-3 mb-3">
-          <div className="flex justify-between items-center">
-            <div>
-              <p className="font-medium">Latest Backup</p>
-              <p className="text-sm text-gray-600">2025-03-28 15:00</p>
-            </div>
-            <div className="flex gap-2">
-              <button
-                className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
-                onClick={() => alert("백업 파일을 다운로드합니다.")}
-              >
-                <ArrowDown size={16} />
-                <span>Download</span>
-              </button>
-              <button
-                className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
-                onClick={() => alert("이 백업으로 복원하시겠습니까?")}
-              >
-                <span>Restore</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* 자동 백업 */}
-        <div>
-          <div className="flex justify-between items-center">
-            <div>
-              <p className="font-medium">Auto Backup</p>
-              <p className="text-sm text-gray-600">2025-03-28 10:00</p>
-            </div>
-            <div className="flex gap-2">
-              <button
-                className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
-                onClick={() => alert("백업 파일을 다운로드합니다.")}
-              >
-                <ArrowDown size={16} />
-                <span>Download</span>
-              </button>
-              <button
-                className="flex items-center gap-1 px-3 py-1 border rounded-md bg-white"
-                onClick={() => alert("이 백업으로 복원하시겠습니까?")}
-              >
-                <span>Restore</span>
-              </button>
-            </div>
           </div>
         </div>
       </div>

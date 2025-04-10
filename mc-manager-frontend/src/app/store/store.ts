@@ -1,16 +1,24 @@
 import { create } from "zustand";
 import axios from "axios";
-import { devtools } from "zustand/middleware";
-// 현재 브라우저 기반 URL 구성 (개발 환경용)
+import { devtools, persist } from "zustand/middleware";
+
+// ====================================
+// 기본 설정 및 API 엔드포인트 구성
+// ====================================
 const BASE_HOST =
   typeof window !== "undefined"
     ? window.location.hostname === "localhost"
       ? "localhost"
       : window.location.hostname
     : "localhost";
-const API_PORT = 8080; // 백엔드 포트
+const API_PORT = 8080;
 const URL = `http://${BASE_HOST}:${API_PORT}/api`;
 
+// ====================================
+// 타입 및 인터페이스 정의
+// ====================================
+
+// 공통 타입
 export interface AxiosError {
   response?: {
     data?: {
@@ -21,6 +29,12 @@ export interface AxiosError {
   message?: string;
 }
 
+interface TimeInterval {
+  hours: number;
+  minutes: number;
+}
+
+// 인증 관련 인터페이스
 interface ILogin {
   username: string;
   password: string;
@@ -65,6 +79,7 @@ interface AuthState {
   logout: () => void;
 }
 
+// 서버 상태 관련 인터페이스
 interface Players {
   uuid: string;
   name: string;
@@ -93,19 +108,23 @@ interface ServerStatus {
   fetchServer: () => Promise<void>;
 }
 
-interface TimeInterval {
-  hours: number;
-  minutes: number;
-}
-
+// 백업 관련 인터페이스
 interface BackupStore {
-  backupDelayTime: number; // 지정된 백업 시간
-  currentRemainingTime: number; // 현재 남은 시간
+  backupDelayTime: number; // 설정된 백업 간격 (ms)
+  currentRemainingTime: number; // 현재 남은 시간 (ms)
   lastUpdated: number; // 마지막 업데이트 시간
+  isBackingUp: boolean; // 백업 진행 중 여부
+  lastBackupTime: number | null; // 마지막으로 성공한 백업 시간
   setStoreTimeInterval: (timeInterval: TimeInterval) => void;
-  updateTimer: () => boolean; // 타이머 업데이트
+  updateTimer: () => boolean; // 타이머 업데이트 함수
+  performBackup: () => Promise<void>; // 백업 실행 함수
 }
 
+// ====================================
+// API 요청 함수
+// ====================================
+
+// 인증 관련 API
 export const submitRegister = async ({
   username,
   password,
@@ -139,7 +158,178 @@ export const submitLogin = async ({ username, password }: ILogin) => {
   }
 };
 
-// 로컬 스토리지에서 기존 인증 정보 불러오기
+// 서버 상태 API
+export const fetchServerStatus = async () => {
+  try {
+    return await axios.get(`${URL}/server/status`);
+  } catch (error) {
+    console.error(`fetchServerStatus Error`, error);
+    throw error;
+  }
+};
+
+// 플레이어 관련 API
+export const fetchPlayersStatus = async () => {
+  try {
+    return await authAxios.get(`${URL}/players`);
+  } catch (error) {
+    console.error(`fetchPlayersStatus Error`, error);
+    throw error;
+  }
+};
+
+export const kickBanPlayer = async (
+  name: string,
+  option: string,
+  reason: string
+) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/${option}`, { reason });
+  } catch (error) {
+    console.error(`kickBanPlayer Error`, error);
+    throw error;
+  }
+};
+
+export const unBanPlayer = async (name: string) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/unban`);
+  } catch (error) {
+    console.error(`unBanPlayer Error`, error);
+    throw error;
+  }
+};
+
+export const operatorStatusManage = async (name: string, option: string) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/${option}`);
+  } catch (error) {
+    console.error(`operatorStatusManage Error`, error);
+    throw error;
+  }
+};
+
+export const gamemodeManage = async (name: string, option: string) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/gamemode`, {
+      gamemode: option,
+    });
+  } catch (error) {
+    console.error(`gamemodeManage Error`, error);
+    throw error;
+  }
+};
+
+export const teleportMange = async (name: string, location: object) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/teleport`, location);
+  } catch (error) {
+    console.error(`teleportMange Error`, error);
+    throw error;
+  }
+};
+
+export const giveItems = async (name: string, item: string, amount: number) => {
+  try {
+    return await authAxios.post(`${URL}/players/${name}/give`, {
+      item: item,
+      amount: amount,
+    });
+  } catch (error) {
+    console.error(`giveItems Error`, error);
+    throw error;
+  }
+};
+
+// 채팅 관련 API
+export const fetchChatLogs = async () => {
+  try {
+    return await authAxios.get(`${URL}/chat/logs?includeBanStatus=true`);
+  } catch (error) {
+    console.error(`fetchChatLogs Error`, error);
+    throw error;
+  }
+};
+
+export const sendGlobalMessage = async (message: string) => {
+  try {
+    return await authAxios.post(`${URL}/chat/broadcast`, { message: message });
+  } catch (error) {
+    console.error(`sendGlobalMessage Error`, error);
+    throw error;
+  }
+};
+
+// 서버 관리 API
+export const serverStartManage = async (
+  option: string,
+  delay?: number,
+  message?: string
+) => {
+  try {
+    const requestBody: { delay?: number; message?: string } = {};
+
+    if (delay && delay > 0) {
+      requestBody.delay = delay;
+    }
+
+    if (message && message.trim() !== "") {
+      requestBody.message = message;
+    }
+
+    console.log(`Sending ${option} request with:`, requestBody);
+    return await authAxios.post(`${URL}/server/${option}`, requestBody);
+  } catch (error) {
+    console.error(`serverStartManage Error`, error);
+    throw error;
+  }
+};
+
+// 백업 API
+export const serverBackup = async () => {
+  try {
+    return await authAxios.post(`${URL}/backups`);
+  } catch (error) {
+    console.error(`serverBackup Error`, error);
+    throw error;
+  }
+};
+
+// 백업 불러오는 API
+export const getBackupList = async () => {
+  try {
+    return await authAxios.get(`${URL}/backups`);
+  } catch (error) {
+    console.error(`getBackupList Error`, error);
+    throw error;
+  }
+};
+
+// 백업 다운로드 API
+export const downloadBackup = async (id: number) => {
+  try {
+    return await authAxios.get(`${URL}/backups/${id}/download`, {
+      responseType: "blob",
+    });
+  } catch (error) {
+    console.error(`downloadBackup Error`, error);
+    throw error;
+  }
+};
+
+// 아이템 API
+export const getItems = async () => {
+  try {
+    return await axios.get(`https://minecraft-api.vercel.app/api/items`);
+  } catch (error) {
+    console.error(`getItems Error`, error);
+    throw error;
+  }
+};
+
+// ====================================
+// 헬퍼 함수
+// ====================================
 const getStoredAuth = () => {
   if (typeof window === "undefined")
     return { user: null, token: null, isAuthenticated: false };
@@ -154,27 +344,52 @@ const getStoredAuth = () => {
   };
 };
 
+// ====================================
+// 인증된 API용 Axios 인스턴스
+// ====================================
+export const authAxios = axios.create({
+  baseURL: URL,
+});
+
+authAxios.interceptors.request.use(
+  (config) => {
+    const token = useAuthStore.getState().token;
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+// ====================================
+// Zustand 스토어
+// ====================================
+
+// 인증 스토어
 export const useAuthStore = create<AuthState>()(
   devtools(
     (set) => ({
-      ...getStoredAuth(), // 로컬 스토리지에서 초기 상태 불러오기
+      ...getStoredAuth(),
 
       login: async (credential) => {
         try {
           const response = await submitLogin(credential);
           if (response.success) {
-            // 로컬 스토리지에 토큰과 사용자 정보 저장
             localStorage.setItem("token", response.data.token);
             localStorage.setItem("user", JSON.stringify(response.data));
 
-            // 상태 업데이트
-            set({
-              user: response.data,
-              token: response.data.token,
-              isAuthenticated: true,
-            });
+            set(
+              {
+                user: response.data,
+                token: response.data.token,
+                isAuthenticated: true,
+              },
+              false,
+              "login"
+            );
           }
-          return response; // 결과 반환 추가
+          return response;
         } catch (error) {
           console.error("Login error:", error);
           throw error;
@@ -182,36 +397,28 @@ export const useAuthStore = create<AuthState>()(
       },
 
       logout: () => {
-        // 로컬 스토리지에서 인증 정보 제거
         localStorage.removeItem("token");
         localStorage.removeItem("user");
 
-        // 상태 초기화
-        set({
-          user: null,
-          token: null,
-          isAuthenticated: false,
-        });
+        set(
+          {
+            user: null,
+            token: null,
+            isAuthenticated: false,
+          },
+          false,
+          "logout"
+        );
       },
     }),
     { name: "auth-store" }
   )
 );
 
-// 서버 상태 불러오기
-export const fetchServerStatus = async () => {
-  try {
-    return await axios.get(`${URL}/server/status`);
-  } catch (error) {
-    console.error(`fetchServerStatus Error`, error);
-    throw error;
-  }
-};
-
+// 서버 상태 스토어
 export const useServerStateStore = create<ServerStatus>()(
   devtools(
     (set) => ({
-      // 상태
       status: "",
       timestamp: 0,
       tps: 0,
@@ -226,17 +433,21 @@ export const useServerStateStore = create<ServerStatus>()(
         try {
           const response = await fetchServerStatus();
 
-          set({
-            status: response.data.data.status,
-            timestamp: response.data.data.timestamp,
-            tps: response.data.data.tps,
-            onlinePlayers: response.data.data.onlinePlayers,
-            maxPlayers: response.data.data.maxPlayers,
-            usedMemory: response.data.data.usedMemory,
-            totalMemory: response.data.data.totalMemory,
-            uptime: response.data.data.uptime,
-            players: response.data.data.players,
-          });
+          set(
+            {
+              status: response.data.data.status,
+              timestamp: response.data.data.timestamp,
+              tps: response.data.data.tps,
+              onlinePlayers: response.data.data.onlinePlayers,
+              maxPlayers: response.data.data.maxPlayers,
+              usedMemory: response.data.data.usedMemory,
+              totalMemory: response.data.data.totalMemory,
+              uptime: response.data.data.uptime,
+              players: response.data.data.players,
+            },
+            false,
+            "fetchServer"
+          );
         } catch (error) {
           console.error("fetchServer", error);
         }
@@ -246,224 +457,52 @@ export const useServerStateStore = create<ServerStatus>()(
   )
 );
 
-// 인증된 API 요청을 위한 Axios 인스턴스
-export const authAxios = axios.create({
-  baseURL: URL,
-});
-
-// 요청 인터셉터 - 모든 요청에 인증 토큰 추가
-authAxios.interceptors.request.use(
-  (config) => {
-    const token = useAuthStore.getState().token;
-    if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-  },
-  (error) => Promise.reject(error)
-);
-
-// 유저 상태 불러오기
-export const fetchPlayersStatus = async () => {
-  try {
-    return await authAxios.get(`${URL}/players`);
-  } catch (error) {
-    console.error(`fetchPlayersStatus Error`, error);
-    throw error;
-  }
-};
-
-// 유저 킥 또는 벤
-export const kickBanPlayer = async (
-  name: string,
-  option: string,
-  reason: string
-) => {
-  try {
-    return await authAxios.post(`${URL}/players/${name}/${option}`, { reason });
-  } catch (error) {
-    console.error(`kickBanPlayer Error`, error);
-    throw error;
-  }
-};
-
-// 유저 언벤
-export const unBanPlayer = async (name: string) => {
-  try {
-    return await authAxios.post(`${URL}/players/${name}/unban`);
-  } catch (error) {
-    console.error(`unBanPlayer Error`, error);
-    throw error;
-  }
-};
-
-// 유저 op 또는 deop
-export const operatorStatusManage = async (name: string, option: string) => {
-  try {
-    return await authAxios.post(`${URL}/players/${name}/${option}`);
-  } catch (error) {
-    console.error(`operatorStatusManage Error`, error);
-    throw error;
-  }
-};
-
-// 유저 게임모드 변경 survival/creative
-export const gamemodeManage = async (name: string, option: string) => {
-  try {
-    return await authAxios.post(`${URL}/players/${name}/gamemode`, {
-      gamemode: option,
-    });
-  } catch (error) {
-    console.error(`gamemodeManage Error`, error);
-    throw error;
-  }
-};
-
-// 유저 텔레포트
-export const teleportMange = async (name: string, location: object) => {
-  try {
-    return await authAxios.post(`${URL}/players/${name}/teleport`, location);
-  } catch (error) {
-    console.error(`teleportMange Error`, error);
-    throw error;
-  }
-};
-
-// 채팅로그 불러오기
-export const fetchChatLogs = async () => {
-  try {
-    return await authAxios.get(`${URL}/chat/logs?includeBanStatus=true`);
-  } catch (error) {
-    console.error(`fetchChatLogs Error`, error);
-    throw error;
-  }
-};
-
-// 글로벌메세지 보내기
-export const sendGlobalMessage = async (message: string) => {
-  try {
-    return await authAxios.post(`${URL}/chat/broadcast`, { message: message });
-  } catch (error) {
-    console.error(`sendGlobalMessage Error`, error);
-    throw error;
-  }
-};
-
-// 서버 시작, 중지, 재시작
-export const serverStartManage = async (
-  option: string,
-  delay?: number,
-  message?: string
-) => {
-  try {
-    // 요청 본문 구성
-    const requestBody: { delay?: number; message?: string } = {};
-
-    // 딜레이가 있는 경우에만 추가
-    if (delay && delay > 0) {
-      requestBody.delay = delay;
-    }
-
-    // 메시지가 있는 경우에만 추가
-    if (message && message.trim() !== "") {
-      requestBody.message = message;
-    }
-
-    console.log(`Sending ${option} request with:`, requestBody);
-
-    // 빈 객체인 경우에도 전송 (서버에서 처리)
-    return await authAxios.post(`${URL}/server/${option}`, requestBody);
-  } catch (error) {
-    console.error(`serverStartManage Error`, error);
-    throw error;
-  }
-};
-
-// 아이템 불러오기
-export const getItems = async () => {
-  try {
-    return await axios.get(`https://minecraft-api.vercel.app/api/items`);
-  } catch (error) {
-    console.error(`getItems Error`, error);
-    throw error;
-  }
-};
-
-// 아이템 지급하기
-export const giveItems = async (name: string, item: string, amount: number) => {
-  try {
-    return await authAxios.post(`${URL}/players/${name}/give`, {
-      item: item,
-      amount: amount,
-    });
-  } catch (error) {
-    console.error(`giveItems Error`, error);
-    throw error;
-  }
-};
-
-// 백업하기
-export const serverBackup = async () => {
-  try {
-    return await authAxios.post(`${URL}/backups`);
-  } catch (error) {
-    console.error(`serverBackup Error`, error);
-    throw error;
-  }
-};
-
+// 백업 스토어
 export const useBackupStore = create<BackupStore>()(
   devtools(
-    (set, get) => ({
-      // 상태
-      backupDelayTime: 9000000,
-      currentRemainingTime: 9000000, // 처음에는 backupDelayTime과 동일
-      lastUpdated: Date.now(),
+    persist(
+      (set, get) => ({
+        backupDelayTime: 9000000, // 기본 2시간 30분
+        currentRemainingTime: 9000000,
+        lastUpdated: Date.now(),
+        isBackingUp: false,
+        lastBackupTime: null,
 
-      setStoreTimeInterval: (timeInterval: TimeInterval) => {
-        try {
-          const newTime =
-            (timeInterval.hours * 60 * 60 + timeInterval.minutes * 60) * 1000;
-          set(
-            {
-              backupDelayTime: newTime,
-              currentRemainingTime: newTime, // 새 시간으로 남은 시간도 재설정
-              lastUpdated: Date.now(),
-            },
-            false,
-            "setStoreTimeInterval"
-          ); // 액션 이름 추가
-        } catch (error) {
-          console.error(`setStoreTimeInterval`, error);
-        }
-      },
-
-      updateTimer: () => {
-        const { currentRemainingTime, lastUpdated, backupDelayTime } = get();
-
-        const now = Date.now();
-        const elapsed = now - lastUpdated;
-
-        // 1분(60000ms) 이상 경과했는지 확인
-        if (elapsed >= 60000) {
-          // 1분 단위로 시간을 감소
-          const minutesToSubtract = Math.floor(elapsed / 60000);
-          const newRemainingTime = Math.max(
-            0,
-            currentRemainingTime - minutesToSubtract * 60000
-          );
-
-          // 시간이 0이 되면 기본값으로 리셋
-          if (newRemainingTime === 0) {
+        // 백업 시간 간격 설정
+        setStoreTimeInterval: (timeInterval: TimeInterval) => {
+          try {
+            const newTime =
+              (timeInterval.hours * 60 * 60 + timeInterval.minutes * 60) * 1000;
             set(
               {
-                currentRemainingTime: backupDelayTime,
-                lastUpdated: now,
+                backupDelayTime: newTime,
+                currentRemainingTime: newTime,
+                lastUpdated: Date.now(),
               },
               false,
-              "updateTimer/reset"
-            ); // 액션 이름 추가
-          } else {
+              "setStoreTimeInterval"
+            );
+          } catch (error) {
+            console.error(`setStoreTimeInterval`, error);
+          }
+        },
+
+        // 1분마다 타이머 업데이트
+        updateTimer: () => {
+          const { currentRemainingTime, lastUpdated, isBackingUp } = get();
+
+          const now = Date.now();
+          const elapsed = now - lastUpdated;
+
+          // 1분 이상 경과했는지 확인
+          if (elapsed >= 60000) {
+            const minutesToSubtract = Math.floor(elapsed / 60000);
+            const newRemainingTime = Math.max(
+              0,
+              currentRemainingTime - minutesToSubtract * 60000
+            );
+
+            // 남은 시간 업데이트
             set(
               {
                 currentRemainingTime: newRemainingTime,
@@ -471,15 +510,76 @@ export const useBackupStore = create<BackupStore>()(
               },
               false,
               "updateTimer"
-            ); // 액션 이름 추가
+            );
+
+            // 타이머가 0이 되었고 백업 진행 중이 아니면 백업 실행
+            if (newRemainingTime === 0 && !isBackingUp) {
+              // 백업 실행과 타이머 리셋은 별도 함수로 분리
+              get().performBackup();
+            }
+
+            return true; // 타이머가 업데이트됨
           }
 
-          return true; // 시간이 변경되었음을 나타냄
-        }
+          return false; // 타이머 업데이트 없음
+        },
 
-        return false; // 시간이 변경되지 않음
-      },
-    }),
+        // 백업 실행 함수 (독립적으로 분리하여 관리)
+        performBackup: async () => {
+          const { isBackingUp, backupDelayTime } = get();
+
+          // 이미 백업 중이면 무시
+          if (isBackingUp) return;
+
+          // 백업 중 상태로 설정
+          set({ isBackingUp: true }, false, "startBackup");
+
+          try {
+            console.log("Starting backup process...");
+            const result = await serverBackup();
+
+            // 성공 시 타이머 리셋 및 상태 업데이트
+            set(
+              {
+                currentRemainingTime: backupDelayTime,
+                lastUpdated: Date.now(),
+                isBackingUp: false,
+                lastBackupTime: Date.now(),
+              },
+              false,
+              "backupSuccess"
+            );
+
+            console.log(
+              "Backup completed successfully:",
+              result?.data?.message
+            );
+          } catch (error) {
+            console.error("Backup failed:", error);
+
+            // 실패 시에도 타이머 리셋 (무한 재시도 방지)
+            set(
+              {
+                currentRemainingTime: backupDelayTime,
+                lastUpdated: Date.now(),
+                isBackingUp: false,
+              },
+              false,
+              "backupFailed"
+            );
+          }
+        },
+      }),
+      {
+        name: "backup-storage",
+        partialize: (state) => ({
+          backupDelayTime: state.backupDelayTime,
+          currentRemainingTime: state.currentRemainingTime,
+          lastUpdated: state.lastUpdated,
+          lastBackupTime: state.lastBackupTime,
+        }),
+      }
+    ),
     { name: "backup-store" }
   )
 );
