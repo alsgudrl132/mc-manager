@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import axios from "axios";
-
+import { devtools } from "zustand/middleware";
 // 현재 브라우저 기반 URL 구성 (개발 환경용)
 const BASE_HOST =
   typeof window !== "undefined"
@@ -154,44 +154,49 @@ const getStoredAuth = () => {
   };
 };
 
-export const useAuthStore = create<AuthState>((set) => ({
-  ...getStoredAuth(), // 로컬 스토리지에서 초기 상태 불러오기
+export const useAuthStore = create<AuthState>()(
+  devtools(
+    (set) => ({
+      ...getStoredAuth(), // 로컬 스토리지에서 초기 상태 불러오기
 
-  login: async (credential) => {
-    try {
-      const response = await submitLogin(credential);
-      if (response.success) {
-        // 로컬 스토리지에 토큰과 사용자 정보 저장
-        localStorage.setItem("token", response.data.token);
-        localStorage.setItem("user", JSON.stringify(response.data));
+      login: async (credential) => {
+        try {
+          const response = await submitLogin(credential);
+          if (response.success) {
+            // 로컬 스토리지에 토큰과 사용자 정보 저장
+            localStorage.setItem("token", response.data.token);
+            localStorage.setItem("user", JSON.stringify(response.data));
 
-        // 상태 업데이트
+            // 상태 업데이트
+            set({
+              user: response.data,
+              token: response.data.token,
+              isAuthenticated: true,
+            });
+          }
+          return response; // 결과 반환 추가
+        } catch (error) {
+          console.error("Login error:", error);
+          throw error;
+        }
+      },
+
+      logout: () => {
+        // 로컬 스토리지에서 인증 정보 제거
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+
+        // 상태 초기화
         set({
-          user: response.data,
-          token: response.data.token,
-          isAuthenticated: true,
+          user: null,
+          token: null,
+          isAuthenticated: false,
         });
-      }
-      return response; // 결과 반환 추가
-    } catch (error) {
-      console.error("Login error:", error);
-      throw error;
-    }
-  },
-
-  logout: () => {
-    // 로컬 스토리지에서 인증 정보 제거
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-
-    // 상태 초기화
-    set({
-      user: null,
-      token: null,
-      isAuthenticated: false,
-    });
-  },
-}));
+      },
+    }),
+    { name: "auth-store" }
+  )
+);
 
 // 서버 상태 불러오기
 export const fetchServerStatus = async () => {
@@ -203,38 +208,43 @@ export const fetchServerStatus = async () => {
   }
 };
 
-export const useServerStateStore = create<ServerStatus>((set) => ({
-  // 상태
-  status: "",
-  timestamp: 0,
-  tps: 0,
-  onlinePlayers: 0,
-  maxPlayers: 0,
-  usedMemory: 0,
-  totalMemory: 0,
-  uptime: "",
-  players: [],
+export const useServerStateStore = create<ServerStatus>()(
+  devtools(
+    (set) => ({
+      // 상태
+      status: "",
+      timestamp: 0,
+      tps: 0,
+      onlinePlayers: 0,
+      maxPlayers: 0,
+      usedMemory: 0,
+      totalMemory: 0,
+      uptime: "",
+      players: [],
 
-  fetchServer: async () => {
-    try {
-      const response = await fetchServerStatus();
+      fetchServer: async () => {
+        try {
+          const response = await fetchServerStatus();
 
-      set({
-        status: response.data.data.status,
-        timestamp: response.data.data.timestamp,
-        tps: response.data.data.tps,
-        onlinePlayers: response.data.data.onlinePlayers,
-        maxPlayers: response.data.data.maxPlayers,
-        usedMemory: response.data.data.usedMemory,
-        totalMemory: response.data.data.totalMemory,
-        uptime: response.data.data.uptime,
-        players: response.data.data.players,
-      });
-    } catch (error) {
-      console.error("fetchServer", error);
-    }
-  },
-}));
+          set({
+            status: response.data.data.status,
+            timestamp: response.data.data.timestamp,
+            tps: response.data.data.tps,
+            onlinePlayers: response.data.data.onlinePlayers,
+            maxPlayers: response.data.data.maxPlayers,
+            usedMemory: response.data.data.usedMemory,
+            totalMemory: response.data.data.totalMemory,
+            uptime: response.data.data.uptime,
+            players: response.data.data.players,
+          });
+        } catch (error) {
+          console.error("fetchServer", error);
+        }
+      },
+    }),
+    { name: "server-store" }
+  )
+);
 
 // 인증된 API 요청을 위한 Axios 인스턴스
 export const authAxios = axios.create({
@@ -402,57 +412,74 @@ export const serverBackup = async () => {
   }
 };
 
-export const useBackupStore = create<BackupStore>((set, get) => ({
-  // 상태
-  backupDelayTime: 9000000,
-  currentRemainingTime: 9000000, // 처음에는 backupDelayTime과 동일
-  lastUpdated: Date.now(),
+export const useBackupStore = create<BackupStore>()(
+  devtools(
+    (set, get) => ({
+      // 상태
+      backupDelayTime: 9000000,
+      currentRemainingTime: 9000000, // 처음에는 backupDelayTime과 동일
+      lastUpdated: Date.now(),
 
-  setStoreTimeInterval: (timeInterval: TimeInterval) => {
-    try {
-      const newTime =
-        (timeInterval.hours * 60 * 60 + timeInterval.minutes * 60) * 1000;
-      set({
-        backupDelayTime: newTime,
-        currentRemainingTime: newTime, // 새 시간으로 남은 시간도 재설정
-        lastUpdated: Date.now(),
-      });
-    } catch (error) {
-      console.error(`setStoreTimeInterval`, error);
-    }
-  },
+      setStoreTimeInterval: (timeInterval: TimeInterval) => {
+        try {
+          const newTime =
+            (timeInterval.hours * 60 * 60 + timeInterval.minutes * 60) * 1000;
+          set(
+            {
+              backupDelayTime: newTime,
+              currentRemainingTime: newTime, // 새 시간으로 남은 시간도 재설정
+              lastUpdated: Date.now(),
+            },
+            false,
+            "setStoreTimeInterval"
+          ); // 액션 이름 추가
+        } catch (error) {
+          console.error(`setStoreTimeInterval`, error);
+        }
+      },
 
-  updateTimer: () => {
-    const { currentRemainingTime, lastUpdated, backupDelayTime } = get();
+      updateTimer: () => {
+        const { currentRemainingTime, lastUpdated, backupDelayTime } = get();
 
-    const now = Date.now();
-    const elapsed = now - lastUpdated;
+        const now = Date.now();
+        const elapsed = now - lastUpdated;
 
-    // 1분(60000ms) 이상 경과했는지 확인
-    if (elapsed >= 60000) {
-      // 1분 단위로 시간을 감소
-      const minutesToSubtract = Math.floor(elapsed / 60000);
-      const newRemainingTime = Math.max(
-        0,
-        currentRemainingTime - minutesToSubtract * 60000
-      );
+        // 1분(60000ms) 이상 경과했는지 확인
+        if (elapsed >= 60000) {
+          // 1분 단위로 시간을 감소
+          const minutesToSubtract = Math.floor(elapsed / 60000);
+          const newRemainingTime = Math.max(
+            0,
+            currentRemainingTime - minutesToSubtract * 60000
+          );
 
-      // 시간이 0이 되면 기본값으로 리셋
-      if (newRemainingTime === 0) {
-        set({
-          currentRemainingTime: backupDelayTime,
-          lastUpdated: now,
-        });
-      } else {
-        set({
-          currentRemainingTime: newRemainingTime,
-          lastUpdated: now,
-        });
-      }
+          // 시간이 0이 되면 기본값으로 리셋
+          if (newRemainingTime === 0) {
+            set(
+              {
+                currentRemainingTime: backupDelayTime,
+                lastUpdated: now,
+              },
+              false,
+              "updateTimer/reset"
+            ); // 액션 이름 추가
+          } else {
+            set(
+              {
+                currentRemainingTime: newRemainingTime,
+                lastUpdated: now,
+              },
+              false,
+              "updateTimer"
+            ); // 액션 이름 추가
+          }
 
-      return true; // 시간이 변경되었음을 나타냄
-    }
+          return true; // 시간이 변경되었음을 나타냄
+        }
 
-    return false; // 시간이 변경되지 않음
-  },
-}));
+        return false; // 시간이 변경되지 않음
+      },
+    }),
+    { name: "backup-store" }
+  )
+);
