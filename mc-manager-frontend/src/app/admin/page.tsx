@@ -5,6 +5,7 @@ import CommonServerRun from "../common/CommonServerRun";
 import CommonBackup from "../common/CommonBackup";
 import CommonBackupManage from "../common/CommonBackupManage";
 import CommonWorldManage from "../common/CommonWorldManage";
+import CommonPerformance from "../common/CommonPerformance";
 
 function Admin() {
   return (
@@ -28,47 +29,7 @@ function Admin() {
       <CommonBackupManage />
 
       {/* 퍼포먼스 모니터링 카드 */}
-      <div className="bg-white rounded-lg shadow-sm p-4">
-        <h3 className="text-lg font-semibold mb-3">Performance Monitoring</h3>
-        <div className="grid gap-3">
-          <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm">TPS</span>
-              <span className="text-sm font-medium">19.8/20</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className="bg-green-500 h-2 rounded-full"
-                style={{ width: "99%" }}
-              ></div>
-            </div>
-          </div>
-          <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm">Memory</span>
-              <span className="text-sm font-medium">3.2GB/4GB</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className="bg-blue-500 h-2 rounded-full"
-                style={{ width: "80%" }}
-              ></div>
-            </div>
-          </div>
-          <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm">CPU</span>
-              <span className="text-sm font-medium">45%</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className="bg-yellow-500 h-2 rounded-full"
-                style={{ width: "45%" }}
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <CommonPerformance />
 
       {/* 월드 설정 카드 */}
       <CommonWorldManage />
