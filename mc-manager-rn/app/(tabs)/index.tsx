@@ -14,9 +14,21 @@ import { useState } from "react";
 export default function HomeScreen() {
   const [working, setWorking] = useState(true);
   const [text, setText] = useState("");
+  const [toDos, setToDos] = useState({});
   const travel = () => setWorking(false);
   const work = () => setWorking(true);
   const onChangeText = (payload: string) => setText(payload);
+  const addTodo = () => {
+    if (text === "") {
+      return;
+    }
+    const newToDos = Object.assign({}, toDos, {
+      [Date.now()]: { text, work: working },
+    });
+    setToDos(newToDos);
+    setText("");
+  };
+  console.log(toDos);
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -41,6 +53,7 @@ export default function HomeScreen() {
       </View>
       <View>
         <TextInput
+          onSubmitEditing={addTodo}
           onChangeText={onChangeText}
           value={text}
           placeholder={working ? "Add a To Do" : "Where do you want to go?"}
